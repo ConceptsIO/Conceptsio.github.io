@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card.jsx';
+import Card from '../Card/Card.jsx';
 
 class Carousel extends React.Component {
     render() {
@@ -15,8 +15,12 @@ class Carousel extends React.Component {
                     <div className="carousel-item">
                         <Card cardTitle="Sup"/>
                     </div>
+                    <CarouselItem itemType={"card, img, video, etc."} value={"String value from JSON OBJECT"} />
                 </div>
-                <a className="carousel-control-prev" href="#MainCarousel" role="button" data-slide="prev">
+                
+                <CarouselControls link={"#MainCarousel"} />
+
+                <a className="carousel-control-prev" href={this.props.link} role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="sr-only">Previous</span>
                 </a>

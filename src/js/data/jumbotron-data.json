@@ -1,0 +1,12 @@
+{
+    "text" : [
+        "Hello World",
+        "Welcome to ConceptsIO's website",
+        "Lucky number of the day is 42"
+    ],
+    "HTMLtags" : [
+        "h1",
+        "p",
+        "p"
+    ]
+}
