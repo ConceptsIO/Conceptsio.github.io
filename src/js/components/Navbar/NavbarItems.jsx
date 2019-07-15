@@ -4,7 +4,8 @@ class NavbarItems extends React.Component {
     
     constructor(props) {
         super(props);
-
+        
+        this.resolveTags = this.resolveTags.bind(this);
     }
 
     resolveTags(index) {
@@ -12,8 +13,15 @@ class NavbarItems extends React.Component {
     }
 
     render() {
-        var content = this.props.navBarItems.
+        var content = this.props.navBarItems.map((item, ID) => {
+            console.log(ID);
+            return this.resolveTags(ID);
+        });
 
-        return ();
+        return (
+            <ul>
+                {content}
+            </ul>
+        );
     }
 }
