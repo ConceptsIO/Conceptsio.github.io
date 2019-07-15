@@ -5,6 +5,7 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar.jsx';
 import Jumbotron from '../Jumbotron/Jumbotron.jsx';
 import Carousel from '../Carousel/Carousel.jsx';
+import Footer from '../Footer/Footer.jsx';
 
 const App = (props) => {
     return (
@@ -12,6 +13,7 @@ const App = (props) => {
             <Navbar navBarJSONURL={ props.navbarjsonurl }/>
             <Jumbotron jumbotronJSONURL={ props.jumbotronjsonurl } />
             <Carousel />
+            <Footer />
         </div>
     );
 }
