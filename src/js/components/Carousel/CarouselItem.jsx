@@ -2,41 +2,51 @@ import React from 'react';
 import Card from '../Card/Card.jsx';
 
 class CarouselItem extends React.Component {
-    render() {
-        if (this.props.itemType === "card") {
-            if (this.props.activeCarousel === "active") {
+
+    constructor(props) {
+        super(props);
+
+        this.resolveTags = this.resolveTags.bind(this);
+    }
+
+    resolveTags() {
+
+        switch(this.props.carouselItem.itemType) {
+            case "card active":
                 return (
-                    <div className="carousel-item active">
-                        <Card cardTitle={ this.props.value } />
+                  <div className="carousel-item active">
+                      <Card cardTitle={ this.props.carouselItem.card.cardHeader } cardText={ this.props.carouselItem.card.cardBody.cardText }/>
+                  </div>  
+                );
+            case "card":
+                return (
+                    <div className="carousel-item">
+                        <Card cardTitle={ this.props.carouselItem.card.cardHeader } cardText={ this.props.carouselItem.card.cardBody.cardText } />
                     </div>
                 );
-            }
-            return (
-                <div className="carousel-item">
-                    <Card cardTitle={ this.props.value } />
-                </div>
-            );
-        } else if (this.props.itemType === "img") {
-            return (
-                <div className="carousel-item">
-                    <img src={ this.props.value } />
-                </div>
-            );
-        } else if (this.props.itemType === "video") {
-            return (
-                <div className="carousel-item">
-                    <video>
-                        <source src={ this.props.value } type="video/mp4"></source>
-                    </video>
-                </div>
-            );
-        } else {
-            return (
-                <div className="carousel-item">
-                    <p>{ this.props.value }</p>
-                </div>
-            );
+            case "img":
+                return (
+                    <div className="carousel-item">
+                        <img src={ this.props.carouselItem.img.imgurl } alt=""/>
+                    </div>
+                );
+            case "video":
+                return (
+                    <div className="carousel-item">
+                        <video src={ this.props.carouselItem.video.vidurl }></video>
+                    </div>
+                );
+            default:
+                return (
+                    <div className="carousel-item">
+                        <p>Currently under construction.</p>
+                    </div>
+                )
         }
+    }
+
+    render() {
+        return this.resolveTags();
     }
 }
 
