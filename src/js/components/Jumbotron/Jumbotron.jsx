@@ -66,7 +66,7 @@ class Jumbotron extends React.Component {
         });
 
         return (
-            <div className="jumbotron">
+            <div className="jumbotron" style={{ backgroundImage: "url('../../../../src/assets/sadfox.png')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgrondSize: "cover"}}>
                 { content }
             </div>
         );
