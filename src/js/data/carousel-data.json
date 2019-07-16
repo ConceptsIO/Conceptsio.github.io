@@ -1,0 +1,24 @@
+{
+    "CarouselItems": [
+        {
+            "itemType": "card active",
+            "card": {
+                "cardHeader": "Hello World!",
+                "cardBody": {
+                    "cardText": "This is the body text of a card"
+                },
+                "cardFooter": ""
+            }
+        },
+        {
+            "itemType": "card",
+            "card": {
+                "cardHeader": "Hello there",
+                "cardBody": {
+                    "cardText": "General Kenobi"
+                },
+                "cardFooter": ""
+            }
+        }
+    ]
+}

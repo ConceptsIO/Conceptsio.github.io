@@ -12,7 +12,7 @@ const App = (props) => {
         <div>
             <Navbar navBarJSONURL={ props.navbarjsonurl }/>
             <Jumbotron jumbotronJSONURL={ props.jumbotronjsonurl } />
-            <Carousel />
+            <Carousel carouselJSONURL={ props.carouseljsonurl }/>
             <Footer />
         </div>
     );
