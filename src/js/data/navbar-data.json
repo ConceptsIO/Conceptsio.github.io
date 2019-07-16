@@ -1,3 +1,48 @@
 {
-    
+    "navbarItems" : [
+        {
+            "liClassName" : "nav-item active",
+            "aClassName" : "nav-link",
+            "aHref" : "#",
+            "aText" : "Home",
+            "spanClassName" : "sr-only"
+        },
+        {
+            "liClassName" : "nav-item",
+            "aClassName" : "nav-link",
+            "aHref" : "#",
+            "aText" : "Link"
+        },
+        {
+            "liClassName" : "nav-item dropdown",
+            "aClassName" : "nav-link dropdown-toggle",
+            "aHref" : "#",
+            "aId" : "navbarDropdown",
+            "aRole" : "button",
+            "aDataToggle":"dropdown",
+            "aAriaHasPopup": true,
+            "aAriaExpanded" : false,
+            "aValue" : "Dropdown",
+            "innerA" : [
+                {
+                    "className" : "dropdown-item",
+                    "aHref" : "#",
+                    "aText" : "Action"    
+                },
+                {
+                    "className" : "dropdown-item",
+                    "aHref" : "#",
+                    "aText" : "Another Action" 
+                },
+                {
+                    "className" : "dropdown-divider"
+                },
+                {
+                    "className" : "dropdown-item",
+                    "aHref" : "#",
+                    "aText" : "Something else here" 
+                }
+            ]
+        }
+    ]
 }

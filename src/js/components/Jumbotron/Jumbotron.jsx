@@ -17,7 +17,6 @@ class Jumbotron extends React.Component {
                 ]
             }
         */
-
         var jumbotronTextFields  = (function(jsonURL) {
             var json = null;
             $.ajax({

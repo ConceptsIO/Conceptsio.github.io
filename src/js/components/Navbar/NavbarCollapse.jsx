@@ -1,11 +1,13 @@
 import React from 'react';
 
-class NavbarCollapse extends React.Component {
-    render() {
-        return (
-            <div>
+import NavbarItems from './NavbarItems.jsx';
 
-            </div>
-        )
-    };
+const NavbarCollapse = (props) => {
+    return (
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <NavbarItems navbarItems={ props.navbarCollapseItems } />
+        </div>
+    );
 }
+
+export default NavbarCollapse;
