@@ -35,7 +35,7 @@ class Carousel extends React.Component {
         });
 
         return (
-            <div className="carousel slide" id="MainCarousel" data-ride="carousel" data-interval="false" style={{ backgroundColor: "black"}}>
+            <div className="carousel slide" id="MainCarousel" data-ride="carousel" data-interval="false" style={{ backgroundColor: "lightseagreen"}}>
                 <div className="carousel-inner">
                     { content }
                     <CarouselControls link={ "#MainCarousel" } />

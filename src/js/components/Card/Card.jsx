@@ -14,11 +14,14 @@ class Card extends React.Component {
     }
     render() {
         return (
-            <div className="card center-block" style={{width: "30%", margin: "auto"}}>
-                <div className="card-body">
-                    <h5>{ this.state.cardTitle }</h5>
-                    <br />
-                    <img src={ this.state.cardImg }></img>
+            <div className="card center-block" style={{width: "30%", margin: "auto", backgroundColor: "transparent", border:"none"}}>
+                <div className="card-body" style={{ color:"white"}}>
+                    <div>
+                        <h5>{ this.state.cardTitle }</h5>
+                        <br />
+                        <img src={ this.state.cardImg }></img>
+                        <br />
+                    </div>
                     <br />
                     <p className="card-text">
                         { this.state.cardText }

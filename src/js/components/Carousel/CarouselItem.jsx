@@ -15,13 +15,13 @@ class CarouselItem extends React.Component {
             case "card active":
                 return (
                   <div className="carousel-item active">
-                      <Card cardTitle={ this.props.carouselItem.card.cardHeader } cardText={ this.props.carouselItem.card.cardBody.cardText }/>
+                      <Card cardTitle={ this.props.carouselItem.card.cardHeader } cardText={ this.props.carouselItem.card.cardBody.cardText } cardImg={ this.props.carouselItem.card.cardBody.cardImg }/>
                   </div>  
                 );
             case "card":
                 return (
                     <div className="carousel-item">
-                        <Card cardTitle={ this.props.carouselItem.card.cardHeader } cardText={ this.props.carouselItem.card.cardBody.cardText } />
+                        <Card cardTitle={ this.props.carouselItem.card.cardHeader } cardText={ this.props.carouselItem.card.cardBody.cardText } cardImg={ this.props.carouselItem.card.cardBody.cardImg }/>
                     </div>
                 );
             case "img":

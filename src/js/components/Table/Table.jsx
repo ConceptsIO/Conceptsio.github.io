@@ -5,13 +5,14 @@ class Table extends React.Component {
         return (
             <div className="container" id="PriceTable">
                 <h2>Pricing</h2>
-                <table className="table">
+                <br />
+                <table className="table table-bordered" style={{ borderColor: "black"}}>
                     <thead>
                         <tr>
-                            <th scope="col">Pricing Tier</th>
-                            <th scope="col">Script Kiddie</th>
-                            <th scope="col">Code Monkey</th>
-                            <th scope="col">Web Masters</th>
+                            <th scope="col" style={{width:"10%"}}>Pricing Tier</th>
+                            <th scope="col" style={{width:"15%"}}>Script Kiddie</th>
+                            <th scope="col" style={{width:"15%"}}>Code Monkey</th>
+                            <th scope="col" style={{width:"25%"}}>Web Masters</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -19,45 +20,62 @@ class Table extends React.Component {
                             <td>Build/Design Cost</td>
                             <td>$250 one time fee</td>
                             <td>$300 one time fee</td>
-                            <td>$1000 one time fee</td>
+                            <td><a href="#contactUs">Let's Set Up a Meeting to Chat</a></td>
                         </tr>
                         <tr>
                             <td>Maintenance Cost</td>
                             <td>$20/month</td>
                             <td>$50/month</td>
-                            <td>$100/month</td>
+                            <td>~$100/month</td>
                         </tr>
                         <tr>
                             <td>Strategy/Support Cost</td>
                             <td>$10/month</td>
                             <td>$20/month</td>
-                            <td>$100/month</td>
+                            <td>~$100/month</td>
                         </tr>
                         <tr>
                             <td>Features of Tier</td>
                             <td>
-                                <ul style={{ paddingLeft: "0" }}>
+                                <ul style={{ paddingLeft: "5%", wrapContent:"true" }}>
                                     <li>Beautiful smart websites for online branding</li>
                                     <li>Access to Slack/Discord customer service/forums</li>
-                                    <li>Mobile optimised websites</li>
+                                    <li>Mobile optimized websites</li>
                                     <li>Monthly strategy web conference call</li>
                                 </ul>
                             </td>
                             <td>
-                                <ul style={{ paddingLeft: "0" }}>
+                                <ul style={{ paddingLeft: "5%" }}>
                                     <li>All features from the previous tiers</li>
                                     <li>Website dashboard</li>
                                     <li>Access to an account manager</li>
                                     <li>Support for GSuite email</li>
-                                    <li>Best in class strategy consultations</li>
+                                    <li>SEO consultation</li>
                                 </ul>
                             </td>
                             <td>
-                                <ul style={{ paddingLeft: "0" }}>
+                                <ul style={{ paddingLeft: "5%" }}>
                                     <li>All features from the previous tiers</li>
                                     <li>Custom built features</li>
                                     <li>24/7 live support</li>
+                                    <li>Ecommerce consulting</li>
+                                    <li>D2C web marketplace on your site</li>
+                                    <li>Digital marketing Consulting</li>
                                 </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Who is this for?
+                            </td>
+                            <td>
+                                Small business who want a simple, stylish, static webpage.
+                            </td>
+                            <td>
+                                SMBs who wants a contracted team to manage their web presence and build their website content strategy.
+                            </td>
+                            <td>
+                                Businesses seeking complex websites and web-based infrastructures that can be used as part of the business whether its a direct to consumer marketplace to an enterprise SaaS platform.
                             </td>
                         </tr>
                     </tbody>
