@@ -3,9 +3,9 @@
         {
             "itemType": "card active",
             "card": {
-                "cardHeader": "Hello World!",
+                "cardHeader": "George Le - Co-founder/CEO",
                 "cardBody": {
-                    "cardText": "This is the body text of a card"
+                    "cardText": "George Le is a futurist and serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
                 },
                 "cardFooter": ""
             }
@@ -13,9 +13,20 @@
         {
             "itemType": "card",
             "card": {
-                "cardHeader": "Hello there",
+                "cardHeader": "Matthew LeBlanc - Co-founder/CTO",
                 "cardBody": {
-                    "cardText": "General Kenobi"
+                    "cardImg": "",
+                    "cardText": "Matthew LeBlanc is a recent graduate of the University of Massachusetts Lowell where he received a Bachelor's degree in computer science. He is a software developer and focuses on front-end development using technologies like React.js. He is passionate about learning new technologies as well as experiencing new aspects of culture."
+                },
+                "cardFooter": ""
+            }
+        },
+        {
+            "itemType": "card",
+            "card": {
+                "cardHeader": "Jonathan Murphy - Co-founder/CPO-CIO",
+                "cardBody": {
+                    "cardText": ""
                 },
                 "cardFooter": ""
             }

@@ -10,8 +10,14 @@
         {
             "liClassName" : "nav-item",
             "aClassName" : "nav-link",
-            "aHref" : "#",
-            "aText" : "Link"
+            "aHref" : "#aboutUs",
+            "aText" : "About Us"
+        },
+        {
+            "liClassName" : "nav-item",
+            "aClassName" : "nav-link",
+            "aHref" : "#PriceTable",
+            "aText" : "Pricing"
         },
         {
             "liClassName" : "nav-item dropdown",
@@ -22,17 +28,22 @@
             "aDataToggle":"dropdown",
             "aAriaHasPopup": true,
             "aAriaExpanded" : false,
-            "aValue" : "Dropdown",
+            "aValue" : "Portfolio",
             "innerA" : [
                 {
                     "className" : "dropdown-item",
                     "aHref" : "#",
-                    "aText" : "Action"    
+                    "aText" : "Under Construction"    
                 },
                 {
                     "className" : "dropdown-item",
                     "aHref" : "#",
-                    "aText" : "Another Action" 
+                    "aText" : "Also Under Construction" 
+                },
+                {
+                    "className" : "dropdown-item",
+                    "aHref" : "#",
+                    "aText" : "You get the idea" 
                 },
                 {
                     "className" : "dropdown-divider"
@@ -40,9 +51,15 @@
                 {
                     "className" : "dropdown-item",
                     "aHref" : "#",
-                    "aText" : "Something else here" 
+                    "aText" : "Your Website?" 
                 }
             ]
+        },
+        {
+            "liClassName" : "nav-item",
+            "aClassName" : "nav-link",
+            "aHref" : "#contactUs",
+            "aText" : "Contact Us"
         }
     ]
 }
