@@ -9,7 +9,7 @@ class Footer extends React.Component {
                     <div id="contactUs">
                         <h2>Contact Us</h2>
                         <br />
-                        Shoot me an email for any inquiries: <span><a href="mailto:george.le@conceptsio.com">George.Le@conceptsio.com</a></span>
+                        Shoot me an email and let's get the ball rolling: <span><a href="mailto:george.le@conceptsio.com">George.Le@conceptsio.com</a></span>
                     </div>
                     <br />
                     <br />

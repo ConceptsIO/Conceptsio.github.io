@@ -14,8 +14,8 @@ class Card extends React.Component {
     }
     render() {
         return (
-            <div className="card center-block" style={{width: "30%", margin: "auto", backgroundColor: "transparent", border:"none"}}>
-                <div className="card-body" style={{ color:"white"}}>
+            <div className="card" style={{ height: "750px", width: "35%", margin: "auto", backgroundColor: "transparent", border:"none", display: "block" }}>
+                <div className="card-body" style={{ color:"white", textAlign:"center" }}>
                     <div>
                         <h5>{ this.state.cardTitle }</h5>
                         <br />

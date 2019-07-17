@@ -19,6 +19,7 @@ const App = (props) => {
             <div className="container" id="aboutUs">
                 <h2>About Us</h2>
                 <img src="../../../../src/assets/ConceptsIOSolutionsCropped.png" style={{ display:"block", marginLeft: "auto", marginRight: "auto" }}/>
+                <br />
                 <div>ConceptsIO Solutions is devoted to working with small 
                     to medium sized businesses on building, maintaining, and 
                     improving their digital presence. Contemporary businesses drive 

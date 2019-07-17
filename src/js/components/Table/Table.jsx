@@ -9,9 +9,9 @@ class Table extends React.Component {
                 <table className="table table-bordered" style={{ borderColor: "black"}}>
                     <thead>
                         <tr>
-                            <th scope="col" style={{width:"10%"}}>Pricing Tier</th>
-                            <th scope="col" style={{width:"15%"}}>Script Kiddie</th>
-                            <th scope="col" style={{width:"15%"}}>Code Monkey</th>
+                            <th scope="col" style={{width:"15%"}}>Pricing Tier</th>
+                            <th scope="col" style={{width:"25%"}}>Script Kiddie</th>
+                            <th scope="col" style={{width:"25%"}}>Code Monkey</th>
                             <th scope="col" style={{width:"25%"}}>Web Masters</th>
                         </tr>
                     </thead>
@@ -20,13 +20,13 @@ class Table extends React.Component {
                             <td>Build/Design Cost</td>
                             <td>$250 one time fee</td>
                             <td>$300 one time fee</td>
-                            <td><a href="#contactUs">Let's Set Up a Meeting to Chat</a></td>
+                            <td><a href="#contactUs">Let's Set Up a Meeting</a></td>
                         </tr>
                         <tr>
                             <td>Maintenance Cost</td>
-                            <td>$20/month</td>
-                            <td>$50/month</td>
-                            <td>~$100/month</td>
+                            <td>$20/month*</td>
+                            <td>$50/month*</td>
+                            <td>~$100/month*</td>
                         </tr>
                         <tr>
                             <td>Strategy/Support Cost</td>
@@ -76,6 +76,16 @@ class Table extends React.Component {
                             </td>
                             <td>
                                 Businesses seeking complex websites and web-based infrastructures that can be used as part of the business whether its a direct to consumer marketplace to an enterprise SaaS platform.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <h6>
+                                    We understand that every business is different and their wants and budgets warrant different solutions. We have tried to build our standard pricing model with that in mind, however we 
+                                    will always be open to negotiating a bespoke solution.
+                                </h6>
+                                <br />
+                                *Fees related to third-party services such as hosting, server costs, etc, are not included in the maintenance cost and will be assessed based on your business needs.
                             </td>
                         </tr>
                     </tbody>
