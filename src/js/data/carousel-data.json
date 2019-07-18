@@ -1,37 +1,50 @@
-{
-    "CarouselItems": [
-        {
-            "itemType": "card active",
-            "card": {
-                "cardHeader": "George Le - Co-founder/CEO",
-                "cardBody": {
-                    "cardImg": "../../../src/assets/george.jpg",
-                    "cardText": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
+[
+    {   
+        "carouselID": "staffCarousel", 
+        "carouselContents" : {
+            "carouselControls" : {
+                "prev": {
+
                 },
-                "cardFooter": ""
-            }
-        },
-        {
-            "itemType": "card",
-            "card": {
-                "cardHeader": "Matthew LeBlanc - Co-founder/CTO",
-                "cardBody": {
-                    "cardImg": "../../../src/assets/matt.jpg",
-                    "cardText": "Matthew LeBlanc is a recent graduate of the University of Massachusetts Lowell where he received a Bachelor's degree in computer science. He is a software developer and focuses on front-end development using technologies like React.js. He is passionate about learning new technologies as well as experiencing new aspects of culture."
+                "next": {
+
+                }
+            },
+            "CarouselItems": [
+                {
+                    "itemType": "card active",
+                    "card": {
+                        "cardHeader": "George Le - Co-founder/CEO",
+                        "cardBody": {
+                            "cardImg": "../../../src/assets/george.jpg",
+                            "cardText": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
+                        },
+                        "cardFooter": ""
+                    }
                 },
-                "cardFooter": ""
-            }
-        },
-        {
-            "itemType": "card",
-            "card": {
-                "cardHeader": "Jonathan Murphy - Co-founder/CPO-CIO",
-                "cardBody": {
-                    "cardImg": "../../../src/assets/jonathan.jpg",
-                    "cardText": "Jonathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
+                {
+                    "itemType": "card",
+                    "card": {
+                        "cardHeader": "Matthew LeBlanc - Co-founder/CTO",
+                        "cardBody": {
+                            "cardImg": "../../../src/assets/matt.jpg",
+                            "cardText": "Matthew LeBlanc is a recent graduate of the University of Massachusetts Lowell where he received a Bachelor's degree in computer science. He is a software developer and focuses on front-end development using technologies like React.js. He is passionate about learning new technologies as well as experiencing new aspects of culture."
+                        },
+                        "cardFooter": ""
+                    }
                 },
-                "cardFooter": ""
-            }
+                {
+                    "itemType": "card",
+                    "card": {
+                        "cardHeader": "Jonathan Murphy - Co-founder/CPO-CIO",
+                        "cardBody": {
+                            "cardImg": "../../../src/assets/jonathan.jpg",
+                            "cardText": "Jonathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
+                        },
+                        "cardFooter": ""
+                    }
+                }
+            ]
         }
-    ]
-}
+    }
+]

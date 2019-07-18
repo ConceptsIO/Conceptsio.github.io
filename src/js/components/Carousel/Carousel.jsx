@@ -7,7 +7,7 @@ class Carousel extends React.Component {
     constructor(props) {
         super(props);
 
-        var carouselItems  = (function(jsonURL) {
+        var carouselData  = (function(jsonURL, carouselID) {
             var json = null;
             $.ajax({
                 'url' : jsonURL,
@@ -17,11 +17,15 @@ class Carousel extends React.Component {
                     json = data;
                 }
             });
-            return json;
-        })(this.props.carouselJSONURL);
+            return json.map((item) => {
+                if (item.carouselID === carouselID) {
+                    return item;
+                }
+            });
+        })(props.carouselJSONURL, props.carouselID);
 
         this.state = {
-            carouselItems: carouselItems.CarouselItems
+            carouselItems: carouselData.carouselContents.carouselItems
         }
     }
 
@@ -36,7 +40,7 @@ class Carousel extends React.Component {
 
         return (
             <div style={{ alignItems: "center", backgroundColor: "lightgray", display: "flex", height: "900px", justifyContent: "center" }} >
-                <div className="carousel slide" id="MainCarousel" data-ride="carousel" data-interval="false">
+                <div className="carousel slide" id="MainCarousel" data-ride="carousel" data-interval="7500">
                     <div className="carousel-inner" style={{ margin: "auto" }}>
                         { content }
                         <CarouselControls link={ "#MainCarousel" } />

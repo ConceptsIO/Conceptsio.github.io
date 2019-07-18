@@ -43,7 +43,7 @@ const App = (props) => {
             <br />
             <br />
             </div>
-            <Carousel carouselJSONURL={ props.carouseljsonurl }/>
+            <Carousel carouselID={ "staffCarousel" } carouselJSONURL={ props.carouseljsonurl }/>
             <br />
             <br />
             <Table />

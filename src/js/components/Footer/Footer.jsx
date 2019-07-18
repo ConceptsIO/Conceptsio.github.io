@@ -18,6 +18,9 @@ class Footer extends React.Component {
                     <p className="text-muted">&copy; 2019, ConceptsIO Solutions LLC</p>
                     <p className="text-muted">For all your Website and Ecommerce Solutions</p>
                 </div>
+                <br />
+                <br />
+                <br />
             </footer>
         );
     }
