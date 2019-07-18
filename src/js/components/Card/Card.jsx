@@ -14,7 +14,7 @@ class Card extends React.Component {
     }
     render() {
         return (
-            <div className="card" style={{ height: "auto", width: "35%", margin: "auto", backgroundColor: "lightseagreen", display: "block" }}>
+            <div className="card" style={{ height: "auto", width: "50%", margin: "auto", backgroundColor: "lightseagreen", display: "block" }}>
                 <div className="card-body" style={{ color:"white", textAlign:"center" }}>
                     <h5>{ this.state.cardTitle }</h5>
                     <br />
