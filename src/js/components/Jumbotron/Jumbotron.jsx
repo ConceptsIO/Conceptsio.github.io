@@ -29,7 +29,6 @@ class Jumbotron extends React.Component {
             });
             return json;
         })(this.props.jumbotronJSONURL);
-
         this.state = {
             jumbotronTextFields : jumbotronTextFields
         };

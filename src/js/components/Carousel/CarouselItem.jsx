@@ -10,7 +10,6 @@ class CarouselItem extends React.Component {
     }
 
     resolveTags() {
-
         switch(this.props.carouselItem.itemType) {
             case "card active":
                 return (
@@ -41,7 +40,7 @@ class CarouselItem extends React.Component {
                     <div className="carousel-item">
                         <p>Currently under construction.</p>
                     </div>
-                )
+                );
         }
     }
 

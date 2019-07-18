@@ -6,7 +6,7 @@
                 "cardHeader": "George Le - Co-founder/CEO",
                 "cardBody": {
                     "cardImg": "../../../src/assets/george.jpg",
-                    "cardText": "George Le is a serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
+                    "cardText": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
                 },
                 "cardFooter": ""
             }
@@ -28,7 +28,7 @@
                 "cardHeader": "Jonathan Murphy - Co-founder/CPO-CIO",
                 "cardBody": {
                     "cardImg": "../../../src/assets/jonathan.jpg",
-                    "cardText": ""
+                    "cardText": "Jonathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
                 },
                 "cardFooter": ""
             }

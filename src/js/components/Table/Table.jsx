@@ -26,13 +26,13 @@ class Table extends React.Component {
                             <td>Maintenance Cost</td>
                             <td>$20/month*</td>
                             <td>$50/month*</td>
-                            <td>~$100/month*</td>
+                            <td>Dependent on Project Scope*</td>
                         </tr>
                         <tr>
                             <td>Strategy/Support Cost</td>
                             <td>$10/month</td>
                             <td>$20/month</td>
-                            <td>~$100/month</td>
+                            <td>Dependent on Project Scope</td>
                         </tr>
                         <tr>
                             <td>Features of Tier</td>
@@ -79,7 +79,7 @@ class Table extends React.Component {
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="4">
+                            <td colSpan="4">
                                 <h6>
                                     We understand that every business is different and their wants and budgets warrant different solutions. We have tried to build our standard pricing model with that in mind, however we 
                                     will always be open to negotiating a bespoke solution.
