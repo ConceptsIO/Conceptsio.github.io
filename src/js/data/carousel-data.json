@@ -1,16 +1,34 @@
 [
     {   
-        "carouselID": "staffCarousel", 
+        "carouselID": "staffCarousel",
         "carouselContents" : {
             "carouselControls" : {
                 "prev": {
-
+                    "prev": [
+                        {
+                            "htmlTag": "a",
+                            "className": "carousel-control-prev",
+                            "prevContent": [
+                                {
+                                    "htmlTag": "span",
+                                    "className": "carousel-control-prev-icon",
+                                    "ariaHidden": "true"
+                                },
+                                {
+                                    "htmlTag": "span",
+                                    "className": "sr-only"
+                                }
+                            ],
+                            "dataSlide": "prev",
+                            "role": "button"
+                        }
+                    ]
                 },
                 "next": {
 
                 }
             },
-            "CarouselItems": [
+            "carouselItems": [
                 {
                     "itemType": "card active",
                     "card": {
