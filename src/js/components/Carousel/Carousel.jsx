@@ -35,7 +35,7 @@ class Carousel extends React.Component {
         });
 
         return (
-            <div style={{ alignItems: "center", backgroundColor: "lightgrey", display: "flex", height: "900px", justifyContent: "center" }} >
+            <div style={{ alignItems: "center", backgroundColor: "lightgray", display: "flex", height: "900px", justifyContent: "center" }} >
                 <div className="carousel slide" id="MainCarousel" data-ride="carousel" data-interval="false">
                     <div className="carousel-inner" style={{ margin: "auto" }}>
                         { content }

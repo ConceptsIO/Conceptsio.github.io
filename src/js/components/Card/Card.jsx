@@ -16,14 +16,14 @@ class Card extends React.Component {
         return (
             <div className="card" style={{ height: "auto", width: "50%", margin: "auto", backgroundColor: "lightseagreen", display: "block" }}>
                 <div className="card-body" style={{ color:"white", textAlign:"center" }}>
-                    <h5>{ this.state.cardTitle }</h5>
+                    <h3>{ this.state.cardTitle }</h3>
                     <br />
                     <img src={ this.state.cardImg }></img>
                     <br />
                     <br />
-                    <p className="card-text">
+                    <h5 className="card-text">
                         { this.state.cardText }
-                    </p>
+                    </h5>
                 </div>
             </div>
         )
