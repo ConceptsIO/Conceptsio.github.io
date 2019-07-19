@@ -9,7 +9,7 @@ class Table extends React.Component {
                 <table className="table table-bordered" style={{ borderColor: "black"}}>
                     <thead>
                         <tr>
-                            <th scope="col" style={{width:"15%"}}>Pricing Tier</th>
+                            <th scope="col" style={{width:"20%"}}>Pricing Tier</th>
                             <th scope="col" style={{width:"25%"}}>Script Kiddie</th>
                             <th scope="col" style={{width:"25%"}}>Code Monkey</th>
                             <th scope="col" style={{width:"25%"}}>Web Masters</th>
@@ -18,29 +18,29 @@ class Table extends React.Component {
                     <tbody>
                         <tr>
                             <td>Build/Design Cost</td>
-                            <td>$250 one time fee</td>
-                            <td>$300 one time fee</td>
+                            <td>$600 one time fee</td>
+                            <td>$750 one time fee</td>
                             <td><a href="#contactUs">Let's Set Up a Meeting</a></td>
                         </tr>
                         <tr>
                             <td>Maintenance Cost</td>
-                            <td>$20/month*</td>
                             <td>$50/month*</td>
-                            <td>Dependent on Project Scope*</td>
+                            <td>$100/month*</td>
+                            <td>Depends on Project Scope*</td>
                         </tr>
                         <tr>
                             <td>Strategy/Support Cost</td>
-                            <td>$10/month</td>
                             <td>$20/month</td>
-                            <td>Dependent on Project Scope</td>
+                            <td>$50/month</td>
+                            <td>Depends on Project Scope</td>
                         </tr>
                         <tr>
                             <td>Features of Tier</td>
                             <td>
                                 <ul style={{ paddingLeft: "5%", wrapContent:"true" }}>
                                     <li>Beautiful smart websites for online branding</li>
-                                    <li>Access to Slack/Discord customer service/forums</li>
                                     <li>Mobile optimized websites</li>
+                                    <li>Management of GSuite and email</li>
                                     <li>Monthly strategy web conference call</li>
                                 </ul>
                             </td>
@@ -49,8 +49,8 @@ class Table extends React.Component {
                                     <li>All features from the previous tiers</li>
                                     <li>Website dashboard</li>
                                     <li>Access to an account manager</li>
-                                    <li>Support for GSuite email</li>
                                     <li>SEO consultation</li>
+                                    <li>Access to Slack/Discord customer service/forums</li>
                                 </ul>
                             </td>
                             <td>
@@ -62,6 +62,22 @@ class Table extends React.Component {
                                     <li>D2C web marketplace on your site</li>
                                     <li>Digital marketing Consulting</li>
                                 </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Time to build
+                                <br/>
+                                Minimum service period
+                            </td>
+                            <td>
+                                2 weeks website construction, Minimum 16 month service contract
+                            </td>
+                            <td>
+                                2-4 weeks website construction, Minimum 12 month service contract
+                            </td>
+                            <td>
+                                Depends on Project Scope
                             </td>
                         </tr>
                         <tr>
