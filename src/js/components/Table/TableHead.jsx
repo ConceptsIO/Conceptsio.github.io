@@ -1,5 +1,5 @@
 import React from 'react';
 
-const TableHead = (props) => {
-    
+export const TableHead = (props) => {
+    <div>{ this.props.tablehead }</div>
 }
