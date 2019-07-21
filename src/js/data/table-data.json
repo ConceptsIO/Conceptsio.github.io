@@ -1,7 +1,7 @@
 [
     {
         "head": {
-            "row": [
+            "rows": [
                 "Pricing Tier",
                 "Script Kiddie",
                 "Code Monkey",
@@ -10,7 +10,7 @@
         },
         "body": [
             {
-                "row": [
+                "rows": [
                     "Build/Design Cost",
                     "$250 one time fee",
                     "$300 one time fee",
@@ -18,7 +18,7 @@
                 ]
             },
             {
-                "row": [
+                "rows": [
                     "Maintenace Cost",
                     "$20/month*",
                     "$50/month*",
@@ -26,7 +26,7 @@
                 ]
             },
             {
-                "row": [
+                "rows": [
                     "Strategy/Support Cost",
                     "$10/month",
                     "$20/month",
@@ -34,7 +34,7 @@
                 ]
             },
             {
-                "row": [
+                "rows": [
                     {
                         "col": "Features of Tier",
                         "ul": [
@@ -66,7 +66,7 @@
                 ]
             },
             {
-                "row": [
+                "rows": [
                     "Who is this for?",
                     "Small business who want a simple, stylish, static webpage.",
                     "SMBs who wants a contracted team to manage their web presence and build their website content strategy.",
@@ -74,7 +74,7 @@
                 ]
             },
             {
-                "row": [
+                "rows": [
                     {
                         "h6": "We understand that every business is different and their wants and budgets warrant different solutions. We have tried to build our standard pricing model with that in mind, however we will always be open to negotiating a bespoke solution.",
                         "p": "*Fees related to third-party services such as hosting, server costs etc, are not included in the maintenance cost and will be assessed based on your business needs."
