@@ -1,33 +1,47 @@
 import React from 'react';
 
-class Card extends React.Component {
+import CardBody from './CardBody.jsx';
+import parseJsonData from '../Utilities/parseJsonItem.js';
 
-    constructor(props) {
-        super(props);
+function parseCardData(cardData) {
+    
+}
 
-        this.state = {
-            cardTitle: props.cardTitle,
-            cardText: props.cardText,
-            cardImg: props.cardImg,
-            cardFooter: props.cardFooter
-        };
-    }
-    render() {
-        return (
-            <div className="card" style={{ height: "auto", width: "50%", margin: "auto", backgroundColor: "lightseagreen", display: "block" }}>
-                <div className="card-body" style={{ color:"white", textAlign:"center" }}>
-                    <h3>{ this.state.cardTitle }</h3>
-                    <br />
-                    <img src={ this.state.cardImg }></img>
-                    <br />
-                    <br />
-                    <h5 className="card-text">
-                        { this.state.cardText }
-                    </h5>
-                </div>
-            </div>
-        )
-    }
+/*
+    Expected props is an object with the following format,
+
+    Ex:
+        {
+            "itemType": "card active",
+            "itemContent": {
+                "cardContainer": [
+                    {
+                        "containerType": "div",
+                        "containerProperties": {
+                            "className": "card",
+                            "style": {
+                                "backgroundColor": "lightseagreen",
+                                "display": "block",
+                                "height": "auto",
+                                "margin": "auto",
+                                "width": "50%"
+                            }
+                        }
+                    }
+                ],
+                "cardContents" : {
+                    "cardHeader": "Card title",
+                    "cardBody": {
+                        "cardImg": "../../../src/url.js",
+                        "cardText": "Blah Blah Blah"
+                    },
+                    "cardFooter": "My email is blah@gmail.com"   
+                }
+            }
+        }
+*/
+const Card = (props) => {
+    return parseCardData(props.itemContents);
 }
 
 export default Card;

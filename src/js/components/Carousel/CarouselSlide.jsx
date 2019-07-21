@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card.jsx';
 
-class CarouselItem extends React.Component {
+class CarouselSlide extends React.Component {
 
     constructor(props) {
         super(props);
@@ -49,4 +49,4 @@ class CarouselItem extends React.Component {
     }
 }
 
-export default CarouselItem;
+export default CarouselSlide;
