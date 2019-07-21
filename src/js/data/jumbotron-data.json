@@ -1,7 +1,7 @@
 [
     {
-        "jumbotronID": "mainTopJumbrotron",
-        "jumbotronContainer": [
+        "componentID": "mainTopJumbrotron",
+        "componentContainer": [
             {
                 "itemType": "div",
                 "itemAttributes": {
@@ -10,12 +10,12 @@
                         "backgroundImage": "url('../../../../src/assets/sadfox.png')", 
                         "backgroundRepeat": "no-repeat", 
                         "backgroundPosition": "right", 
-                        "backgrondSize": "cover"
+                        "backgroundSize": "cover"
                     }
                 }      
             }
         ],
-        "jumbotronContents": [
+        "componentContents": [
             {
                 "itemType": "h1",
                 "itemContents": {
