@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
 import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
@@ -17,7 +16,7 @@ function parseJumbotronContents(jumbotronContents) {
 
 function parseJumbotronContainers(jumbotronContainer, jumbotronContents) {
     var container = jumbotronContainer.map((container) => {
-        parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, jumbotronContents);
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, jumbotronContents);
     });
     return container;
 }

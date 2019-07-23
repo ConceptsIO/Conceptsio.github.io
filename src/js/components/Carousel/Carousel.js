@@ -1,10 +1,39 @@
 import React from 'react';
 
-import CarouselControls from './CarouselControls.jsx';
-import CarouselSlide from './CarouselSlide.jsx';
+import CarouselControls from './CarouselControls.js';
+import CarouselSlide from './CarouselSlide.js';
 
 import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 import parseJsonItem from '../Utilities/parseJsonItem.js';
+
+function parseCarouselContents(carouselComponentContents) {
+    return carouselComponentContents.map((item) => {
+        switch(item.itemType) {
+            case "carouselControls":
+                return <CarouselControls />
+            case "carouselSlide":
+                return <CarouselSlide />
+            default:
+                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+        }
+    });
+}
+
+function parseCarouselContainer(carouselContainer, carouselContents) {
+    return carouselContainer.map((container) => {
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselContents);
+    });
+}
+
+function parseCarouselData(carouselData) {
+    return parseCarouselContainer(parseCarouselContents(carouselData));
+}
+
+const Carousel = (props) => {
+    return parseCarouselData(getJsonObjectWithID(props.carouselJsonUrl, props.id));
+}
+
+export default Carousel;
 
 // class Carousel extends React.Component {
 
@@ -52,28 +81,3 @@ import parseJsonItem from '../Utilities/parseJsonItem.js';
 //         );
 //     }
 // }
-
-function parseCarouselContents(carouselComponentContents) {
-    return carouselComponentContents.map((item) => {
-        switch(item.itemType) {
-            case "carouselControls":
-                return <CarouselControls />
-            case "carouselSlide":
-                return <CarouselSlide />
-        }
-    });
-}
-
-function parseCarouselContainer(carouselContents) {
-
-}
-
-function parseCarouselData(carouselData) {
-    return parseCarouselContainer(parseCarouselContents(carouselData));
-}
-
-const Carousel = (props) => {
-    return parseCarouselData(getJsonObjectWithID(props.carouselJsonUrl, props.id));
-}
-
-export default Carousel;

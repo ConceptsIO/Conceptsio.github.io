@@ -9,8 +9,7 @@
                     "style": {
                         "backgroundImage": "url('../../../../src/assets/sadfox.png')", 
                         "backgroundRepeat": "no-repeat", 
-                        "backgroundPosition": "right", 
-                        "backgroundSize": "cover"
+                        "backgroundPosition": "right"
                     }
                 }      
             }

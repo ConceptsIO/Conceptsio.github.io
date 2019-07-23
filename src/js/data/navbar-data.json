@@ -11,7 +11,7 @@
         ],
         "componentContents": [
             {
-                "itemType": "navbar-brand",
+                "itemType": "navbarBrand",
                 "itemContents": [
                     {
                         "itemType": "a",

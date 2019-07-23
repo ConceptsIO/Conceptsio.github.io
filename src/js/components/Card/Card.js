@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CardBody from './CardBody.jsx';
+import CardBody from './CardBody.js';
 import parseJsonData from '../Utilities/parseJsonItem.js';
 
 function parseCardData(cardData) {
