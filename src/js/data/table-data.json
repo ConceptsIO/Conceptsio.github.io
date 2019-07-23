@@ -1,91 +1,5 @@
 [
     {
-        "head": {
-            "rows": [
-                "Pricing Tier",
-                "Script Kiddie",
-                "Code Monkey",
-                "Web Masters"
-            ]
-        },
-        "body": [
-            {
-                "rows": [
-                    "Build/Design Cost",
-                    "$250 one time fee",
-                    "$300 one time fee",
-                    "#contactUs"
-                ]
-            },
-            {
-                "rows": [
-                    "Maintenace Cost",
-                    "$20/month*",
-                    "$50/month*",
-                    "Dependent on Project Scope"
-                ]
-            },
-            {
-                "rows": [
-                    "Strategy/Support Cost",
-                    "$10/month",
-                    "$20/month",
-                    "Dependent on Project Scope"
-                ]
-            },
-            {
-                "rows": [
-                    {
-                        "col": "Features of Tier",
-                        "ul": [
-                            "Beautiful smart websites for online branding",
-                            "Access to Slack/Discord customer service/forums",
-                            "Mobile optimized websites",
-                            "Monthly strategy web conference call"
-                        ]
-                    },
-                    {
-                        "ul": [
-                            "All features from the previous tiers",
-                            "Website dashboard",
-                            "Access to an account manager",
-                            "Support fro GSuite email",
-                            "SEO consultation"
-                        ]
-                    },
-                    {
-                        "ul": [
-                            "All features from the previous tiers",
-                            "Custom built features",
-                            "24/7 live support",
-                            "Ecommerce consulting",
-                            "D2C web marketplace on your site",
-                            "Digital marketing consulting"
-                        ]
-                    }
-                ]
-            },
-            {
-                "rows": [
-                    "Who is this for?",
-                    "Small business who want a simple, stylish, static webpage.",
-                    "SMBs who wants a contracted team to manage their web presence and build their website content strategy.",
-                    "Businesses seeking complex websites and web-based infrastructures that can be used as part of the business whether it's a direct to consumer marketplace or an enterprise SaaS platform."
-                ]
-            },
-            {
-                "rows": [
-                    {
-                        "h6": "We understand that every business is different and their wants and budgets warrant different solutions. We have tried to build our standard pricing model with that in mind, however we will always be open to negotiating a bespoke solution.",
-                        "p": "*Fees related to third-party services such as hosting, server costs etc, are not included in the maintenance cost and will be assessed based on your business needs."
-                    }
-                ]
-            }
-        ]
-    }
-]
-[
-    {
         "componentID": "pricingTable",
         "componentContainer": [
            {
@@ -115,7 +29,7 @@
                             "scope": "col",
                             "style": {
                                 "width": "25%"
-                            } 
+                            }
                         },
                         "itemContents": "Script Kiddie"
                     },
@@ -145,7 +59,121 @@
                 "itemType": "tbody",
                 "itemContents": [
                     {
-
+                        "itemType": "tr",
+                        "itemContents": [
+                            "Build/Design Cost",
+                            "$250 one time fee",
+                            "$300 one time fee",
+                            {
+                                "itemType": "a",
+                                "itemAttributes": {
+                                    "href": "#contactUs"
+                                },
+                                "itemContents": "Let's Set Up a Meeting"
+                            }
+                        ]
+                    },
+                    {
+                        "itemtype": "tr",
+                        "itemContents": [
+                            "Maintenance Cost",
+                            "$20/month*",
+                            "$50/month*",
+                            "Dependent on Project Scope"
+                        ]
+                    },
+                    {
+                        "itemType": "tr",
+                        "itemContents": [
+                            "Strategy/Support Cost",
+                            "$10/month",
+                            "$20/month",
+                            "Dependent on Project Scope"
+                        ]
+                    },
+                    {
+                        "itemType": "tr",
+                        "itemContents": [
+                            "Features of Tier",
+                            {
+                                "itemType": "ul",
+                                "itemAttributes": {
+                                    "style": {
+                                        "paddingLeft": "5%",
+                                        "wrapContent": "true"
+                                    }
+                                },
+                                "itemContent": [
+                                    "Beautiful smart websites for online branding",
+                                    "Access to Slack/Discord customer service/forums",
+                                    "Mobile optimized websites",
+                                    "Monthly strategy web conference call"
+                                ]
+                            },
+                            {
+                                "itemType": "ul",
+                                "itemAttributes": {
+                                    "style": {
+                                        "paddingLeft": "5%"
+                                    }
+                                },
+                                "itemContent": [
+                                    "All features from the previous tiers",
+                                    "Website dashboard",
+                                    "Access to an account manager",
+                                    "Support for GSuite email",
+                                    "SEO consultation"
+                                ]
+                            },
+                            {
+                                "itemType": "ul",
+                                "itemAttributes": {
+                                    "style": {
+                                        "paddingLeft": "5%"
+                                    }
+                                },
+                                "itemContent": [
+                                    "All features from the previous tiers",
+                                    "Custom built features",
+                                    "24/7 live support ",
+                                    "Ecommerce consulting",
+                                    "D2C web marketplace on your site",
+                                    "Digital marketing consulting"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "itemtype": "tr",
+                        "itemContent": [
+                            "Who is this for?",
+                            "Small businesses who want a simple, stylish, static webpage.",
+                            "SMBs who wants a contracted team to manage their web presence and build their website content strategy",
+                            "Businesses seeking complex websites and web-based infrastructures that can be used as part of the business whether its a direct to consumer marketplace to an enterprise SaaS platform."
+                        ]
+                    },
+                    {
+                        "itemType": "tr",
+                        "itemContent": [
+                            {
+                                "itemType": "td",
+                                "itemAttributes": {
+                                    "colSpan": "4"
+                                },
+                                "itemContent": [
+                                    {
+                                        "itemType": "h6",
+                                        "itemContent": 
+                                            "We understand that every business is different and their wants and budgets warrant different solutions. We have tried to build our standard pricing model with that in mind, however we 
+                                            will always be open to negotiating a bespoke solution."
+                                    },
+                                    {
+                                        "itemType": "br"
+                                    },
+                                    "*Fees related to third-party services such as hosting, server costs, etc, are not included in the maintenance cost and will be assessed based on your business needs."
+                                ]
+                            }
+                        ]
                     }
                 ]
             }
