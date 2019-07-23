@@ -1,12 +1,12 @@
 [
     {
-        "componentID": "mainTopJumbrotron",
+        "componentID": "mainJumbotron",
         "componentContainer": [
             {
-                "itemType": "div",
-                "itemAttributes": {
-                    "itemClassName": "jumbotron",
-                    "itemStyle": {
+                "containerType": "div",
+                "containerAttributes": {
+                    "className": "jumbotron",
+                    "style": {
                         "backgroundImage": "url('../../../../src/assets/sadfox.png')", 
                         "backgroundRepeat": "no-repeat", 
                         "backgroundPosition": "right", 

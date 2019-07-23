@@ -1,12 +1,15 @@
 import React from 'react';
+
 import CarouselControls from './CarouselControls.jsx';
 import CarouselSlide from './CarouselSlide.jsx';
+
+import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
+import parseJsonItem from '../Utilities/parseJsonItem.js';
 
 // class Carousel extends React.Component {
 
 //     constructor(props) {
 //         super(props);
-
 //         var carouselData  = (function(jsonURL, carouselID) {
 //             var json = null;
 //             $.ajax({
@@ -18,14 +21,13 @@ import CarouselSlide from './CarouselSlide.jsx';
 //                 }
 //             });
 //             return json.map((item) => {
-//                 if (item.carouselID === carouselID) {
+//                 if (item.componentID === carouselID) {
 //                     return item;
 //                 }
 //             });
-//         })(props.carouselJSONURL, props.carouselID);
-
+//         })(props.carouselJsonUrl, props.carouselID);
 //         this.state = {
-//             carouselItems: carouselData.carouselContents.carouselItems
+//             carouselItems: carouselData
 //         }
 //     }
 
@@ -51,12 +53,27 @@ import CarouselSlide from './CarouselSlide.jsx';
 //     }
 // }
 
-function parseCarouselData(carouselData) {
+function parseCarouselContents(carouselComponentContents) {
+    return carouselComponentContents.map((item) => {
+        switch(item.itemType) {
+            case "carouselControls":
+                return <CarouselControls />
+            case "carouselSlide":
+                return <CarouselSlide />
+        }
+    });
+}
+
+function parseCarouselContainer(carouselContents) {
 
 }
 
-const Carousel = (props) => {
+function parseCarouselData(carouselData) {
+    return parseCarouselContainer(parseCarouselContents(carouselData));
+}
 
+const Carousel = (props) => {
+    return parseCarouselData(getJsonObjectWithID(props.carouselJsonUrl, props.id));
 }
 
 export default Carousel;

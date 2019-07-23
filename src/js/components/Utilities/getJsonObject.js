@@ -1,4 +1,4 @@
-export function getJSON(jsonURL) {
+export function getJsonObject(jsonURL) {
     return (function(JSONURL) {
         var json = null;
         $.ajax({
@@ -13,7 +13,7 @@ export function getJSON(jsonURL) {
     })(jsonURL);
 }
 
-export function getJSONwithID(jsonURL, ID) {
+export function getJsonObjectWithID(jsonURL, ID) {
     return (function(JSONURL) {
         var json = null;
         $.ajax({

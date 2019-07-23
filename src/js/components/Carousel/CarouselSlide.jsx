@@ -15,7 +15,7 @@ class CarouselSlide extends React.Component {
                 return (
                   <div className="carousel-item active">
                       <Card cardTitle={ this.props.carouselItem.card.cardHeader } cardText={ this.props.carouselItem.card.cardBody.cardText } cardImg={ this.props.carouselItem.card.cardBody.cardImg }/>
-                  </div>  
+                  </div>
                 );
             case "card":
                 return (
