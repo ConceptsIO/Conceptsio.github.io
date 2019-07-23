@@ -1,9 +1,8 @@
-import React from 'react';
-
-import NavbarBrand from './NavbarBrand.jsx';
-import NavbarCollapse from './NavbarCollapse.jsx';
-import NavbarToggler from './NavbarToggler.jsx';
+import NavbarBrand from './NavbarBrand.js';
+import NavbarCollapse from './NavbarCollapse.js';
+import NavbarToggler from './NavbarToggler.js';
 import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
+import parseJsonItem from '../Utilities/parseJsonItem.js';
 
 // class Navbar extends React.Component {
     
@@ -38,39 +37,34 @@ import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 //     }
 // }
 
-function parseNavbarContents(navbarItemType, navbarItemAttribute, navbarItemContents) {
-    // switch(navbarItemType) {
-    //     case ""
-    // }
+function parseNavbarContents(navbarContents) {
+    return navbarContents.map((item) => {
+        switch(item.itemType) {
+            case "navbarBrand":
+                return <NavbarBrand navbarBrandAttributes={ item.itemAttributes } navbarBrandContents={ item.itemContents } />;
+            case "navbarCollapse":
+                return <NavbarCollapse navbarCollapseAttributes={ item.itemAttributes } navbarCollapseContents={ item.itemContents } />;
+            case "navbarToggler":
+                return <NavbarToggler navbarTogglerAttributes={ item.itemAttributes } navbarTogglerContents={ item.itemContents } />;
+            default:
+                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+        }
+    })
 }
 
-function parseNavbarContainers(navbarContainerType, navbarContainerAttribute, navbarContainerContents) {
-    switch(navbar) {
-        case "nav":
-            if(navbarData.componentContainer.containerContents) {
-                var contents = parseNavbarContainers();
-                return <nav { ...navbarData.componentContainer.containerAttributes }>{ contents }</nav>;
-            } else {
-                return <nav { ...navbarData.componentContainer.containerAttributes }>{ navbarData.componentContainer.containerContents }</nav>
-            }
-    }
+function parseNavbarContainers(navbarContainer, navbarContents) {
+    return navbarContainer.map((container) => {
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarContents);
+    }); 
 }
 
-function parseNavbarData(navbar) {
-    
-    // build contents first
-
-    // build containers and pass contents into it
-    
-    // return containers with content in it
-    
+function parseNavbarData(navbarData) {
+    return parseNavbarContainers(navbarData.componentContainer, parseNavbarContents(navbarData.componentContents));
 }
 
 const Navbar = (props) => {
-    // read from JSON file an navbarData object with the corresponding id
-    var navbarData = getJSONwithID(props.navbarJsonUrl, props.id);
 
-    return parseNavbarData(navbarData);
+    return parseNavbarData(getJSONwithID(props.navbarJsonUrl, props.navbarID));
 }
 
 export default Navbar;
