@@ -22,9 +22,7 @@ function parseJumbotronContainers(jumbotronContainer, jumbotronContents) {
 }
 
 function parseJumbotronData(jumbotronData) {
-    var jumbotron = parseJumbotronContainers(jumbotronData.componentContainer, parseJumbotronContents(jumbotronData.componentContents));
-    
-    return jumbotron;
+    return parseJumbotronContainers(jumbotronData.componentContainer, parseJumbotronContents(jumbotronData.componentContents));
 }
 
 const Jumbotron = (props) => {

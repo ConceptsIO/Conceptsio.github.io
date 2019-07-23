@@ -1,6 +1,35 @@
-const Table = (props) => {
-    return ;
+import PropTypes from 'prop-types';
+
+import { getJsonObjectWithID } from "../Utilities/getJsonObject";
+import parseJsonItem from '../Utilities/parseJsonItem';
+
+function parseTableContents(tableContents) {
+    return tableContents.map((item) => {
+        switch(item.itemType) {
+            default:
+                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+        }
+    });
 }
+
+function parseTableContainers(tableContainer, tableContents) {
+    return tableContainer.map((container, index) => {
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, tableContents[index]);
+    });
+}
+
+function parseTableData(tableData) {
+    return parseTableContainers(table.componentContainer, parseTableContents(tableData.componentContents));
+}
+
+const Table = (props) => {
+    return parseTableData(getJsonObjectWithID(props.tableJsonUrl, props.tableID));
+}
+
+Table.propTypes = {
+    tableID : PropTypes.string,
+    tableJsonUrl : PropTypes.string.isRequired
+};
 
 export default Table;
 
