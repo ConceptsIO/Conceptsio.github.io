@@ -84,3 +84,71 @@
         ]
     }
 ]
+[
+    {
+        "componentID": "pricingTable",
+        "componentContainer": [
+           {
+               "containerType": "table",
+               "containerAttributes": {
+                   "className": "table table-bordered"
+               },
+           }
+        ],
+        "componentContents": [
+            {
+                "itemType": "thead",
+                "itemContents": [
+                    {
+                        "itemType": "th",
+                        "itemAttribute": {
+                            "scope": "col",
+                            "style": {
+                                "width": "15%"
+                            } 
+                        },
+                        "itemContents": "Pricing Tier"
+                    },
+                    {
+                        "itemType": "th",
+                        "itemAttribute": {
+                            "scope": "col",
+                            "style": {
+                                "width": "25%"
+                            } 
+                        },
+                        "itemContents": "Script Kiddie"
+                    },
+                    {
+                        "itemType": "th",
+                        "itemAttribute": {
+                            "scope": "col",
+                            "style": {
+                                "width": "25%"
+                            } 
+                        },
+                        "itemContents": "Code Monkey"
+                    },
+                    {
+                        "itemType": "th",
+                        "itemAttribute": {
+                            "scope": "col",
+                            "style": {
+                                "width": "25%"
+                            } 
+                        },
+                        "itemContents": "Web Masters"
+                    }
+                ]
+            },
+            {
+                "itemType": "tbody",
+                "itemContents": [
+                    {
+
+                    }
+                ]
+            }
+        ]
+    }
+]

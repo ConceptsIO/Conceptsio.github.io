@@ -1,6 +1,22 @@
 import React from 'react';
 
 class Table extends React.Component {
+    /*constructor(props) {
+        super(props);
+
+        var tableItems = (function(jsonURL) {
+            var json = null;
+            $.ajax({
+                'url' : jsonURL,
+                'datatype' : 'json',
+                async : false,
+                'success' : function(data) {
+                    json = data;
+                }
+            });
+            return json;
+        })(this.props.tableJSONURL);
+    }*/
     render() {
         return (
             <div className="container" id="PriceTable">
