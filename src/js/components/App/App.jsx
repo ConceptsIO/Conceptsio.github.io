@@ -12,8 +12,9 @@ import Footer from '../Footer/Footer.jsx';
 const App = (props) => {
     return (
         <div>
-            <Navbar id={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
-
+            
+            <Jumbotron jumbotronID={ "mainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />            
+            
         </div>
     );
 }
@@ -21,13 +22,13 @@ const App = (props) => {
 export default App;
 
 /*
-
+<Navbar id={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
 <Jumbotron jumbotronJsonUrl={ props.jumbotronjsonurl } />
 <ContentColumn contentColumnJsonUrl={ props.contentcolumnjsonurl } />
-<Carousel carouselJsonUrl={ props.carouseljsonurl } />
+<Carousel carouselJsonUrl={ props.carouseljsonurl } /> <Carousel carouselID={ "staffCarousel" } carouselJsonUrl={ props.carouseljsonurl } />
 <br />
 <br />
-<Table tableJsonUrl={ props.tablejsonurl } />
+<Table tableJsonUrl={ props.tablejsonurl } /> <Table id={ "pricingTable" } tableJsonUrl={ props.tablejsonurl } />
 <Footer footerJsonUrl={ props.footerjsonurl } />
 
 */

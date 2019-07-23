@@ -1,17 +1,32 @@
-function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents) {
+import React from 'react';
+
+function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataComponentContents) {
+
     // checks the passed in item type to various HTML tags
     switch(dataItemType) {
+        // these tags potentially are containers
         case "div":
-            if(dataItemContents.containerContent) {
-                var content = parseJsonItem(dataItemContents.containerContent.containerType,
-                                             dataItemContents.containerContent.containerAttributes,
-                                             dataItemContents.containerContent.containerContent)
+            if (dataItemContents) {
+                // collect the inner containers through recursive calls
+                var content = parseJsonItem(dataItemContents.containerType,
+                    dataItemContents.containerAttributes,
+                    dataItemContents.containerContent,
+                    dataComponentContents);
                 return <div { ...dataItemAttributes }>{ content }</div>;
             } else {
-                return <div { ...dataItemAttributes }>{ dataItemContents }</div>
+                return <div { ...dataItemAttributes }>{ dataComponentContents }</div>
+            }
+        case "span":
+            if(dataItemContents.containerContent) {
+                // collect the inner containers through recursive calls
+                var content = parseJsonItem(dataItemContents.containerType,
+                                            dataItemContents.containerAttributes,
+                                            dataItemContents.containerContent);
+                return <span { ...dataItemAttributes }>{ content }</span>
+            } else {
+                return <span { ...dataItemAttributes }>{ dataItemContents }</span>
             }
         
-        // header tags
         case "h1":
             return <h1 { ...dataItemAttributes }>{ dataItemContents }</h1>;
         case "h2":
@@ -21,16 +36,6 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents) {
         
         case "p":
             return <p { ...dataItemAttributes }>{ dataItemContents }</p>
-
-        case "span":
-            if(dataItemContents.containerContent) {
-                var content = parseJsonItem(dataItemContents.containerContent.containerType,
-                                            dataItemContents.containerContent.containerAttributes,
-                                            dataItemContents.containerContent.containerContent);
-                return <span { ...dataItemAttributes }>{ content }</span>
-            } else {
-                return <span { ...dataItemAttributes }>{ dataItemContents }</span>
-            }
     }
 }
 

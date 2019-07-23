@@ -3,7 +3,7 @@ import React from 'react';
 import NavbarBrand from './NavbarBrand.jsx';
 import NavbarCollapse from './NavbarCollapse.jsx';
 import NavbarToggler from './NavbarToggler.jsx';
-import { getJSONwithID } from '../Utilities/getJSON.js';
+import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 
 // class Navbar extends React.Component {
     
@@ -39,9 +39,9 @@ import { getJSONwithID } from '../Utilities/getJSON.js';
 // }
 
 function parseNavbarContents(navbarItemType, navbarItemAttribute, navbarItemContents) {
-    switch(navbarItemType) {
-        case ""
-    }
+    // switch(navbarItemType) {
+    //     case ""
+    // }
 }
 
 function parseNavbarContainers(navbarContainerType, navbarContainerAttribute, navbarContainerContents) {

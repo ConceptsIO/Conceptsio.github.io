@@ -15,9 +15,10 @@
                 "itemContents": [
                     {
                         "itemType": "a",
-                        "itemAttributes": [
-
-                        ],
+                        "itemAttributes": {
+                            "className": "navbar-brand",
+                            "href": "#"
+                        },
                         "itemContents": [
                             {
                                 "itemType": "span",
