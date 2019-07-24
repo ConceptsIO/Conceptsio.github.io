@@ -79,7 +79,11 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
         case "h6":
             return <h6 { ...dataItemAttributes }> { dataItemContents } </h6>;
         case "p":
-            return <p { ...dataItemAttributes }>{ dataItemContents }</p>;
+            if (dataItemContents) {
+                return dataItemContents.map((item) => {
+                    return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents, dataComponentContents);
+                });
+            } else { return <p { ...dataItemAttributes }>{ dataItemContents }</p>; }
     }
 }
 
