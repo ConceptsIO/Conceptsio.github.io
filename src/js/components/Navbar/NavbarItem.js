@@ -1,10 +1,11 @@
 import parseJsonItem from "../Utilities/parseJsonItem.js";
+import NavbarDropdown from "./NavbarDropdown.js";
 
 function parseNavbarItemContents(navbarItemContents) {
     return navbarItemContents.map((item) => {
         switch(item.itemType) {
             case "navbarDropdown":
-                break;
+                <NavbarDropdown navbarDropdownData={ item } />
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }

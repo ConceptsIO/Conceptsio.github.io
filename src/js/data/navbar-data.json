@@ -85,11 +85,16 @@
                         ],
                         "componentContents": [
                             {
-                                "itemType": "navbarItem",
-                                "itemAttributes": {
-                                    "className": "nav-item active"
-                                },
-                                "itemContents": [
+                                "componentType": "navbarItem",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "li",
+                                        "containerAttributes": {
+                                            "className": "nav-item"
+                                        }
+                                    }
+                                ],
+                                "componentContents": [
                                     {
                                         "itemType": "a",
                                         "itemAttributes": {
@@ -108,11 +113,16 @@
                                 ]
                             },
                             {
-                                "itemType": "navbarItem",
-                                "itemAttributes": {
-                                    "className": "nav-item"
-                                },
-                                "itemContents": [
+                                "componentType": "navbarItem",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "li",
+                                        "containerAttributes": {
+                                            "className": "nav-item"
+                                        }
+                                    }
+                                ],
+                                "componentContents": [
                                     {
                                         "itemType": "a",
                                         "itemAttributes": {
@@ -123,11 +133,16 @@
                                 ]
                             },
                             {
-                                "itemType": "navbarItem",
-                                "itemAttributes": {
-                                    "className": "nav-item"
-                                },
-                                "itemContents": [
+                                "componentType": "navbarItem",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "li",
+                                        "containerAttributes": {
+                                            "className": "nav-item"
+                                        }
+                                    }
+                                ],
+                                "componentContents": [
                                     {
                                         "itemType": "a",
                                         "itemAttributes": {
@@ -139,10 +154,15 @@
                             },
                             {
                                 "componentType": "navbarItem",
-                                "componentContainers": {
-
-                                },
-                                "itemContents": [
+                                "componentContainers": [
+                                    {
+                                        "containerType": "li",
+                                        "containerAttributes": {
+                                            "className": "nav-item"
+                                        }
+                                    }
+                                ],
+                                "componentContents": [
                                     {
                                         "componentType": "navbarDropdown",
                                         "componentContainers": [

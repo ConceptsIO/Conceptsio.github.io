@@ -4,7 +4,7 @@ function parseNavbarItemsContents(navbarItemsContents) {
     return navbarItemsContents.map((item) => {
         switch(item.itemType) {
             case "navbarItem":
-                return <NavbarItem navbarItem={ item }/>;
+                return <NavbarItem navbarItemData={ item }/>;
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }

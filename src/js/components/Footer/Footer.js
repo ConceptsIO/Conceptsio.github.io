@@ -1,4 +1,38 @@
-import React from 'react';
+import PropTypes from 'prop-types';
+import { getJsonObjectWithID } from '../Utilities/getJsonObject';
+import parseJsonItem from '../Utilities/parseJsonItem';
+
+function parseFooterContents(footerContents) {
+    return footerContents.map((item) => {
+        switch(item.itemType) {
+            default:
+                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+        }
+    });
+}
+
+function parseFooterContainers(footerContainer, tableContents) {
+    return footerContainer.map((container) => {
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, tableContents);
+    });
+}
+
+function parseFooterData(footerData) {
+    return parseFooterContainers(footer.componentContainer, parseFooterContents(footerData.componentContents));
+}
+
+const Footer = (props) => {
+    return parseFooterData(getJsonObjectWithID(props.footerJsonUrl, props.footerID));
+}
+
+Footer.propTypes = {
+    footerID : PropTypes.string,
+    footerJsonUrl : PropTypes.string.isRequired
+};
+
+export default Footer;
+
+/* import React from 'react';
 
 class Footer extends React.Component {
     render() {
@@ -26,4 +60,4 @@ class Footer extends React.Component {
     }
 }
 
-export default Footer;
+export default Footer; */
