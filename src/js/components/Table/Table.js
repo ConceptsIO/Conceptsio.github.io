@@ -19,7 +19,7 @@ function parseTableContainers(tableContainer, tableContents) {
 }
 
 function parseTableData(tableData) {
-    return parseTableContainers(table.componentContainer, parseTableContents(tableData.componentContents));
+    return parseTableContainers(tableData.componentContainer, parseTableContents(tableData.componentContents));
 }
 
 const Table = (props) => {
