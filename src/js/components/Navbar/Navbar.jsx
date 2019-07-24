@@ -13,29 +13,29 @@ function parseNavbarContents(navbarContents) {
             case "navbarBrand":
                 return <NavbarBrand navbarBrandData={ item } />;
             case "navbarCollapse":
-                return <NavbarCollapse navbarCollapse={ item } />;
+                return <NavbarCollapse navbarCollapseData={ item } />;
             case "navbarToggler":
-                return <NavbarToggler navbarToggler={ item } />;
+                return <NavbarToggler navbarTogglerData={ item } />;
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }
     });
 }
 
-function parseNavbarContainers(navbarContainer, navbarContents) {
-    return navbarContainer.map((container) => {
+function parseNavbarContainers(navbarContainers, navbarContents) {
+    return navbarContainers.map((container) => {
         return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarContents);
     }); 
 }
 
 function parseNavbarData(navbarData) {
-    var navbar = parseNavbarContainers(navbarData.componentContainer, parseNavbarContents(navbarData.componentContents));
-    console.log(navbar);
-    return navbar;
+    return parseNavbarContainers(navbarData.componentContainers, parseNavbarContents(navbarData.componentContents));
 }
 
 const Navbar = (props) => {
-    return parseNavbarData(getJsonObjectWithID(props.navbarJsonUrl, props.navbarID));
+    var navbar = parseNavbarData(getJsonObjectWithID(props.navbarJsonUrl, props.navbarID));
+    
+    return navbar;
 }
 
 export default Navbar;

@@ -1,7 +1,7 @@
 [
     {
         "componentID": "mainPageNavbar",
-        "componentContainer": [
+        "componentContainers": [
             {
                 "containerType": "nav",
                 "containerAttributes": {
@@ -12,33 +12,33 @@
         "componentContents": [
             {
                 "componentType": "navbarBrand",
-                "componentContents": [
+                "componentContainers": [
                     {
-                        "itemType": "a",
-                        "itemAttributes": {
+                        "containerType": "a",
+                        "containerAttributes": {
                             "className": "navbar-brand",
                             "href": "#"
                         },
-                        "itemContents": [
+                        "containerContents": [
                             {
-                                "itemType": "span",
-                                "itemContents": [
-                                    {
-                                        "itemType": "img",
-                                        "itemAttributes": {
-                                            "src": "../../../../../src/assets/64x64profile.png",
-                                            "alt": "Foxicon"
-                                        }
-                                    }
-                                ]
+                                "containerType": "span"
                             }
                         ]
                     } 
+                ],
+                "componentContents": [
+                    {
+                        "itemType": "img",
+                        "itemAttributes": {
+                            "src": "../../../../../src/assets/64x64profile.png",
+                            "alt": "Foxicon"
+                        }
+                    }
                 ]
             },
             {
                 "componentType": "navbarToggler",
-                "componentContainer": [
+                "componentContainers": [
                     {
                         "containerType": "button",
                         "containerAttributes": {
@@ -63,7 +63,7 @@
             },
             {
                 "componentType": "navbarCollapse",
-                "componentContainer": [
+                "componentContainers": [
                     {
                         "containerType": "div",
                         "containerAttributes": {
@@ -75,7 +75,7 @@
                 "componentContents": [
                     {
                         "componentType": "navbarItems",
-                        "componentContainer": [
+                        "componentContainers": [
                             {
                                 "containerType": "ul",
                                 "containerAttributes": {
@@ -98,17 +98,10 @@
                                     {
                                         "itemType": "a",
                                         "itemAttributes": {
+                                            "className": "nav-link",
                                             "href": "#"
                                         },
-                                        "itemContents": [
-                                            "Home",
-                                            {
-                                                "itemType": "span",
-                                                "itemAttributes": {
-                                                    "className": "sr-only"
-                                                }
-                                            }
-                                        ]
+                                        "itemContents": "Home"
                                     }
                                 ]
                             },
@@ -126,6 +119,7 @@
                                     {
                                         "itemType": "a",
                                         "itemAttributes": {
+                                            "className": "nav-link",
                                             "href": "#aboutUs"
                                         },
                                         "itemContents": "About Us"
@@ -146,6 +140,7 @@
                                     {
                                         "itemType": "a",
                                         "itemAttributes": {
+                                            "className": "nav-link",
                                             "href": "#PriceTable"
                                         },
                                         "itemContents": "Pricing"
@@ -158,25 +153,33 @@
                                     {
                                         "containerType": "li",
                                         "containerAttributes": {
-                                            "className": "nav-item"
+                                            "className": "nav-item dropdown"
                                         }
                                     }
                                 ],
                                 "componentContents": [
                                     {
+                                        "itemType": "a",
+                                        "itemAttributes": {
+                                            "className": "nav-link dropdown-toggle",
+                                            "aria-expanded": "false",
+                                            "aria-haspopup": "true",
+                                            "data-toggle": "dropdown",
+                                            "href": "#",
+                                            "id": "navbarDropdown",
+                                            "role": "button"
+                                        },
+                                        "itemContents": "Portfolio"
+                                    },
+                                    {
                                         "componentType": "navbarDropdown",
                                         "componentContainers": [
                                             {
-                                                "containerType": "a",
+                                                "containerType": "div",
                                                 "containerAttributes": {
-                                                    "ariaExpanded": "false",
-                                                    "ariaHasPopup": "true",
-                                                    "dataToggle": "dropdown",
-                                                    "href": "#",
-                                                    "id": "navbarDropdown",
-                                                    "role": "button"
-                                                },
-                                                "containerContents": "Portfolio"
+                                                    "className": "dropdown-menu",
+                                                    "aria-labelledby": "navbarDropdown"
+                                                }
                                             }
                                         ],
                                         "componentContents": [
@@ -224,7 +227,7 @@
                             },
                             {
                                 "componentType": "navbarItem",
-                                "componentContainer": [
+                                "componentContainers": [
                                     {
                                         "containerType": "li",
                                         "containerAttributes": {
@@ -236,6 +239,7 @@
                                     {
                                         "itemType": "a",
                                         "itemAttributes": {
+                                            "className": "nav-link",
                                             "href": "#contactUs"
                                         },
                                         "itemContents": "Contact Us"

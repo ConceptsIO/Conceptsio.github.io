@@ -23,15 +23,29 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
                 return <div { ...dataItemAttributes }>{ dataComponentContents }</div>
             }
         case "span":
-            if(dataItemContents.containerContents) {
-                // collect the inner containers through recursive calls
-                var content = parseJsonItem(dataItemContents.containerType,
+            if(dataItemContents) {
+                if(dataItemContents.containerContents) {
+                    // collect the inner containers through recursive calls
+                    var content = parseJsonItem(dataItemContents.containerType,
+                                                dataItemContents.containerAttributes,
+                                                dataItemContents.containerContents);
+                    return <span { ...dataItemAttributes }>{ content }</span>
+                }
+            }
+            else {
+                return <span { ...dataItemAttributes }>{ dataComponentContents }</span>
+            }
+        case "ul":
+            return <ul { ...dataItemAttributes }>{ dataComponentContents }</ul>;
+        case "li":
+            if(dataItemContents) {
+                var contents = parseJsonItem(dataItemContents.containerType,
                                             dataItemContents.containerAttributes,
                                             dataItemContents.containerContents);
-                return <span { ...dataItemAttributes }>{ content }</span>
-            } else {
-                return <span { ...dataItemAttributes }>{ dataItemContents }</span>
+                return <li { ...dataItemAttributes }>{ contents }</li>
             }
+            return <li { ...dataItemAttributes }>{ dataComponentContents }</li>
+
         case "table":
             return <table { ...dataItemAttributes }>{ dataItemContents }</table>;
         case "thead":
@@ -66,8 +80,23 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
             return <nav { ...dataItemAttributes }>{ dataComponentContents }</nav>
 
         case "a":
-            return <a { ...dataItemAttributes }>{ dataItemContents }</a>;
-
+            if(dataItemContents) {
+                if(typeof(dataItemContents) === "object") {
+                    var content = dataItemContents.map((container) => {
+                        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, dataComponentContents);
+                    });
+                    return <a { ...dataItemAttributes }>{ content }</a>;
+                } else {
+                    return <a { ...dataItemAttributes }>{ dataItemContents }</a>;
+                }
+            } else {
+                return <a { ...dataItemAttributes }>{ dataComponentContents }</a>;
+            }
+        case "button":
+            return <button { ...dataItemAttributes }>{ dataComponentContents }</button>
+        case "img":
+            return <img { ...dataItemAttributes }>{ dataItemContents }</img>
+            
         case "h1":
             return <h1 { ...dataItemAttributes }>{ dataItemContents }</h1>;
         case "h2":

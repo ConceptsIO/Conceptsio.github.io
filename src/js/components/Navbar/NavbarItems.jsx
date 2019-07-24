@@ -1,8 +1,12 @@
+import React from 'react';
+
+import NavbarItem from './NavbarItem.jsx';
+
 import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
 function parseNavbarItemsContents(navbarItemsContents) {
     return navbarItemsContents.map((item) => {
-        switch(item.itemType) {
+        switch(item.componentType) {
             case "navbarItem":
                 return <NavbarItem navbarItemData={ item }/>;
             default:

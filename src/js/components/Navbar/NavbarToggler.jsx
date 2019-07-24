@@ -13,7 +13,11 @@ function parseNavbarTogglerContainers(navbarTogglerContainers, navbarTogglerCont
 }
 
 function parseNavbarTogglerData(navbarTogglerData) {
-    return parseNavbarTogglerContainers(navbarTogglerData.componentContainer, parseNavbarTogglerContents(navbarTogglerData.componentContents));
+    if(navbarTogglerData.componentContainers) {
+        return parseNavbarTogglerContainers(navbarTogglerData.componentContainers, parseNavbarTogglerContents(navbarTogglerData.componentContents));
+    } else {
+        return parseNavbarTogglerContents(navbarTogglerData.componentContents);
+    }
 }
 
 const NavbarToggler = (props) => {
