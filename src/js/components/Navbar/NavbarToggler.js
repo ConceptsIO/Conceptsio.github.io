@@ -1,7 +1,23 @@
-import React from 'react';
+import parseJsonItem from "../Utilities/parseJsonItem.js";
+
+function parseNavbarTogglerContents(navbarTogglerContents) {
+    return navbarTogglerContents.map((item) => {
+        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+    });
+}
+
+function parseNavbarTogglerContainers(navbarTogglerContainers, navbarTogglerContents) {
+    return navbarTogglerContainers.map((container) => {
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarTogglerContents);
+    });
+}
+
+function parseNavbarTogglerData(navbarTogglerData) {
+    return parseNavbarTogglerContainers(navbarTogglerData.componentContainer, parseNavbarTogglerContents(navbarTogglerData.componentContents));
+}
 
 const NavbarToggler = (props) => {
-    return ;
+    return parseNavbarTogglerData(props.navbarTogglerData);
 }
 
 export default NavbarToggler;

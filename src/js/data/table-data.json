@@ -91,22 +91,8 @@
                         "containerType": "tbody",
                         "containerContents": [
                             {
-                                "containerType": "tr list"
-                            },
-                            {
-                                "containerType": "tr list"
-                            },
-                            {
-                                "containerType": "tr list"
-                            },
-                            {
-                                "containerType": "tr list"
-                            },
-                            {
-                                "containerType": "tr list"
-                            },
-                            {
-                                "containerType": "tr list"
+                                "containerType": "tr list",
+                                "numOfContainers": "6"
                             }
                         ]
                     }

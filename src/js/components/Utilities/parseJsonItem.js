@@ -1,7 +1,3 @@
-import React from 'react';
-import Table from '../Table/Table';
-import { threadId } from 'worker_threads';
-
 function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataComponentContents) {
 
     // checks the passed in item type to various HTML tags
@@ -83,7 +79,9 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
                 return dataItemContents.map((item) => {
                     return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents, dataComponentContents);
                 });
-            } else { return <p { ...dataItemAttributes }>{ dataItemContents }</p>; }
+            } else { 
+                return <p { ...dataItemAttributes }>{ dataItemContents }</p>; 
+            }
     }
 }
 

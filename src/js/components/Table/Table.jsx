@@ -1,11 +1,18 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import { getJsonObjectWithID } from "../Utilities/getJsonObject";
 import parseJsonItem from '../Utilities/parseJsonItem';
+import TableHead from './TableHead.js';
+import TableBody from './TableBody.js';
 
 function parseTableContents(tableContents) {
     return tableContents.map((item) => {
         switch(item.itemType) {
+            case "tableHead":
+                <TableHead tableHeadData={ item } />
+            case "tableBody":
+                <TableBody tableBodyData={ item } />
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }
