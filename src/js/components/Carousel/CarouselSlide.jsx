@@ -1,4 +1,4 @@
-import Card from '../Card/Card.js';
+import Card from '../Card/Card.jsx';
 
 const CarouselSlide = (props) => {
     

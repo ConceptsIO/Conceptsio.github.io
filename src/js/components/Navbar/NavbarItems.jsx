@@ -1,4 +1,4 @@
-import parseJsonItem from '../Utilities/parseJsonItem.js';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
 function parseNavbarItemsContents(navbarItemsContents) {
     return navbarItemsContents.map((item) => {

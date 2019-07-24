@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavbarItems from './NavbarItems.js';
+import NavbarItems from './NavbarItems.jsx';
 
 const NavbarCollapse = (props) => {
     return (

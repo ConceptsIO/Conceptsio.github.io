@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-import { getJsonObjectWithID } from "../Utilities/getJsonObject";
-import parseJsonItem from '../Utilities/parseJsonItem';
+import { getJsonObjectWithID } from "../Utilities/getJsonObject.js";
+import parseJsonItem from '../Utilities/parseJsonItem.js';
 
 function parseTableContents(tableContents) {
     return tableContents.map((item) => {

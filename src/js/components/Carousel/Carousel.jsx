@@ -1,10 +1,10 @@
 import React from 'react';
 
-import CarouselControls from './CarouselControls.js';
-import CarouselSlide from './CarouselSlide.js';
+import CarouselControls from './CarouselControls.jsx';
+import CarouselSlide from './CarouselSlide.jsx';
 
 import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
-import parseJsonItem from '../Utilities/parseJsonItem.js';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
 function parseCarouselContents(carouselComponentContents) {
     return carouselComponentContents.map((item) => {

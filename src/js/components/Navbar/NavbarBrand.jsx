@@ -1,4 +1,4 @@
-import parseJsonItem from '../Utilities/parseJsonItem.js';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
 function parseNavbarBrandContents(navbarBrandContents) {
     return navbarBrandContents.map((item) => {
@@ -13,10 +13,13 @@ function parseNavbarBrandContainers(navbarBrandContainers, navbarBrandContents) 
 }
 
 function parseNavbarBrandData(navbarBrandData) {
-    return parseNavbarBrandContainers(navbarBrandData.componentContainer, parseNavbarBrandContents(navbarBrandData.componentContents));
+    var navbarBrand = parseNavbarBrandContainers(navbarBrandData.componentContainer, parseNavbarBrandContents(navbarBrandData.componentContents));
+    console.log(navbarBrand);
+    return navbarBrand;
 }
 
 const NavbarBrand = (props) => {
+    console.log(props);
     return parseNavbarBrandData(props.navbarBrandData);
 }
 

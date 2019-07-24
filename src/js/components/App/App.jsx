@@ -2,17 +2,17 @@ import React from 'react';
 
 // Provide all the imports from the various React Components that are to be used
 // import React Component from "./pathto/ReactComponent.jsx";
-import Navbar from '../Navbar/Navbar.js';
-import Jumbotron from '../Jumbotron/Jumbotron.js';
-import Carousel from '../Carousel/Carousel.js';
-import ContentColumn from '../ContentColumn/ContentColumn.js';
+import Navbar from '../Navbar/Navbar.jsx';
+import Jumbotron from '../Jumbotron/Jumbotron.jsx';
+import Carousel from '../Carousel/Carousel.jsx';
+import ContentColumn from '../ContentColumn/ContentColumn.jsx';
 import Table from '../Table/Table.js';
-import Footer from '../Footer/Footer.js';
+import Footer from '../Footer/Footer.jsx';
 
 const App = (props) => {
     return (
         <div>
-            <Navbar id={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
+            <Navbar navbarID={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
             <Jumbotron jumbotronID={ "mainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />            
             
         </div>

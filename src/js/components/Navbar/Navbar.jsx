@@ -1,22 +1,25 @@
-import NavbarBrand from './NavbarBrand.js';
-import NavbarCollapse from './NavbarCollapse.js';
-import NavbarToggler from './NavbarToggler.js';
+import React from 'react';
+
+import NavbarBrand from './NavbarBrand.jsx';
+import NavbarCollapse from './NavbarCollapse.jsx';
+import NavbarToggler from './NavbarToggler.jsx';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
+
 import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
-import parseJsonItem from '../Utilities/parseJsonItem.js';
 
 function parseNavbarContents(navbarContents) {
     return navbarContents.map((item) => {
-        switch(item.itemType) {
+        switch(item.componentType) {
             case "navbarBrand":
-                return <NavbarBrand navbarBrandAttributes={ item.itemAttributes } navbarBrandContents={ item.itemContents } />;
+                return <NavbarBrand navbarBrandData={ item } />;
             case "navbarCollapse":
-                return <NavbarCollapse navbarCollapseAttributes={ item.itemAttributes } navbarCollapseContents={ item.itemContents } />;
+                return <NavbarCollapse navbarCollapse={ item } />;
             case "navbarToggler":
-                return <NavbarToggler navbarTogglerAttributes={ item.itemAttributes } navbarTogglerContents={ item.itemContents } />;
+                return <NavbarToggler navbarToggler={ item } />;
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }
-    })
+    });
 }
 
 function parseNavbarContainers(navbarContainer, navbarContents) {
@@ -26,7 +29,9 @@ function parseNavbarContainers(navbarContainer, navbarContents) {
 }
 
 function parseNavbarData(navbarData) {
-    return parseNavbarContainers(navbarData.componentContainer, parseNavbarContents(navbarData.componentContents));
+    var navbar = parseNavbarContainers(navbarData.componentContainer, parseNavbarContents(navbarData.componentContents));
+    console.log(navbar);
+    return navbar;
 }
 
 const Navbar = (props) => {

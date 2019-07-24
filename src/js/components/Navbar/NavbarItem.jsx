@@ -1,5 +1,6 @@
-import parseJsonItem from "../Utilities/parseJsonItem.js";
-import NavbarDropdown from "./NavbarDropdown.js";
+import NavbarDropdown from "./NavbarDropdown.jsx";
+
+import parseJsonItem from "../Utilities/parseJsonItem.jsx";
 
 function parseNavbarItemContents(navbarItemContents) {
     return navbarItemContents.map((item) => {

@@ -1,6 +1,4 @@
 import React from 'react';
-import Table from '../Table/Table';
-import { threadId } from 'worker_threads';
 
 function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataComponentContents) {
 
@@ -80,9 +78,11 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
             return <h6 { ...dataItemAttributes }> { dataItemContents } </h6>;
         case "p":
             if (dataItemContents) {
-                return dataItemContents.map((item) => {
-                    return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents, dataComponentContents);
-                });
+                if(typeof(dataItemContents) === "object") {
+                    return dataItemContents.map((item) => {
+                        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents, dataComponentContents);
+                    });
+                }
             } else { 
                 return <p { ...dataItemAttributes }>{ dataItemContents }</p>; 
             }
