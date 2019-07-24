@@ -12,34 +12,33 @@ function parseCardData(cardData) {
 
     Ex:
         {
-            "itemType": "card active",
-            "itemContent": {
-                "cardContainer": [
-                    {
-                        "containerType": "div",
-                        "containerProperties": {
-                            "className": "card",
-                            "style": {
-                                "backgroundColor": "lightseagreen",
-                                "display": "block",
-                                "height": "auto",
-                                "margin": "auto",
-                                "width": "50%"
-                            }
+            "componentType": "card active",
+            "componentContainer": [
+                {
+                    "containerType": "div",
+                    "containerProperties": {
+                        "className": "card",
+                        "style": {
+                            "backgroundColor": "lightseagreen",
+                            "display": "block",
+                            "height": "auto",
+                            "margin": "auto",
+                            "width": "50%"
                         }
                     }
-                ],
-                "cardContents" : {
-                    "cardHeader": "Card title",
-                    "cardBody": {
-                        "cardImg": "../../../src/url.js",
-                        "cardText": "Blah Blah Blah"
-                    },
-                    "cardFooter": "My email is blah@gmail.com"   
                 }
+            ]
+            "componentContent": {
+                "cardHeader": "Card title",
+                "cardBody": {
+                    "cardImg": "../../../src/url.js",
+                    "cardText": "Blah Blah Blah"
+                },
+                "cardFooter": "My email is blah@gmail.com"
             }
         }
 */
+
 const Card = (props) => {
     return parseCardData(props.itemContents);
 }

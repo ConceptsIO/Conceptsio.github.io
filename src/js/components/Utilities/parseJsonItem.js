@@ -80,6 +80,9 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
             return <h6 { ...dataItemAttributes }> { dataItemContents } </h6>;
         case "p":
             return <p { ...dataItemAttributes }>{ dataItemContents }</p>;
+
+        default:
+            
     }
 }
 
