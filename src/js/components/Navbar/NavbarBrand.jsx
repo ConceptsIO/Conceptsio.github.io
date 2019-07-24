@@ -7,19 +7,17 @@ function parseNavbarBrandContents(navbarBrandContents) {
 }
 
 function parseNavbarBrandContainers(navbarBrandContainers, navbarBrandContents) {
-    return navbarBrandContainers.map((container) => {
+    var container = navbarBrandContainers.map((container) => {
         return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarBrandContents);
     });
+    return container;
 }
 
 function parseNavbarBrandData(navbarBrandData) {
-    var navbarBrand = parseNavbarBrandContainers(navbarBrandData.componentContainer, parseNavbarBrandContents(navbarBrandData.componentContents));
-    console.log(navbarBrand);
-    return navbarBrand;
+    return parseNavbarBrandContainers(navbarBrandData.componentContainers, parseNavbarBrandContents(navbarBrandData.componentContents));
 }
 
 const NavbarBrand = (props) => {
-    console.log(props);
     return parseNavbarBrandData(props.navbarBrandData);
 }
 

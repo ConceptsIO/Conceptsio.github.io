@@ -1,12 +1,14 @@
-import NavbarDropdown from "./NavbarDropdown.jsx";
+import React from 'react';
 
-import parseJsonItem from "../Utilities/parseJsonItem.jsx";
+import NavbarDropdown from './NavbarDropdown.jsx';
+
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
 function parseNavbarItemContents(navbarItemContents) {
     return navbarItemContents.map((item) => {
-        switch(item.itemType) {
+        switch(item.componentType) {
             case "navbarDropdown":
-                <NavbarDropdown navbarDropdownData={ item } />
+                return <NavbarDropdown navbarDropdownData={ item } />
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }
@@ -15,7 +17,7 @@ function parseNavbarItemContents(navbarItemContents) {
 
 function parseNavbarItemContainers(navbarItemContainers, navbarItemContents) {
     return navbarItemContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttribute, container.containerContents, navbarItemContents);
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarItemContents);
     });
 }
 

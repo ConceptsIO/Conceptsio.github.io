@@ -44,6 +44,7 @@
             {
                 "itemType": "p",
                 "itemContents": [
+                    "Shoot me an email and let's get the ball rolling: ",
                     {
                         "itemType": "span",
                         "itemContents": [
@@ -75,18 +76,14 @@
                     {
                         "itemType": "p",
                         "itemAttributes": {
-                            "style": {
-                                "className": "text-muted"
-                            }
+                            "className": "text-muted"
                         },
-                        "itemContents": "&copy; 2019, ConceptsIO Solutions LLC"
+                        "itemContents": "Copyright 2019, ConceptsIO Solutions LLC"
                     },
                     {
                         "itemType": "p",
                         "itemAttributes": {
-                            "style": {
-                                "className": "text-muted"
-                            }
+                            "className": "text-muted"
                         },
                         "itemContents": "For all your Website and Ecommerce Solutions"
                     }
