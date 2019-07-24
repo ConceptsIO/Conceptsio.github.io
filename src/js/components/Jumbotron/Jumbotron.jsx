@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
-import parseJsonItem from '../Utilities/parseJsonItem.js';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
 function parseJumbotronContents(jumbotronContents) {
     // return a list of items which make up the contents of a jumbotron

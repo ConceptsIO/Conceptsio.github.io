@@ -6,7 +6,7 @@ import Navbar from '../Navbar/Navbar.jsx';
 import Jumbotron from '../Jumbotron/Jumbotron.jsx';
 import Carousel from '../Carousel/Carousel.jsx';
 import ContentColumn from '../ContentColumn/ContentColumn.jsx';
-import Table from '../Table/Table.js';
+import Table from '../Table/Table.jsx';
 import Footer from '../Footer/Footer.jsx';
 
 const App = (props) => {

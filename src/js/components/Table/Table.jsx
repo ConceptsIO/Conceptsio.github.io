@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import { getJsonObjectWithID } from "../Utilities/getJsonObject";
-import parseJsonItem from '../Utilities/parseJsonItem';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 import TableHead from './TableHead.jsx';
 import TableBody from './TableBody.jsx';
 

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { getJsonObjectWithID } from '../Utilities/getJsonObject';
-import parseJsonItem from '../Utilities/parseJsonItem';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
 function parseFooterContents(footerContents) {
     return footerContents.map((item) => {
