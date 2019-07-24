@@ -12,9 +12,7 @@ import Footer from '../Footer/Footer.jsx';
 const App = (props) => {
     return (
         <div>
-            <Navbar navbarID={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
-            <Jumbotron jumbotronID={ "mainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />            
-            
+            <Footer footerID={ "footer" } footerJsonUrl={ props.footerjsonurl } />
         </div>
     );
 }

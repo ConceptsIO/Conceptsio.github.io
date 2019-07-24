@@ -11,8 +11,8 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
         case "div":
             if (dataItemContents) {
                 var containerContents = [];
-                for (var i = 0; i < containerContents.length; ++i) {
-                    if (containerContents[i].itemType) {
+                for (var i = 0; i < dataItemContents.length; ++i) {
+                    if (dataItemContents[i].itemType) {
                         containerContents.push(parseJsonItem(dataItemContents[i].itemType, dataItemContents[i].itemAttributes, dataItemContents[i].itemContents));
                     } else {
                         containerContents.push(parseJsonItem(dataItemContents[i].containerType, dataItemContents[i].containerAttributes, dataItemContents[i].containerContents, dataComponentContents));
@@ -29,7 +29,13 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
                                             dataItemContents.containerAttributes,
                                             dataItemContents.containerContents);
                 return <span { ...dataItemAttributes }>{ content }</span>
-            } else {
+            } else if (typeof(dataItemContents) === "object"){
+                var content = dataItemContents.map((item) => {
+                    return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+                });
+                return <span { ...dataItemAttributes }>{ content }</span>;
+            }
+            else {
                 return <span { ...dataItemAttributes }>{ dataItemContents }</span>
             }
         case "table":
@@ -77,14 +83,21 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
         case "h6":
             return <h6 { ...dataItemAttributes }> { dataItemContents } </h6>;
         case "p":
-            if (dataItemContents) {
-                if(typeof(dataItemContents) === "object") {
-                    return dataItemContents.map((item) => {
-                        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents, dataComponentContents);
-                    });
-                }
-            } else { 
+            console.log(dataItemContents);
+            if(typeof(dataItemContents) === "object") {
+                return dataItemContents.map((item) => {
+                    return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents, dataComponentContents);
+                });
+            }
+            else { 
                 return <p { ...dataItemAttributes }>{ dataItemContents }</p>; 
+            }
+        case "footer":
+            if (typeof(dataItemContents) === "object") {
+                var contents = dataItemContents.map((container) => {
+                    return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, dataComponentContents);
+                });
+                return <footer { ...dataItemAttributes }>{ contents }</footer>;
             }
     }
 }

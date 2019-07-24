@@ -12,94 +12,94 @@
                         "width": "100%"
                     }
                 },
-                "containerComponents": [
+                "containerContents": [
                     {
                         "containerType": "div",
                         "containerAttributes": {
                             "className": "container"
-                        }
+                        },
+                        "containerContents": [
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "id": "contactUs"
+                                }
+                            }
+                        ]
                     }
                 ]
             }
         ],
         "componentContents": [
             {
+                "itemType": "h2",
+                "itemContents": "Contact Us"
+            },
+            {
                 "itemType": "br"
             },
             {
-                "containerType": "div",
-                "containerAttributes": {
-                    "id": "contactUs"
+                "itemType": "p",
+                "itemContents": [
+                    {
+                        "itemType": "span",
+                        "itemContents": [
+                            {
+                                "itemType": "a",
+                                "itemAttributes": {
+                                    "href": "mailto:george.le@conceptsio.com"
+                                },
+                                "itemContents": "George.Le@conceptsio.com"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "div",
+                "itemAttributes": {
+                    "style": {
+                        "textAlign": "center"
+                    }
                 },
-                "containerContents": [
+                "itemContents": [
                     {
-                        "itemType": "h2",
-                        "itemContents": "Contact Us"
-                    },
-                    {
-                        "itemType": "br"
+                        "itemType": "p",
+                        "itemAttributes": {
+                            "style": {
+                                "className": "text-muted"
+                            }
+                        },
+                        "itemContents": "&copy; 2019, ConceptsIO Solutions LLC"
                     },
                     {
                         "itemType": "p",
-                        "itemContents": [
-                            {
-                                "itemType": "span",
-                                "itemContents": [
-                                    {
-                                        "itemType": "a",
-                                        "itemAttributes": {
-                                            "href": "mailto:george.le@conceptsio.com"
-                                        },
-                                        "itemContents": "George.Le@conceptsio.com"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "itemType": "br"
-                    },
-                    {
-                        "itemType": "br"
-                    },
-                    {
-                        "itemType": "div",
                         "itemAttributes": {
                             "style": {
-                                "textAlign": "center"
+                                "className": "text-muted"
                             }
                         },
-                        "itemContents": [
-                            {
-                                "itemType": "p",
-                                "itemAttributes": {
-                                    "style": {
-                                        "className": "text-muted"
-                                    }
-                                },
-                                "itemContents": "&copy; 2019, ConceptsIO Solutions LLC"
-                            },
-                            {
-                                "itemType": "p",
-                                "itemAttributes": {
-                                    "style": {
-                                        "className": "text-muted"
-                                    }
-                                },
-                                "itemContents": "For all your Website and Ecommerce Solutions"
-                            }
-                        ]
-                    },
-                    {
-                        "itemType": "br"
-                    },
-                    {
-                        "itemType": "br"
-                    },
-                    {
-                        "itemType": "br"
+                        "itemContents": "For all your Website and Ecommerce Solutions"
                     }
                 ]
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "br"
             }
         ]
     }

@@ -18,7 +18,7 @@ function parseFooterContainers(footerContainer, footerContents) {
 }
 
 function parseFooterData(footerData) {
-    return parseFooterContainers(footerData.componentContainer, parseFooterContents(footerData.componentContents));
+    return parseFooterContainers(footerData.componentContainers, parseFooterContents(footerData.componentContents));
 }
 
 const Footer = (props) => {
