@@ -11,14 +11,14 @@ function parseFooterContents(footerContents) {
     });
 }
 
-function parseFooterContainers(footerContainer, tableContents) {
+function parseFooterContainers(footerContainer, footerContents) {
     return footerContainer.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, tableContents);
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, footerContents);
     });
 }
 
 function parseFooterData(footerData) {
-    return parseFooterContainers(footer.componentContainer, parseFooterContents(footerData.componentContents));
+    return parseFooterContainers(footerData.componentContainer, parseFooterContents(footerData.componentContents));
 }
 
 const Footer = (props) => {

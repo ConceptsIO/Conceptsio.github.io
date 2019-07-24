@@ -1,4 +1,4 @@
-import parseJsonItem from "../Utilities/parseJsonItem.js";
+import parseJsonItem from "../Utilities/parseJsonItem.jsx";
 
 function parseTableBodyContents(tableBodyContents) {
     return tableBodyContents.map((item) => {
