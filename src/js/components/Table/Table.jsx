@@ -19,14 +19,15 @@ function parseTableContents(tableContents) {
     });
 }
 
-function parseTableContainers(tableContainer, tableContents) {
-    return tableContainer.map((container, index) => {
+function parseTableContainers(tableContainers, tableContents) {
+    return tableContainers.map((container, index) => {
         return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, tableContents[index]);
     });
 }
 
 function parseTableData(tableData) {
-    return parseTableContainers(tableData.componentContainer, parseTableContents(tableData.componentContents));
+    console.log(tableData);
+    return parseTableContainers(tableData.componentContainers, parseTableContents(tableData.componentContents));
 }
 
 const Table = (props) => {

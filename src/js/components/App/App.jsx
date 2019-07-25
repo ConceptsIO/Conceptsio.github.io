@@ -14,9 +14,9 @@ const App = (props) => {
     return (
         
         <div>         
-            <Navbar navbarID={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
-            <Jumbotron jumbotronID={ "mainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />
-            <Footer footerID={ "footer" } footerJsonUrl={ props.footerjsonurl } />
+            
+            <Table tableID={ "priceTable" } tableJsonUrl={ props.tablejsonurl } />            
+            
         </div>
     );
 }
@@ -25,13 +25,13 @@ export default App;
 
 /*
 <Navbar navbarID={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
-<Jumbotron jumbotronJsonUrl={ props.jumbotronjsonurl } />
+            <Jumbotron jumbotronID={ "mainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />
 <ContentColumn contentColumnJsonUrl={ props.contentcolumnjsonurl } />
 <Carousel carouselJsonUrl={ props.carouseljsonurl } /> <Carousel carouselID={ "staffCarousel" } carouselJsonUrl={ props.carouseljsonurl } />
 <br />
 <br />
-<Table tableJsonUrl={ props.tablejsonurl } /> <Table id={ "pricingTable" } tableJsonUrl={ props.tablejsonurl } />
-<Footer footerJsonUrl={ props.footerjsonurl } />
+<Table id={ "pricingTable" } tableJsonUrl={ props.tablejsonurl } />
+<Footer footerID={ "footer" } footerJsonUrl={ props.footerjsonurl } />
 
 */
 
