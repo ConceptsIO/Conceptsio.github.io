@@ -37,8 +37,10 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
                         return <span { ...dataItemAttributes }>{ content }</span>;
                     }
                 }
-                else {
+                else if(dataItemContents) {
                     return <span { ...dataItemAttributes }>{ dataItemContents }</span>;
+                } else {
+                    return <span { ...dataItemAttributes }>{ dataComponentContents }</span>;
                 }
         case "ul":
             return <ul { ...dataItemAttributes }>{ dataComponentContents }</ul>;

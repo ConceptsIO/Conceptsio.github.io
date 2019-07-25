@@ -2,7 +2,10 @@ import parseJsonItem from "../Utilities/parseJsonItem.jsx";
 
 function parseTableHeadContents(tableHeadContents) {
     return tableHeadContents.map((item) => {
-        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+        switch(item.itemType) {
+            default:
+                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+        }
     });
 }
 
