@@ -16,6 +16,7 @@ const App = (props) => {
         <div>         
             <Navbar navbarID={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
             <Jumbotron jumbotronID={ "mainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />
+            <Carousel carouselID={ "staffCarousel" } carouselJsonUrl={ props.carouseljsonurl } />
             <Footer footerID={ "footer" } footerJsonUrl={ props.footerjsonurl } />
         </div>
     );

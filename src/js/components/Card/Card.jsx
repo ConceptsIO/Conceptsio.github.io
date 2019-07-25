@@ -1,11 +1,26 @@
-import React from 'react';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
-import CardBody from './CardBody.jsx';
-import parseJsonData from '../Utilities/parseJsonItem.jsx';
+function parseCardContents(cardContents) {
+    return cardContents.map((item) => {
+        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+    });
+}
+
+function parseCardContainers(cardContainers, cardContents) {
+    return cardContainers.map((container) => {
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, cardContents);
+    });
+}
 
 function parseCardData(cardData) {
-    
+    return parseCardContainers(cardData.componentContainers, parseCardContents(CardData.componentContents));
 }
+
+const Card = (props) => {
+    return parseCardData(props.cardData);
+}
+
+export default Card;
 
 /*
     Expected props is an object with the following format,
@@ -13,7 +28,7 @@ function parseCardData(cardData) {
     Ex:
         {
             "componentType": "card active",
-            "componentContainer": [
+            "componentContainers": [
                 {
                     "containerType": "div",
                     "containerProperties": {
@@ -28,7 +43,7 @@ function parseCardData(cardData) {
                     }
                 }
             ]
-            "componentContent": {
+            "componentContents": {
                 "cardHeader": "Card title",
                 "cardBody": {
                     "cardImg": "../../../src/url.js",
@@ -38,9 +53,3 @@ function parseCardData(cardData) {
             }
         }
 */
-
-const Card = (props) => {
-    return parseCardData(props.itemContents);
-}
-
-export default Card;

@@ -1,7 +1,7 @@
 [
     {   
         "componentID": "staffCarousel",
-        "componentContainer": [
+        "componentContainers": [
             {
                 "containerType": "div",
                 "containerAttributes": {
@@ -37,16 +37,16 @@
         ],
         "componentContents" : [
             {
-                "itemType": "carouselControls",
-                "itemContents": [
+                "componentType": "carouselControls",
+                "componentContents": [
                     {
-                        "controlType": "prev",
-                        "controlContainers": [
+                        "componentType": "prev",
+                        "componentContainers": [
                             {
                                 "containerType": "div"
                             }
                         ],
-                        "controlContents": [
+                        "componentContents": [
                             {
                                 "itemType": "a",
                                 "itemAttributes": {
@@ -73,8 +73,13 @@
                         ]
                     },
                     {
-                        "controlType": "next",
-                        "controlContents": [
+                        "componentType": "next",
+                        "componentContainers": [
+                            {
+                                "containerType": "div"
+                            }
+                        ],
+                        "componentContents": [
                             {
                                 "itemType": "a",
                                 "itemAttributes": {
@@ -106,13 +111,12 @@
                 "itemType": "carouselSlide",
                 "itemContents": [
                     {
-                        "itemType": "card active",
-                        "itemContent": {
-                            "cardContainer": [
+                        "itemType": "card",
+                        "itemContainer": [
                                 {
                                     "containerType": "div",
                                     "containerAttributes": {
-                                        "className": "card",
+                                        "className": "card active",
                                         "style": {
                                             "backgroundColor": "lightseagreen",
                                             "display": "block",
@@ -122,21 +126,28 @@
                                         }
                                     }
                                 }
-                            ],
-                            "cardContents" : {
-                                "cardHeader": "George Le - Co-founder/CEO",
-                                "cardBody": {
-                                    "cardImg": "../../../src/assets/george.jpg",
-                                    "cardText": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
-                                },
-                                "cardFooter": ""   
-                            }
-                        }
+                        ],
+                        "itemContents" : [
+                            {
+                                "itemType": "h3",
+                                "itemContents": "George Le - Co-founder/CEO"
+                            },
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "src": "../../../src/assets/george.jpg",
+                                    "alt": "This is George"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
+                            } 
+                        ]
                     },
                     {
                         "itemType": "card",
-                        "itemContent": {
-                            "cardContainer": [
+                        "itemContainer": [
                                 {
                                     "containerType": "div",
                                     "containerAttributes": {
@@ -150,44 +161,59 @@
                                         }
                                     }
                                 }
-                            ],
-                            "cardContent" : {
-                                "cardHeader" : "Matthew LeBlanc - Co-founder/CTO",
-                                "cardBody": {
-                                    "cardImg": "../../../src/assets/matt.jpg",
-                                    "cardText": "Matthew LeBlanc is a recent graduate of the University of Massachusetts Lowell where he received a Bachelor's degree in computer science. He is a software developer and focuses on front-end development using technologies like React.js. He is passionate about learning new technologies as well as experiencing new aspects of culture."
-                                },
-                                "cardFooter": ""
+                        ],
+                        "itemContent" : [
+                            {
+                                "itemType": "h3",
+                                "itemContents": "Matthew LeBlanc - Co-founder/CTO"
+                            },
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "src": "../../../src/assets/matt.jpg",
+                                    "alt": "This is Matt"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Matthew LeBlanc is a recent graduate of the University of Massachusetts Lowell where he received a Bachelor's degree in computer science. He is a software developer and focuses on front-end development using technologies like React.js. He is passionate about learning new technologies as well as experiencing new aspects of culture."
                             }
-                        }
+                        ]
                     },
                     {
                         "itemType": "card",
-                        "itemContent": {
-                            "cardContainer": [
-                                {
-                                    "containerType": "div",
-                                    "containerAttributes": {
-                                        "className": "card",
-                                        "style": {
-                                            "backgroundColor": "lightseagreen",
-                                            "display": "block",
-                                            "height": "auto",
-                                            "margin": "auto",
-                                            "width": "50%"
-                                        }
+                        "itemContainer": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "card",
+                                    "style": {
+                                        "backgroundColor": "lightseagreen",
+                                        "display": "block",
+                                        "height": "auto",
+                                        "margin": "auto",
+                                        "width": "50%"
                                     }
                                 }
-                            ],
-                            "cardContent" : {
-                                "cardHeader" : "Jonathan Murphy - Co-founder/CPO-CIO",
-                                "cardBody": {
-                                    "cardImg": "../../../src/assets/jonathan.jpg",
-                                    "cardText": "Jonathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
-                                },
-                                "cardFooter": ""   
                             }
-                        }
+                        ],
+                        "itemContent" : [
+                            {
+                                "itemType": "h3",
+                                "itemContents": "Jonathan Murphy - Co-founder/CPO-CIO"
+                            },
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "src": "../../../src/assets/jonathan.jpg",
+                                    "alt": "This is Jonathan"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "onathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
+                            }
+                        ]
                     }
                 ]
             }

@@ -1,7 +1,30 @@
 import Card from '../Card/Card.jsx';
+import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
+
+function parseCarouselSlideContents(carouselSlideContents) {
+    return carouselSlideContents.map((item) => {
+        switch(item.itemType) {
+            case "card":
+                return <Card />;
+            default:
+                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+        }
+    });
+}
+
+function parseCarouselSlideContainers(carouselSlideContainer, carouselSlideContents) {
+    return carouselSlideContainer.map((container) => {
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselSlideContents);
+    });
+}
+
+function parseCarouselSlideData(carouselSlideData) {
+    return parseCarouselSlideContainers(parseCarouselSlideContents(carouselSlideData));
+}
 
 const CarouselSlide = (props) => {
-    
+    parseCarouselSlideData(getJsonObjectWithID(props.carouselJsonUrl, props.carouselID));
 }
 
 export default CarouselSlide;

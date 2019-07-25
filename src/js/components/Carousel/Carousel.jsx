@@ -19,14 +19,14 @@ function parseCarouselContents(carouselComponentContents) {
     });
 }
 
-function parseCarouselContainer(carouselContainer, carouselContents) {
-    return carouselContainer.map((container) => {
+function parseCarouselContainers(carouselContainers, carouselContents) {
+    return carouselContainers.map((container) => {
         return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselContents);
     });
 }
 
 function parseCarouselData(carouselData) {
-    return parseCarouselContainer(parseCarouselContents(carouselData));
+    return parseCarouselContainers(carouselData.componentContainers, parseCarouselContents(carouselData));
 }
 
 const Carousel = (props) => {

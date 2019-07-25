@@ -1,9 +1,30 @@
-function parseCarouselContents(carouselContents) {
-    
+import React from 'react';
+
+import parseJsonItem from "../Utilities/parseJsonItem.jsx";
+import CarouselControlsPrev from './CarouselControlsPrev.jsx';
+import CarouselControlsNext from './CarouselControlsNext.jsx';
+
+function parseCarouselControlsContents(carouselControlsContents) {
+    return carouselControlsContents.map((item) => {
+        switch(item.itemType) {
+            case "prev":
+                return <CarouselControlsPrev carouselControlsPrevJsonUrl={ item }/>
+            case "next":
+                return <CarouselControlsNext carouselControlsNextJsonUrl={ item }/>
+            default:
+                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+        }
+    });
+}
+
+function parseCarouselControlsContainer(carouselControlsContainer, carouselControlsContents) {
+    return carouselControlsContainer.map((container) => {
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselControlsContents);
+    });
 }
 
 function parseCarouselControlsData(carouselControlsData) {
-    
+    return parseCarouselControlsContainer(parseCarouselControlsContents(carouselControlsData));
 }
 
 const CarouselControls = (props) => {
