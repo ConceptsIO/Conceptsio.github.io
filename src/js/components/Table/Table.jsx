@@ -88,10 +88,10 @@ class Table extends React.Component {
                                 Small business who want a simple, stylish, static webpage.
                             </td>
                             <td>
-                                SMBs who wants a contracted team to manage their web presence and build their website content strategy.
+                                SMBs who seek a contracted team to manage their web presence and build their website content strategy.
                             </td>
                             <td>
-                                Businesses seeking complex websites and web-based infrastructures that can be used as part of the business whether its a direct to consumer marketplace to an enterprise SaaS platform.
+                                Businesses seeking complex websites and web-based infrastructures that can be used as part of the business whether it's a direct to consumer marketplace to an enterprise SaaS platform.
                             </td>
                         </tr>
                         <tr>
