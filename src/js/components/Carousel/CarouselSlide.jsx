@@ -6,7 +6,7 @@ function parseCarouselSlideContents(carouselSlideContents) {
     return carouselSlideContents.map((item) => {
         switch(item.itemType) {
             case "card":
-                return <Card />;
+                return <Card cardData={ item }/>;
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }
@@ -24,7 +24,7 @@ function parseCarouselSlideData(carouselSlideData) {
 }
 
 const CarouselSlide = (props) => {
-    parseCarouselSlideData(getJsonObjectWithID(props.carouselJsonUrl, props.carouselID));
+    parseCarouselSlideData(getJsonObjectWithID(props.carouselSlideData));
 }
 
 export default CarouselSlide;

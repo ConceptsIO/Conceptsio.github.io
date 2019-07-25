@@ -6,7 +6,7 @@ import CarouselControlsNext from './CarouselControlsNext.jsx';
 
 function parseCarouselControlsContents(carouselControlsContents) {
     return carouselControlsContents.map((item) => {
-        switch(item.itemType) {
+        switch(item.componentType) {
             case "prev":
                 return <CarouselControlsPrev carouselControlsPrevJsonUrl={ item }/>
             case "next":
@@ -24,7 +24,8 @@ function parseCarouselControlsContainer(carouselControlsContainer, carouselContr
 }
 
 function parseCarouselControlsData(carouselControlsData) {
-    return parseCarouselControlsContainer(parseCarouselControlsContents(carouselControlsData));
+    console.log(carouselControlsData);
+    return parseCarouselControlsContainer(parseCarouselControlsContents(carouselControlsData.componentContents));
 }
 
 const CarouselControls = (props) => {

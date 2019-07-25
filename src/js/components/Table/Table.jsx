@@ -31,7 +31,9 @@ function parseTableData(tableData) {
 }
 
 const Table = (props) => {
-    return parseTableData(getJsonObjectWithID(props.tableJsonUrl, props.tableID));
+    var tableData = getJsonObjectWithID(props.tableJsonUrl, props.tableID);
+    console.log(tableData);
+    return parseTableData(tableData);
 }
 
 Table.propTypes = {
