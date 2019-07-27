@@ -38,6 +38,11 @@
             },
             {
                 "componentType": "carouselControls",
+                "componentContainers": [
+                    {
+                        "containerType": "div"
+                    }
+                ],
                 "componentContents": [
                     {
                         "componentType": "prev",
@@ -211,7 +216,7 @@
                             },
                             {
                                 "itemType": "p",
-                                "itemContents": "onathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
+                                "itemContents": "jonathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
                             }
                         ]
                     }

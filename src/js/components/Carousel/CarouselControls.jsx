@@ -1,31 +1,30 @@
 import React from 'react';
 
 import parseJsonItem from "../Utilities/parseJsonItem.jsx";
-import CarouselControlsPrev from './CarouselControlsPrev.jsx';
-import CarouselControlsNext from './CarouselControlsNext.jsx';
+import CarouselControlPrev from './CarouselControlPrev.jsx';
+import CarouselControlNext from './CarouselControlNext.jsx';
 
 function parseCarouselControlsContents(carouselControlsContents) {
     return carouselControlsContents.map((item) => {
         switch(item.componentType) {
             case "prev":
-                return <CarouselControlsPrev carouselControlsPrevJsonUrl={ item }/>
+                return <CarouselControlPrev carouselControlPrevData={ item }/>
             case "next":
-                return <CarouselControlsNext carouselControlsNextJsonUrl={ item }/>
+                return <CarouselControlNext carouselControlNextData={ item }/>
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }
     });
 }
 
-function parseCarouselControlsContainer(carouselControlsContainer, carouselControlsContents) {
-    return carouselControlsContainer.map((container) => {
+function parseCarouselControlsContainer(carouselControlsContainers, carouselControlsContents) {
+    return carouselControlsContainers.map((container) => {
         return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselControlsContents);
     });
 }
 
 function parseCarouselControlsData(carouselControlsData) {
-    console.log(carouselControlsData);
-    return parseCarouselControlsContainer(parseCarouselControlsContents(carouselControlsData.componentContents));
+    return parseCarouselControlsContainer(carouselControlsData.componentContainers, parseCarouselControlsContents(carouselControlsData.componentContents));
 }
 
 const CarouselControls = (props) => {
