@@ -1,11 +1,10 @@
 import React from 'react';
 
+import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 import NavbarBrand from './NavbarBrand.jsx';
 import NavbarCollapse from './NavbarCollapse.jsx';
 import NavbarToggler from './NavbarToggler.jsx';
 import parseJsonItem from '../Utilities/parseJsonItem.jsx';
-
-import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 
 function parseNavbarContents(navbarContents) {
     return navbarContents.map((item) => {
@@ -33,9 +32,7 @@ function parseNavbarData(navbarData) {
 }
 
 const Navbar = (props) => {
-    var navbar = parseNavbarData(getJsonObjectWithID(props.navbarJsonUrl, props.navbarID));
-    
-    return navbar;
+    return parseNavbarData(getJsonObjectWithID(props.navbarJsonUrl, props.navbarID));
 }
 
 export default Navbar;

@@ -1,9 +1,13 @@
-import parseJsonItem from "../Utilities/parseJsonItem";
+import parseJsonItem from "../Utilities/parseJsonItem.jsx";
 
 function parseTableDataContents(tableDataContents) {
     return tableDataContents.map((item) => {
-        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-    })
+        if(item.itemType) {
+            return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+        } else {
+            return item;
+        }
+    });
 }
 
 function parseTableDataContainers(tableDataContainers, tableDataContents) {

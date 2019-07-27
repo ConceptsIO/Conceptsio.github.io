@@ -1,15 +1,19 @@
-import React from 'react';
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
+
+function parseContentColumnContents(contentColumnContents) {
+
+}
+
+function parseContentColumnContainers(contentColumnContainers, contentColumnContents) {
+
+}
+
+function parseContentColumnData(contentColumnData) {
+
+}
 
 const ContentColumn = (props) => {
-    var content = props.contentColumnItems.map((item, index) => {
-        
-    });
-    
-    return (
-        <div className="container-fluid">
-            { content }
-        </div>
-    );
+    return parseContentColumnData();
 }
 
 export default ContentColumn;

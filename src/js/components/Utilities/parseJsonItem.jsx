@@ -46,22 +46,19 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
             return <ul { ...dataItemAttributes }>{ dataComponentContents }</ul>;
         case "li":
             if(dataItemContents) {
-                var contents = parseJsonItem(dataItemContents.containerType,
-                                            dataItemContents.containerAttributes,
-                                            dataItemContents.containerContents);
-                return <li { ...dataItemAttributes }>{ contents }</li>
+                return <li { ...dataItemAttributes }>{ dataItemContents }</li>;
             }
             return <li { ...dataItemAttributes }>{ dataComponentContents }</li>
 
         case "table":
-            return <table { ...dataItemAttributes }>{ dataItemContents }</table>;
+            return <table { ...dataItemAttributes }>{ dataComponentContents }</table>;
         case "thead":
             if (dataItemContents) {
                 return dataItemContents.map((container) => {
                     return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, dataComponentContents);
                 });
             } else {
-                return <thead></thead>;
+                return <thead { ...dataItemAttributes}>{ dataComponentContents }</thead>;
             }
         case "tbody":
             if (dataItemContents) {
@@ -69,20 +66,28 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
                     return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents, dataComponentContents[index]);
                 });
             } else {
-                return <tbody></tbody>;
+                return <tbody { ...dataItemAttributes }>{dataComponentContents}</tbody>;
             }
         case "th":
-            return <th { ...dataItemAttributes }>{ dataItemContents }</th>;
+            if(dataItemContents) {
+                return <th { ...dataItemAttributes }>{ dataItemContents }</th>;
+            } else {
+                return <th { ...dataItemAttributes }>{ dataComponentContents }</th>;
+            }
         case "tr":
             return <tr { ...dataItemAttributes }>{ dataComponentContents }</tr>;
-        case "tr list":
-            return dataComponentContents.map((item) => {
-                
-            })
         case "td":
-            return <td { ...dataItemAttributes }>{ dataItemComponents }</td>;
-        case "td list":
-        
+            if(dataItemContents) {
+                if(dataItemContents.length) {
+                    var content = dataItemContents.map((container) => {
+                        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, dataComponentContents)
+                    });
+                    return <td { ...dataItemAttributes }>{ content }</td>;
+                }
+            } else {
+                return <td { ...dataItemAttributes }>{ dataComponentContents }</td>;
+            }
+            
         case "nav":
             return <nav { ...dataItemAttributes }>{ dataComponentContents }</nav>
 
@@ -132,6 +137,8 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
                 });
                 return <footer { ...dataItemAttributes }>{ contents }</footer>;
             }
+        default: 
+            break;
     }
 }
 

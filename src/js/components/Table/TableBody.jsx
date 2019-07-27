@@ -1,8 +1,13 @@
-import parseJsonItem from "../Utilities/parseJsonItem.jsx";
+import React from 'react';
+
+import parseJsonItem from '../Utilities/parseJsonItem.jsx';
+import TableRow from './TableRow.jsx';
 
 function parseTableBodyContents(tableBodyContents) {
     return tableBodyContents.map((item) => {
-        switch(item.itemType) {
+        switch(item.componentType) {
+            case "tableRow":
+                return <TableRow tableRowData={ item } />
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }

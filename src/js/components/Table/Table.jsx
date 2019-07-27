@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { getJsonObjectWithID } from "../Utilities/getJsonObject";
 import parseJsonItem from '../Utilities/parseJsonItem.jsx';
@@ -8,11 +8,11 @@ import TableBody from './TableBody.jsx';
 
 function parseTableContents(tableContents) {
     return tableContents.map((item) => {
-        switch(item.itemType) {
+        switch(item.componentType) {
             case "tableHead":
-                <TableHead tableHeadData={ item } />
+                return <TableHead tableHeadData={ item } />;
             case "tableBody":
-                <TableBody tableBodyData={ item } />
+                return <TableBody tableBodyData={ item } />;
             default:
                 return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
         }
@@ -20,20 +20,17 @@ function parseTableContents(tableContents) {
 }
 
 function parseTableContainers(tableContainers, tableContents) {
-    return tableContainers.map((container, index) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, tableContents[index]);
+    return tableContainers.map((container) => {
+        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, tableContents);
     });
 }
 
 function parseTableData(tableData) {
-    console.log(tableData);
     return parseTableContainers(tableData.componentContainers, parseTableContents(tableData.componentContents));
 }
 
 const Table = (props) => {
-    var tableData = getJsonObjectWithID(props.tableJsonUrl, props.tableID);
-    console.log(tableData);
-    return parseTableData(tableData);
+    return parseTableData(getJsonObjectWithID(props.tableJsonUrl, props.tableID));
 }
 
 Table.propTypes = {
