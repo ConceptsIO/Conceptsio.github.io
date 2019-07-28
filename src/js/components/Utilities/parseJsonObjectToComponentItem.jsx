@@ -1,7 +1,6 @@
 import React from 'react';
 
-function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataComponentContents) {
-
+function parseJsonObjectToComponentItem(dataItemType, dataItemAttributes, dataItemContents, dataComponentContents) {
     // checks the passed in item type to various HTML tags
     switch(dataItemType) {
         case "br":
@@ -22,24 +21,25 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
                 return <div { ...dataItemAttributes }>{ dataComponentContents }</div>
             }
         case "span":
-            if (typeof(dataItemContents) === "object"){
-                if(dataItemContents.containerContents) {
-                    // collect the inner containers through recursive calls
-                    var content = parseJsonItem(dataItemContents.containerType,
-                                                dataItemContents.containerAttributes,
-                                                dataItemContents.containerContents);
-                    return <span { ...dataItemAttributes }>{ content }</span>
-                } else if(dataItemContents.length) {
-                    var content = dataItemContents.map((item) => {
-                        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-                    });
-                    return <span { ...dataItemAttributes }>{ content }</span>;
+                if (typeof(dataItemContents) === "object"){
+                    if(dataItemContents.containerContents) {
+                        // collect the inner containers through recursive calls
+                        var content = parseJsonItem(dataItemContents.containerType,
+                                                    dataItemContents.containerAttributes,
+                                                    dataItemContents.containerContents);
+                        return <span { ...dataItemAttributes }>{ content }</span>
+                    } else {
+                        var content = dataItemContents.map((item) => {
+                            return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
+                        });
+                        return <span { ...dataItemAttributes }>{ content }</span>;
+                    }
                 }
-            }  else if(dataItemContents) {
-                return <span { ...dataItemAttributes }>{ dataItemContents }</span>;
-            } else {
-                return <span { ...dataItemAttributes }>{ dataComponentContents }</span>;
-            }
+                else if(dataItemContents) {
+                    return <span { ...dataItemAttributes }>{ dataItemContents }</span>;
+                } else {
+                    return <span { ...dataItemAttributes }>{ dataComponentContents }</span>;
+                }
         case "ul":
             return <ul { ...dataItemAttributes }>{ dataComponentContents }</ul>;
         case "li":
@@ -91,15 +91,11 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
 
         case "a":
             if(dataItemContents) {
-                if(dataItemContents.length && typeof(dataItemContents) === 'object') {
-                    var contents = dataItemContents.map((content) => {
-                        if(content.containerType) {
-                            return parseJsonItem(content.containerType, content.containerAttributes, content.containerContents, dataComponentContents);
-                        } else if(content.itemType) {
-                            return parseJsonItem(content.itemType, content.itemAttributes, content.itemContents);
-                        }
+                if(typeof(dataItemContents) === "object") {
+                    var content = dataItemContents.map((container) => {
+                        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, dataComponentContents);
                     });
-                    return <a { ...dataItemAttributes }>{ contents }</a>;
+                    return <a { ...dataItemAttributes }>{ content }</a>;
                 } else {
                     return <a { ...dataItemAttributes }>{ dataItemContents }</a>;
                 }
@@ -144,4 +140,4 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
     }
 }
 
-export default parseJsonItem;
+export default parseJsonObjectToComponentItem;

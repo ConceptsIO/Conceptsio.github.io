@@ -1,5 +1,5 @@
 [
-    {   
+    {
         "componentID": "staffCarousel",
         "componentContainers": [
             {
@@ -28,15 +28,6 @@
         ],
         "componentContents" : [
             {
-                "containerType": "div",
-                "containerAttributes": {
-                    "className": "carousel-inner",
-                    "style": {
-                        "margin": "auto"
-                    }
-                }
-            },
-            {
                 "componentType": "carouselControls",
                 "componentContainers": [
                     {
@@ -45,35 +36,35 @@
                 ],
                 "componentContents": [
                     {
-                        "componentType": "prev",
+                        "componentType": "next",
                         "componentContainers": [
                             {
-                                "containerType": "div"
+                                "containerType": "div",
+                                "containerContents": [
+                                    {
+                                        "containerType": "a",
+                                        "containerAttributes": {
+                                            "className": "carousel-control-prev",
+                                            "data-slide": "next",
+                                            "role": "button"
+                                        }
+                                    }
+                                ]
                             }
                         ],
                         "componentContents": [
                             {
-                                "itemType": "a",
+                                "itemType": "span",
                                 "itemAttributes": {
-                                    "className": "carousel-control-prev",
-                                    "data-slide": "prev",
-                                    "role": "button"
-                                },
-                                "itemContent": [
-                                    {
-                                        "itemType": "span",
-                                        "itemAttributes": {
-                                            "className": "carousel-control-prev-icon",
-                                            "aria-hidden": "true"
-                                        }
-                                    },
-                                    {
-                                        "itemType": "span",
-                                        "itemAttributes": {
-                                            "className": "sr-only"
-                                        }
-                                    }
-                                ]
+                                    "className": "carousel-control-prev-icon",
+                                    "aria-hidden": "true"
+                                }
+                            },
+                            {
+                                "itemType": "span",
+                                "itemAttributes": {
+                                    "className": "sr-only"
+                                }
                             }
                         ]
                     },
@@ -81,61 +72,95 @@
                         "componentType": "next",
                         "componentContainers": [
                             {
-                                "containerType": "div"
+                                "containerType": "div",
+                                "containerContents": [
+                                    {
+                                        "containerType": "a",
+                                        "containerAttributes": {
+                                            "className": "carousel-control-next",
+                                            "data-slide": "next",
+                                            "role": "button"
+                                        }
+                                    }
+                                ]
                             }
                         ],
                         "componentContents": [
                             {
-                                "itemType": "a",
+                                "itemType": "span",
                                 "itemAttributes": {
-                                    "className": "carousel-control-next",
-                                    "data-slide": "next",
-                                    "role": "button"
-                                },
-                                "itemContent": [
-                                    {
-                                        "itemType": "span",
-                                        "itemAttributes": {
-                                            "className": "carousel-control-next-icon",
-                                            "aria-hidden": "true"
-                                        }
-                                    },
-                                    {
-                                        "itemType": "span",
-                                        "itemAttributes": {
-                                            "className": "sr-only"
-                                        }
-                                    }
-                                ]
+                                    "className": "carousel-control-next-icon",
+                                    "aria-hidden": "true"
+                                }
+                            },
+                            {
+                                "itemType": "span",
+                                "itemAttributes": {
+                                    "className": "sr-only"
+                                }
                             }
                         ]
                     }
                 ]
             },
             {
-                "itemType": "carouselSlide",
-                "itemContents": [
+                "componentType": "carouselSlide",
+                "componentContainers": [
                     {
-                        "itemType": "card",
-                        "itemContainer": [
-                                {
-                                    "containerType": "div",
-                                    "containerAttributes": {
-                                        "className": "card active",
-                                        "style": {
-                                            "backgroundColor": "lightseagreen",
-                                            "display": "block",
-                                            "height": "auto",
-                                            "margin": "auto",
-                                            "width": "50%"
-                                        }
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "carousel-inner",
+                            "style": {
+                                "margin": "auto"
+                            }
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentType": "card",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "carousel-item active"
+                                },
+                                "containerContents": [
+                                    {
+                                        "containerType": "div",
+                                        "containerAttributes": {
+                                            "className": "card",
+                                            "style": {
+                                                "backgroundColor": "lightseagreen",
+                                                "display": "block",
+                                                "height": "auto",
+                                                "margin": "auto",
+                                                "width": "50%"
+                                            }
+                                        }, 
+                                        "containerContents": [
+                                            {
+                                                "containerType": "div",
+                                                "containerAttributes": {
+                                                    "className": "card-body",
+                                                    "style": {
+                                                        "color": "white",
+                                                        "textAlign": "center"
+                                                    }
+                                                }
+                                            }
+                                        ]
                                     }
-                                }
+                                ]
+                            }
                         ],
-                        "itemContents" : [
+                        "componentContents" : [
                             {
                                 "itemType": "h3",
                                 "itemContents": "George Le - Co-founder/CEO"
+                            },
+                            {
+                                "itemType": "br"
                             },
                             {
                                 "itemType": "img",
@@ -145,32 +170,58 @@
                                 }
                             },
                             {
+                                "itemType": "br"
+                            },
+                            {
                                 "itemType": "p",
                                 "itemContents": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
                             } 
                         ]
                     },
                     {
-                        "itemType": "card",
-                        "itemContainer": [
-                                {
-                                    "containerType": "div",
-                                    "containerAttributes": {
-                                        "className": "card",
-                                        "style": {
-                                            "backgroundColor": "lightseagreen",
-                                            "display": "block",
-                                            "height": "auto",
-                                            "margin": "auto",
-                                            "width": "50%"
-                                        }
+                        "componentType": "card",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "carousel-item"
+                                },
+                                "containerContents": [
+                                    {
+                                        "containerType": "div",
+                                        "containerAttributes": {
+                                            "className": "card",
+                                            "style": {
+                                                "backgroundColor": "lightseagreen",
+                                                "display": "block",
+                                                "height": "auto",
+                                                "margin": "auto",
+                                                "width": "50%"
+                                            }
+                                        }, 
+                                        "containerContents": [
+                                            {
+                                                "containerType": "div",
+                                                "containerAttributes": {
+                                                    "className": "card-body",
+                                                    "style": {
+                                                        "color": "white",
+                                                        "textAlign": "center"
+                                                    }
+                                                }
+                                            }
+                                        ]
                                     }
-                                }
+                                ]
+                            }
                         ],
-                        "itemContent" : [
+                        "componentContents" : [
                             {
                                 "itemType": "h3",
                                 "itemContents": "Matthew LeBlanc - Co-founder/CTO"
+                            },
+                            {
+                                "itemType": "br"
                             },
                             {
                                 "itemType": "img",
@@ -180,32 +231,58 @@
                                 }
                             },
                             {
+                                "itemType": "br"
+                            },
+                            {
                                 "itemType": "p",
                                 "itemContents": "Matthew LeBlanc is a recent graduate of the University of Massachusetts Lowell where he received a Bachelor's degree in computer science. He is a software developer and focuses on front-end development using technologies like React.js. He is passionate about learning new technologies as well as experiencing new aspects of culture."
                             }
                         ]
                     },
                     {
-                        "itemType": "card",
-                        "itemContainer": [
+                        "componentType": "card",
+                        "componentContainers": [
                             {
                                 "containerType": "div",
                                 "containerAttributes": {
-                                    "className": "card",
-                                    "style": {
-                                        "backgroundColor": "lightseagreen",
-                                        "display": "block",
-                                        "height": "auto",
-                                        "margin": "auto",
-                                        "width": "50%"
+                                    "className": "carousel-item"
+                                },
+                                "containerContents": [
+                                    {
+                                        "containerType": "div",
+                                        "containerAttributes": {
+                                            "className": "card",
+                                            "style": {
+                                                "backgroundColor": "lightseagreen",
+                                                "display": "block",
+                                                "height": "auto",
+                                                "margin": "auto",
+                                                "width": "50%"
+                                            }
+                                        }, 
+                                        "containerContents": [
+                                            {
+                                                "containerType": "div",
+                                                "containerAttributes": {
+                                                    "className": "card-body",
+                                                    "style": {
+                                                        "color": "white",
+                                                        "textAlign": "center"
+                                                    }
+                                                }
+                                            }
+                                        ]
                                     }
-                                }
+                                ]
                             }
                         ],
-                        "itemContent" : [
+                        "componentContents" : [
                             {
                                 "itemType": "h3",
                                 "itemContents": "Jonathan Murphy - Co-founder/CPO-CIO"
+                            },
+                            {
+                                "itemType": "br"
                             },
                             {
                                 "itemType": "img",
@@ -213,6 +290,9 @@
                                     "src": "../../../src/assets/jonathan.jpg",
                                     "alt": "This is Jonathan"
                                 }
+                            },
+                            {
+                                "itemType": "br"
                             },
                             {
                                 "itemType": "p",

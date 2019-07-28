@@ -1,10 +1,11 @@
+import React from 'react';
+
 import Card from '../Card/Card.jsx';
-import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
 function parseCarouselSlideContents(carouselSlideContents) {
     return carouselSlideContents.map((item) => {
-        switch(item.itemType) {
+        switch(item.componentType) {
             case "card":
                 return <Card cardData={ item }/>;
             default:
@@ -13,18 +14,18 @@ function parseCarouselSlideContents(carouselSlideContents) {
     });
 }
 
-function parseCarouselSlideContainers(carouselSlideContainer, carouselSlideContents) {
-    return carouselSlideContainer.map((container) => {
+function parseCarouselSlideContainers(carouselSlideContainers, carouselSlideContents) {
+    return carouselSlideContainers.map((container) => {
         return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselSlideContents);
     });
 }
 
 function parseCarouselSlideData(carouselSlideData) {
-    return parseCarouselSlideContainers(parseCarouselSlideContents(carouselSlideData));
+    return parseCarouselSlideContainers(carouselSlideData.componentContainers, parseCarouselSlideContents(carouselSlideData.componentContents));
 }
 
 const CarouselSlide = (props) => {
-    parseCarouselSlideData(getJsonObjectWithID(props.carouselSlideData));
+    return parseCarouselSlideData(props.carouselSlideData);
 }
 
 export default CarouselSlide;

@@ -13,7 +13,7 @@ function parseCardContainers(cardContainers, cardContents) {
 }
 
 function parseCardData(cardData) {
-    return parseCardContainers(cardData.componentContainers, parseCardContents(CardData.componentContents));
+    return parseCardContainers(cardData.componentContainers, parseCardContents(cardData.componentContents));
 }
 
 const Card = (props) => {
