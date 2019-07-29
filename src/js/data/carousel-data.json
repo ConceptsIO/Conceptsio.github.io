@@ -20,7 +20,7 @@
                             "className": "carousel slide",
                             "data-ride": "carousel",
                             "data-interval": "7500",
-                            "id": "MainCarousel"
+                            "id": "StaffCarousel"
                         }
                     }
                 ]
@@ -46,6 +46,7 @@
                                         "containerAttributes": {
                                             "className": "carousel-control-prev",
                                             "data-slide": "next",
+                                            "href": "#StaffCarousel",
                                             "role": "button"
                                         }
                                     }
@@ -79,6 +80,7 @@
                                         "containerAttributes": {
                                             "className": "carousel-control-next",
                                             "data-slide": "next",
+                                            "href": "#StaffCarousel",
                                             "role": "button"
                                         }
                                     }

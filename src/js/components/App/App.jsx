@@ -8,15 +8,13 @@ import Carousel from '../Carousel/Carousel.jsx';
 import ContentSection from '../ContentColumn/ContentSection.jsx';
 import Table from '../Table/Table.jsx';
 import Footer from '../Footer/Footer.jsx';
-import NavbarBrand from '../Navbar/NavbarBrand.jsx';
 
 const App = (props) => {
     return (
         <div>
             <Navbar navbarID={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
             <Jumbotron jumbotronID={ "mainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />
-            <br>
-            </br>
+            <br/>
             <div className="container" id="aboutUs">
                 <h2>About Us</h2>
                 <img src="../../../../src/assets/ConceptsIOSolutionsCropped.png" style={{ display:"block", marginLeft: "auto", marginRight: "auto" }}/>

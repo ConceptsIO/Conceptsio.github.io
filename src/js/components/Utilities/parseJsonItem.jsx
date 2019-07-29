@@ -1,7 +1,6 @@
 import React from 'react';
 
 function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataComponentContents) {
-
     // checks the passed in item type to various HTML tags
     switch(dataItemType) {
         case "br":

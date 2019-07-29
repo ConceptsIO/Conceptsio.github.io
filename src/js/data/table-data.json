@@ -221,7 +221,7 @@
                                     }
                                 ],
                                 "componentContents": [
-                                    "$100/month"
+                                    "$100/month*"
                                 ]
                             },
                             {
@@ -232,7 +232,7 @@
                                     }
                                 ],
                                 "componentContents": [
-                                    "Depends on Project Scope*"
+                                    "Depends on project scope*"
                                 ]
                             },
                             {
@@ -243,7 +243,7 @@
                                     }
                                 ],
                                 "componentContents": [
-                                    "$90+/month"
+                                    "$90+/month*"
                                 ]
                             }
                         ]
@@ -275,7 +275,7 @@
                                     }
                                 ],
                                 "componentContents": [
-                                    "$25/month*"
+                                    "$25/month"
                                 ]
                             },
                             {
@@ -297,7 +297,7 @@
                                     }
                                 ],
                                 "componentContents": [
-                                    "Depends on Project Scope*"
+                                    "Depends on project scope"
                                 ]
                             },
                             {
@@ -557,7 +557,7 @@
                                     }
                                 ],
                                 "componentContents": [
-                                    "Depends on Project Scope"
+                                    "Depends on project scope"
                                 ]
                             },
                             {
@@ -568,7 +568,7 @@
                                     }
                                 ],
                                 "componentContents": [
-                                    "Depends on Project Scope",
+                                    "Depends on project scope",
                                     {
                                         "itemType": "br"
                                     },
@@ -637,7 +637,7 @@
                                     }
                                 ],
                                 "componentContents": [
-                                    "Startups that are one-two year into their journey that we can provide tremendous value. These startups are incredibly busy and seek to have a dedicated team managing their website and social media presence while they go off and save the world."
+                                    "Startups that are one-two years into their journey that we can provide tremendous value. These startups are incredibly busy and seek to have a dedicated team managing their website and social media presence while they go off and save the world."
                                 ]
                             }
                         ]
