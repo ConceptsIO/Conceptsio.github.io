@@ -1,23 +1,22 @@
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
+import PropTypes from 'prop-types';
 
-function parseCardContents(cardContents) {
-    return cardContents.map((item) => {
-        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-    });
-}
-
-function parseCardContainers(cardContainers, cardContents) {
-    return cardContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, cardContents);
-    });
-}
-
-function parseCardData(cardData) {
-    return parseCardContainers(cardData.componentContainers, parseCardContents(cardData.componentContents));
-}
+import componentParser from "../Utilities/componentParser.jsx";
+import { getJsonObject, getJsonObjectWithID } from "../Utilities/getJsonObject";
 
 const Card = (props) => {
-    return parseCardData(props.cardData);
+    if(props.cardData) {
+        return componentParser(props.cardData);
+    } else if(props.cardID) {
+        return componentParser(getJsonObjectWithID(props.cardJsonUrl, props.cardID));
+    } else {
+        return componentParser(getJsonObject(props.cardJsonUrl));
+    }
+}
+
+Card.propTypes = {
+    cardData : PropTypes.object,
+    cardID : PropTypes.string,
+    cardJsonUrl : PropTypes.string,
 }
 
 export default Card;

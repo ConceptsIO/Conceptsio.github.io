@@ -1,7 +1,7 @@
 [
     {
         "componentID": "mainJumbotron",
-        "componentContainer": [
+        "componentContainers": [
             {
                 "containerType": "div",
                 "containerAttributes": {
@@ -17,27 +17,19 @@
         "componentContents": [
             {
                 "itemType": "h1",
-                "itemContents": {
-                    "itemText": "ConceptsIO Solutions"
-                }
+                "itemContents": "ConceptsIO Solutions"
             },
             {
                 "itemType": "h2",
-                "itemContents": {
-                    "itemText": "Full Service Website, Ecommerce, and Digital Marketing Partner"
-                }
+                "itemContents": "Full Service Website, Ecommerce, and Digital Marketing Partner"
             },
             {
                 "itemType": "h2",
-                "itemContents": {
-                    "itemText": "Please excuse our appearance, we are currently under construction."
-                }
+                "itemContents": "Please excuse our appearance, we are currently under construction."
             },
             {
                 "itemType": "p",
-                "itemContents": {
-                    "itemText": "The lucky number of the day is 42"
-                }
+                "itemContents": "The lucky number of the day is 42"
             }
         ]
     }

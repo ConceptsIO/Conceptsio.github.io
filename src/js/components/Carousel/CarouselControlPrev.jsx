@@ -1,26 +1,13 @@
-import parseJsonItem from "../Utilities/parseJsonItem.jsx";
+import PropTypes from 'prop-types';
 
-function parseCarouselControlPrevItems(carouselControlPrevContents) {
-    return carouselControlPrevContents.map((item) => {
-        switch(item.itemType) {
-            default:
-                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        }
-    });
-}
-
-function parseCarouselControlPrevContainers(carouselControlPrevContainers, carouselControlPrevContent) {
-    return carouselControlPrevContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselControlPrevContent);
-    });
-}
-
-function parseCarouselControlPrevData(carouselControlPrevData) {
-    return parseCarouselControlPrevContainers(carouselControlPrevData.componentContainers, parseCarouselControlPrevItems(carouselControlPrevData.componentContents));
-}
+import componentParser from '../Utilities/componentParser.jsx';
 
 const CarouselControlPrev = (props) => {
-    return parseCarouselControlPrevData(props.carouselControlPrevData);
+    return componentParser(props.carouselControlPrevData);
 }
+
+CarouselControlPrev.propTypes = {
+    carouselControlPrevData : PropTypes.object.isRequired
+};
 
 export default CarouselControlPrev;

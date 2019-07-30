@@ -1,6 +1,6 @@
 [
     {
-        "componentID": "priceTable",
+        "componentID": "PriceTable",
         "componentContainers": [
             {
                 "containerType": "div",

@@ -1,25 +1,14 @@
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
+import PropTypes from 'prop-types';
 
-function parseNavbarBrandContents(navbarBrandContents) {
-    return navbarBrandContents.map((item) => {
-        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-    });
-}
-
-function parseNavbarBrandContainers(navbarBrandContainers, navbarBrandContents) {
-    var container = navbarBrandContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarBrandContents);
-    });
-    return container;
-}
-
-function parseNavbarBrandData(navbarBrandData) {
-    return parseNavbarBrandContainers(navbarBrandData.componentContainers, parseNavbarBrandContents(navbarBrandData.componentContents));
-}
+import componentParser from '../Utilities/componentParser.jsx';
 
 const NavbarBrand = (props) => {
-    return parseNavbarBrandData(props.navbarBrandData);
+    return componentParser(props.navbarBrandData);
 }
+
+NavbarBrand.propTypes = {
+    navbarBrandData : PropTypes.object.isRequired
+};
 
 export default NavbarBrand;
 

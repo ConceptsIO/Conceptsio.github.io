@@ -1,38 +1,36 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
+import { getJsonObject, getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 import NavbarBrand from './NavbarBrand.jsx';
 import NavbarCollapse from './NavbarCollapse.jsx';
 import NavbarToggler from './NavbarToggler.jsx';
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
-
-function parseNavbarContents(navbarContents) {
-    return navbarContents.map((item) => {
-        switch(item.componentType) {
-            case "navbarBrand":
-                return <NavbarBrand navbarBrandData={ item } />;
-            case "navbarCollapse":
-                return <NavbarCollapse navbarCollapseData={ item } />;
-            case "navbarToggler":
-                return <NavbarToggler navbarTogglerData={ item } />;
-            default:
-                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        }
-    });
-}
-
-function parseNavbarContainers(navbarContainers, navbarContents) {
-    return navbarContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarContents);
-    }); 
-}
-
-function parseNavbarData(navbarData) {
-    return parseNavbarContainers(navbarData.componentContainers, parseNavbarContents(navbarData.componentContents));
-}
+import componentParser from '../Utilities/componentParser.jsx';
 
 const Navbar = (props) => {
-    return parseNavbarData(getJsonObjectWithID(props.navbarJsonUrl, props.navbarID));
+    const navbarSubcomponentHandler = function(potentialSubcomponent) {
+        switch(potentialSubcomponent.componentType) {
+            case "navbarBrand":
+                return <NavbarBrand navbarBrandData={ potentialSubcomponent } />;
+            case "navbarCollapse":
+                return <NavbarCollapse navbarCollapseData={ potentialSubcomponent } />;
+            case "navbarToggler":
+                return <NavbarToggler navbarTogglerData={ potentialSubcomponent } />;
+        }
+    };
+    if(props.navbarData) {
+        return componentParser(props.navbarData, navbarSubcomponentHandler);
+    } else if(props.navbarID) {
+        return componentParser(getJsonObjectWithID(props.navbarJsonUrl, props.navbarID), navbarSubcomponentHandler);
+    } else {
+        return componentParser(getJsonObject(props.navbarJsonUrl));
+    }
+}
+
+Navbar.propTypes = {
+    navbarData : PropTypes.object,
+    navbarID : PropTypes.string,
+    navbarJsonUrl : PropTypes.string
 }
 
 export default Navbar;

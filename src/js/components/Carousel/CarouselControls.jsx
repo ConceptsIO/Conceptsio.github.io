@@ -1,34 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import parseJsonItem from "../Utilities/parseJsonItem.jsx";
 import CarouselControlPrev from './CarouselControlPrev.jsx';
 import CarouselControlNext from './CarouselControlNext.jsx';
-
-function parseCarouselControlsContents(carouselControlsContents) {
-    return carouselControlsContents.map((item) => {
-        switch(item.componentType) {
-            case "prev":
-                return <CarouselControlPrev carouselControlPrevData={ item }/>
-            case "next":
-                return <CarouselControlNext carouselControlNextData={ item }/>
-            default:
-                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        }
-    });
-}
-
-function parseCarouselControlsContainer(carouselControlsContainers, carouselControlsContents) {
-    return carouselControlsContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselControlsContents);
-    });
-}
-
-function parseCarouselControlsData(carouselControlsData) {
-    return parseCarouselControlsContainer(carouselControlsData.componentContainers, parseCarouselControlsContents(carouselControlsData.componentContents));
-}
+import componentParser from '../Utilities/componentParser.jsx';
 
 const CarouselControls = (props) => {
-    return parseCarouselControlsData(props.carouselControlsData);
+    const carouselControlsSubcomponentHandler = function(potentialSubcomponent) {
+        switch(potentialSubcomponent.componentType) {
+            case "prev":
+                return <CarouselControlPrev carouselControlPrevData={ potentialSubcomponent }/>;
+            case "next":
+                return <CarouselControlNext carouselControlNextData={ potentialSubcomponent }/>;
+        }
+    }
+    return componentParser(props.carouselControlsData, carouselControlsSubcomponentHandler);
+}
+
+CarouselControls.propTypes = {
+    carouselControlsData : PropTypes.object.isRequired
 }
 
 export default CarouselControls;

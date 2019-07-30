@@ -1,33 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import NavbarItem from './NavbarItem.jsx';
-
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
-
-function parseNavbarItemsContents(navbarItemsContents) {
-    return navbarItemsContents.map((item) => {
-        switch(item.componentType) {
-            case "navbarItem":
-                return <NavbarItem navbarItemData={ item }/>;
-            default:
-                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        }
-    });
-}
-
-function parseNavbarItemsContainers(navbarItemsContainers, navbarItemsContents) {
-    return navbarItemsContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarItemsContents);
-    });
-}
-
-function parseNavbarItemsData(navbarItemsData) {
-    return parseNavbarItemsContainers(navbarItemsData.componentContainers, parseNavbarItemsContents(navbarItemsData.componentContents));
-}
+import componentParser from '../Utilities/componentParser.jsx';
 
 const NavbarItems = (props) => {
-    return parseNavbarItemsData(props.navbarItemsData);
+    const navbarItemsSubcomponentHandler = function(potentialSubcomponent) {
+        switch(potentialSubcomponent.componentType) {
+            case "navbarItem":
+                return <NavbarItem navbarItemData={potentialSubcomponent}/>;
+        }
+    };
+    return componentParser(props.navbarItemsData, navbarItemsSubcomponentHandler);
 }
+
+NavbarItems.propTypes = {
+    navbarItemsData : PropTypes.object.isRequired
+};
 
 export default NavbarItems;
 

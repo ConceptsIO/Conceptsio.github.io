@@ -1,33 +1,22 @@
 import PropTypes from 'prop-types';
-import { getJsonObjectWithID } from '../Utilities/getJsonObject';
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 
-function parseFooterContents(footerContents) {
-    return footerContents.map((item) => {
-        switch(item.itemType) {
-            default:
-                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        }
-    });
-}
-
-function parseFooterContainers(footerContainer, footerContents) {
-    return footerContainer.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, footerContents);
-    });
-}
-
-function parseFooterData(footerData) {
-    return parseFooterContainers(footerData.componentContainers, parseFooterContents(footerData.componentContents));
-}
+import componentParser from '../Utilities/componentParser.jsx';
+import { getJsonObject, getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 
 const Footer = (props) => {
-    return parseFooterData(getJsonObjectWithID(props.footerJsonUrl, props.footerID));
+    if(props.footerData) {
+        return componentParser(props.footerData);
+    } else if(props.footerID) {
+        return componentParser(getJsonObjectWithID(props.footerJsonUrl, props.footerID));
+    } else {
+        return componentParser(getJsonObject(props.footerJsonUrl));
+    }    
 }
 
 Footer.propTypes = {
+    footerData : PropTypes.object,
     footerID : PropTypes.string,
-    footerJsonUrl : PropTypes.string.isRequired
+    footerJsonUrl : PropTypes.string
 };
 
 export default Footer;

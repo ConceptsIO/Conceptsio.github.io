@@ -1,31 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import parseJsonItem from "../Utilities/parseJsonItem.jsx";
 import TableRow from "./TableRow.jsx";
-
-function parseTableHeadContents(tableHeadContents) {
-    return tableHeadContents.map((item) => {
-        switch(item.componentType) {
-            case "tableRow":
-                return <TableRow tableRowData={ item } />
-            default:
-                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        }
-    });
-}
-
-function parseTableHeadContainers(tableHeadContainers, tableHeadContents) {
-    return tableHeadContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, tableHeadContents);
-    });
-}
-
-function parseTableHeadData(tableHeadData) {
-    return parseTableHeadContainers(tableHeadData.componentContainers, parseTableHeadContents(tableHeadData.componentContents));
-}
+import componentParser from '../Utilities/componentParser.jsx';
 
 const TableHead = (props) => {
-    return parseTableHeadData(props.tableHeadData);
+    const tableHeadSubcomponentHandler = function(potentialSubcomponent) {
+        switch(potentialSubcomponent.componentType) {
+            case "tableRow":
+                return <TableRow tableRowData={ potentialSubcomponent } />;
+        }
+    }
+    return componentParser(props.tableHeadData, tableHeadSubcomponentHandler);
+}
+
+TableHead.propTypes = {
+    tableHeadData : PropTypes.object.isRequired
 }
 
 export default TableHead;

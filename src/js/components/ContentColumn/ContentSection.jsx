@@ -1,4 +1,4 @@
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
+import componentParser from '../Utilities/componentParser.jsx';
 import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 
 const ContentSection = (props) => {

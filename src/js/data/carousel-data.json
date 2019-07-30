@@ -1,6 +1,6 @@
 [
     {
-        "componentID": "staffCarousel",
+        "componentID": "StaffCarousel",
         "componentContainers": [
             {
                 "containerType": "div",
@@ -28,6 +28,7 @@
         ],
         "componentContents" : [
             {
+                "componentID": "CarouselControls",
                 "componentType": "carouselControls",
                 "componentContainers": [
                     {
@@ -36,7 +37,8 @@
                 ],
                 "componentContents": [
                     {
-                        "componentType": "next",
+                        "componentID": "Prev",
+                        "componentType": "prev",
                         "componentContainers": [
                             {
                                 "containerType": "div",
@@ -70,6 +72,7 @@
                         ]
                     },
                     {
+                        "componentID": "Next",
                         "componentType": "next",
                         "componentContainers": [
                             {
@@ -106,6 +109,7 @@
                 ]
             },
             {
+                "componentID": "CarouselSlide",
                 "componentType": "carouselSlide",
                 "componentContainers": [
                     {
@@ -175,6 +179,9 @@
                                 "itemType": "br"
                             },
                             {
+                                "itemType": "br"
+                            },
+                            {
                                 "itemType": "p",
                                 "itemContents": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
                             } 
@@ -231,6 +238,9 @@
                                     "src": "../../../src/assets/matt.jpg",
                                     "alt": "This is Matt"
                                 }
+                            },
+                            {
+                                "itemType": "br"
                             },
                             {
                                 "itemType": "br"
@@ -297,8 +307,11 @@
                                 "itemType": "br"
                             },
                             {
+                                "itemType": "br"
+                            },
+                            {
                                 "itemType": "p",
-                                "itemContents": "jonathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
+                                "itemContents": "Jonathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
                             }
                         ]
                     }

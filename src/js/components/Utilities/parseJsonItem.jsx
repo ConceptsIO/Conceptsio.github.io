@@ -16,7 +16,7 @@ function parseJsonItem(dataItemType, dataItemAttributes, dataItemContents, dataC
                         containerContents.push(parseJsonItem(dataItemContents[i].containerType, dataItemContents[i].containerAttributes, dataItemContents[i].containerContents, dataComponentContents));
                     }
                 }
-                return <div { ...dataItemAttributes }>{ containerContents }</div>;
+                return <div { ...dataItemAttributes } >{ containerContents }</div>;
             } else {
                 return <div { ...dataItemAttributes }>{ dataComponentContents }</div>
             }
