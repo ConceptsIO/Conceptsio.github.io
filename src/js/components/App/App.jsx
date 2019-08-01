@@ -5,21 +5,79 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar.jsx';
 import Jumbotron from '../Jumbotron/Jumbotron.jsx';
 import Carousel from '../Carousel/Carousel.jsx';
-import ContentSection from '../ContentColumn/ContentSection.jsx';
+import ContentSection from '../ContentSection/ContentSection.jsx';
 import Table from '../Table/Table.jsx';
 import Footer from '../Footer/Footer.jsx';
 
 const App = (props) => {
     return (
         <div>
-            <Navbar navbarID={ "mainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
-            <Jumbotron jumbotronID={ "mainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />
-            <div className="container" id="aboutUs">
-                <h2>About Us</h2>
+            <Navbar navbarID={ "MainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
+            <Jumbotron jumbotronID={ "MainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />
+            <div class="container-fluid" id="Services" style={{ "background-color": "gray", "color":"white"}}>
+                <div class="row" style={{ "margin-left": "10px" }}>
+                    <h1>Services - How We Help You Win</h1>
+                </div>
                 <br />
+                <div class="row" style={{ "margin-left": "5px" }}>
+                    <h5>Websites - Speedy Construction, Reliable Maintenance, Steadfast Support</h5>
+                </div>
+                <br />
+                <div class="row align-items-center" style={{ "margin-left": "5px" }}>
+                    <div class="col col-lg-4 col-xs-3"> 
+                        <img alt="mobile responsive"/>
+                    </div>
+                    <div class="col col-lg-4 col-xs-3">
+                        <img alt="maintenance and support" />
+                    </div>
+                    <div class="col col-lg-4 col-xs-3">
+                        <img alt="best in class consulting" />
+                    </div>
+                </div>
+                <br />
+                <div class="row" style={{ "margin-left": "5px" }}>
+                    <h5>Social Media - Build Your Brand, Boost Sales, Crush the Competition</h5>
+                </div>
+                <br />
+                <div class="row align-items-center" style={{ "margin-left": "5px" }}>
+                    <div class="col col-lg-4 col-xs-3"> 
+                        <img alt="mobile responsive"/>
+                    </div>
+                    <div class="col col-lg-4 col-xs-3">
+                        <img alt="maintenance and support" />
+                    </div>
+                    <div class="col col-lg-4 col-xs-3">
+                        <img alt="best in class consulting" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row" style={{ "margin-left": "5px" }}>
+                    <h5>Next-Gen Customer Service - Leveraging Platforms Like Slack, Discord, and Other Text Platforms</h5>
+                </div>
+                <br/>
+                <div class="row align-items-center" style={{ "margin-left": "5px" }}>
+                    <div class="col col-lg-4 col-xs-3"> 
+                        <img alt="mobile responsive"/>
+                    </div>
+                    <div class="col col-lg-4 col-xs-3">
+                        <img alt="maintenance and support" />
+                    </div>
+                    <div class="col col-lg-4 col-xs-3">
+                        <img alt="best in class consulting" />
+                    </div>
+                </div>
+                <br/>
+                <br/>
+            </div>
+            <br/>
+            <div className="container" id="AboutUs">
                 <div class="row">
+                    <h1>About Us</h1>
+                    <br />
+                </div>
+                <div class="row align-items-center">
                     <div class="col">
-                        <img src="../../../../src/assets/ConceptsIOSolutionsCropped.png" style={{ display:"block", marginLeft: "auto", marginRight: "auto" }}/>
+                        <img class="mx-auto d-block" src="../assets/ConceptsIOSolutionsCropped.png"/>
                     </div>
                     <div class="col">
                         ConceptsIO Solutions is devoted to working with small 
@@ -28,10 +86,10 @@ const App = (props) => {
                         new leads and sales with the usage of smart websites and are 
                         legitimized by their online presence. Their websites are analogous 
                         to a storefront that passerby’s can window shop at. Digital marketing 
-                        with tools such as social media ads are new age funnels to a new 
-                        generation of customers. We serve as partners for SMBs in constructing
-                        beautiful custom websites and help businesses sell their products 
-                        effectively online.
+                        with tools such as social media ads can create new age brand and sales 
+                        funnels to a new generation of customers. We serve as partners for SMBs 
+                        in constructing beautiful custom websites and help businesses sell their 
+                        products effectively online.
                     </div>
                 </div>
                 <div class="row">
@@ -52,7 +110,7 @@ const App = (props) => {
             <br />
             <br />
             <Table tableID={ "PriceTable" } tableJsonUrl={ props.tablejsonurl } />
-            <Footer footerID={ "footer" } footerJsonUrl={ props.footerjsonurl } />
+            <Footer footerID={ "Footer" } footerJsonUrl={ props.footerjsonurl } />
         </div>
     );
 }

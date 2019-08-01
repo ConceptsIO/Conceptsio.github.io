@@ -13,7 +13,7 @@ const componentParser = function(component = null, subcomponentHandlers = null) 
     })(component.componentContainers, (function(componentContents, subcomponentHandlers) {
         // however before we can build the containers of the component, we must build the componentContents, check to
         // see if there is a subcomponent in the componentContents. If so then we call the componentParser function 
-        // from a subcomponent
+        // from a subcomponent. it also checks the componentContents is a list
         if(typeof(componentContents) === "object") {
             return componentContents.map((item) => {
                 // if the current item is a subcomponent and there is a subcomponent handler provided by the parent component
@@ -24,6 +24,7 @@ const componentParser = function(component = null, subcomponentHandlers = null) 
                     return parseJsonObjectToComponentItem(item);
                 }
             });
+            // if componentContents is just a single object
         } else if(componentContents.componentType && subcomponentHandlers) {
             return subcomponentHandlers(componentContents);
             // for any other itemContents

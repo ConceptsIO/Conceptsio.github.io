@@ -23,7 +23,14 @@ function parseJsonObjectToComponentItem(componentItems) {
                 return <div { ...componentItems.itemAttributes } key={ buffer }>{ contents }</div>;
             }
         case "h1":
-            return <h1 { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</h1>;
+            if(typeof(componentItems.itemContents) === "object") {
+                var contents = componentItems.itemContents.map((item) => {
+                    return parseJsonObjectToComponentItem(item);
+                });
+                return <h1 { ...componentItems.itemAttributes } key={ buffer }>{ contents }</h1>;
+            } else {
+                return <h1 { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</h1>;
+            }
         case "h2":
             return <h2 { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</h2>;
         case "h3":

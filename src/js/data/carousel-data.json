@@ -171,7 +171,7 @@
                             {
                                 "itemType": "img",
                                 "itemAttributes": {
-                                    "src": "../../../src/assets/george.jpg",
+                                    "src": "../assets/george.jpg",
                                     "alt": "This is George"
                                 }
                             },
@@ -235,7 +235,7 @@
                             {
                                 "itemType": "img",
                                 "itemAttributes": {
-                                    "src": "../../../src/assets/matt.jpg",
+                                    "src": "../assets/matt.jpg",
                                     "alt": "This is Matt"
                                 }
                             },
@@ -299,7 +299,7 @@
                             {
                                 "itemType": "img",
                                 "itemAttributes": {
-                                    "src": "../../../src/assets/jonathan.jpg",
+                                    "src": "../assets/jonathan.jpg",
                                     "alt": "This is Jonathan"
                                 }
                             },

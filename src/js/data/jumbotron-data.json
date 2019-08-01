@@ -1,13 +1,12 @@
 [
     {
-        "componentID": "mainJumbotron",
+        "componentID": "MainJumbotron",
         "componentContainers": [
             {
                 "containerType": "div",
                 "containerAttributes": {
                     "className": "jumbotron",
                     "style": {
-                        "backgroundImage": "url('../../../../src/assets/sadfox.png')", 
                         "backgroundRepeat": "no-repeat", 
                         "backgroundPosition": "right"
                     }
@@ -17,19 +16,34 @@
         "componentContents": [
             {
                 "itemType": "h1",
-                "itemContents": "ConceptsIO Solutions"
+                "itemContents": [
+                    "Concepts",
+                    {
+                        "itemType": "span",
+                        "itemAttributes": {
+                            "style": {
+                                "color": "lightseagreen",
+                                "font-weight": "bold"
+                            }
+                        },
+                        "itemContents": "I"
+                    },
+                    {
+                        "itemType": "span",
+                        "itemAttributes": {
+                            "style": {
+                                "color": "teal",
+                                "font-weight": "bold"
+                            }
+                        },
+                        "itemContents": "O"
+                    },
+                    " Solutions"
+                ]
             },
             {
-                "itemType": "h2",
-                "itemContents": "Full Service Website, Ecommerce, and Digital Marketing Partner"
-            },
-            {
-                "itemType": "h2",
-                "itemContents": "Please excuse our appearance, we are currently under construction."
-            },
-            {
-                "itemType": "p",
-                "itemContents": "The lucky number of the day is 42"
+                "itemType": "h3",
+                "itemContents": "A Full Service Website and Digital Marketing Agency"
             }
         ]
     }

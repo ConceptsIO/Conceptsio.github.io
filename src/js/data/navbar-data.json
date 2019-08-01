@@ -1,6 +1,6 @@
 [
     {
-        "componentID": "mainPageNavbar",
+        "componentID": "MainPageNavbar",
         "componentContainers": [
             {
                 "containerType": "nav",
@@ -30,7 +30,7 @@
                     {
                         "itemType": "img",
                         "itemAttributes": {
-                            "src": "../../../../../src/assets/64x64profile.png",
+                            "src": "../assets/64x64profile.png",
                             "alt": "Foxicon"
                         }
                     }
@@ -120,7 +120,7 @@
                                         "itemType": "a",
                                         "itemAttributes": {
                                             "className": "nav-link",
-                                            "href": "#aboutUs"
+                                            "href": "#AboutUs"
                                         },
                                         "itemContents": "About Us"
                                     }
@@ -240,7 +240,7 @@
                                         "itemType": "a",
                                         "itemAttributes": {
                                             "className": "nav-link",
-                                            "href": "#contactUs"
+                                            "href": "#ContactUs"
                                         },
                                         "itemContents": "Contact Us"
                                     }

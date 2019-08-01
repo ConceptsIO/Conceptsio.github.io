@@ -1,6 +1,6 @@
 [
     {
-        "componentID": "footer",
+        "componentID": "Footer",
         "componentContainers": [
             {
                 "containerType": "footer",
@@ -22,7 +22,7 @@
                             {
                                 "containerType": "div",
                                 "containerAttributes": {
-                                    "id": "contactUs"
+                                    "id": "ContactUs"
                                 }
                             }
                         ]
@@ -73,6 +73,10 @@
                     }
                 },
                 "itemContents": [
+                    {
+                        "itemType": "p",
+                        "itemContents": "The lucky number of the day is 42"
+                    },
                     {
                         "itemType": "p",
                         "itemAttributes": {
