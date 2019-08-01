@@ -1,28 +1,13 @@
-import parseJsonItem from "../Utilities/parseJsonItem.jsx";
-
-function parseNavbarTogglerContents(navbarTogglerContents) {
-    return navbarTogglerContents.map((item) => {
-        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-    });
-}
-
-function parseNavbarTogglerContainers(navbarTogglerContainers, navbarTogglerContents) {
-    return navbarTogglerContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarTogglerContents);
-    });
-}
-
-function parseNavbarTogglerData(navbarTogglerData) {
-    if(navbarTogglerData.componentContainers) {
-        return parseNavbarTogglerContainers(navbarTogglerData.componentContainers, parseNavbarTogglerContents(navbarTogglerData.componentContents));
-    } else {
-        return parseNavbarTogglerContents(navbarTogglerData.componentContents);
-    }
-}
+import PropTypes from 'prop-types';
+import componentParser from '../Utilities/componentParser.jsx';
 
 const NavbarToggler = (props) => {
-    return parseNavbarTogglerData(props.navbarTogglerData);
+    return componentParser(props.navbarTogglerData);
 }
+
+NavbarToggler.propTypes = {
+    navbarTogglerData : PropTypes.object.isRequired
+};
 
 export default NavbarToggler;
 

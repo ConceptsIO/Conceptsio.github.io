@@ -20,9 +20,6 @@
                         },
                         "containerContents": [
                             {
-                                "itemType": "br"
-                            },
-                            {
                                 "containerType": "div",
                                 "containerAttributes": {
                                     "id": "contactUs"
@@ -34,6 +31,9 @@
             }
         ],
         "componentContents": [
+            {
+                "itemType": "br"
+            },
             {
                 "itemType": "h2",
                 "itemContents": "Contact Us"

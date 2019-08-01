@@ -1,27 +1,15 @@
-import parseJsonItem from "../Utilities/parseJsonItem.jsx";
+import PropTypes from 'prop-types';
 
-function parseTableDataContents(tableDataContents) {
-    return tableDataContents.map((item) => {
-        if(item.itemType) {
-            return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        } else {
-            return item;
-        }
-    });
-}
-
-function parseTableDataContainers(tableDataContainers, tableDataContents) {
-    return tableDataContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, tableDataContents);
-    })
-}
-
-function parseTableDataData(tableDataData) {
-    return parseTableDataContainers(tableDataData.componentContainers, parseTableDataContents(tableDataData.componentContents));
-}
+import componentParser from "../Utilities/componentParser.jsx";
 
 const TableData = (props) => {
-    return parseTableDataData(props.tableDataData);
+    if(props.tableDataData) {
+        return componentParser(props.tableDataData);
+    }
+}
+
+TableData.propTypes = {
+    tableDataData : PropTypes.object.isRequired
 }
 
 export default TableData;

@@ -1,32 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Card from '../Card/Card.jsx';
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
-
-function parseCarouselSlideContents(carouselSlideContents) {
-    return carouselSlideContents.map((item) => {
-        switch(item.componentType) {
-            case "card":
-                return <Card cardData={ item }/>;
-            default:
-                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        }
-    });
-}
-
-function parseCarouselSlideContainers(carouselSlideContainers, carouselSlideContents) {
-    return carouselSlideContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselSlideContents);
-    });
-}
-
-function parseCarouselSlideData(carouselSlideData) {
-    return parseCarouselSlideContainers(carouselSlideData.componentContainers, parseCarouselSlideContents(carouselSlideData.componentContents));
-}
+import componentParser from '../Utilities/componentParser.jsx';
 
 const CarouselSlide = (props) => {
-    return parseCarouselSlideData(props.carouselSlideData);
+    const carouselSlideSubcomponentHandler = function(potentialSubcomponent) {
+        switch(potentialSubcomponent.componentType) {
+            case "card":
+                return <Card cardData={ potentialSubcomponent } />;
+        }
+    }
+    return componentParser(props.carouselSlideData, carouselSlideSubcomponentHandler);
 }
+
+CarouselSlide.propTypes = {
+    carouselSlideData : PropTypes.object.isRequired
+};
 
 export default CarouselSlide;
 

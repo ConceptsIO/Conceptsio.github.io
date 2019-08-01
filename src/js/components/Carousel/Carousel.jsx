@@ -1,36 +1,36 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import { getJsonObjectWithID } from '../Utilities/getJsonObject.js';
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
 import CarouselControls from './CarouselControls.jsx';
 import CarouselSlide from './CarouselSlide.jsx';
-
-function parseCarouselContents(carouselContents) {
-    return carouselContents.map((item) => {
-        switch(item.componentType) {
-            case "carouselControls":
-                return <CarouselControls carouselControlsData={ item }/>
-            case "carouselSlide":
-                return <CarouselSlide carouselSlideData={ item } />
-            default:
-                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        }
-    });
-}
-
-function parseCarouselContainers(carouselContainers, carouselContents) {
-    return carouselContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, carouselContents);
-    });
-}
-
-function parseCarouselData(carouselData) {
-    return parseCarouselContainers(carouselData.componentContainers, parseCarouselContents(carouselData.componentContents));
-}
+import componentParser from '../Utilities/componentParser.jsx';
+import { getJsonObject, getJsonObjectWithID } from '../Utilities/getJsonObject.js';
 
 const Carousel = (props) => {
-    return parseCarouselData(getJsonObjectWithID(props.carouselJsonUrl, props.carouselID));
+    const carouselSubcomponentHandler = function(potentialSubcomponent) {
+        switch(potentialSubcomponent.componentType) {
+            case "carouselControls":
+                return <CarouselControls carouselControlsData={potentialSubcomponent}/>;
+            case "carouselSlide":
+                return <CarouselSlide carouselSlideData={potentialSubcomponent}/>;
+            default:
+                break;
+        }
+    }
+    if(props.carouselData) {
+        return componentParser(props.carouselData, carouselSubcomponentHandler);
+    } else if(props.carouselID) {
+        return componentParser(getJsonObjectWithID(props.carouselJsonUrl, props.carouselID), carouselSubcomponentHandler);
+    } else {
+        return componentParser(getJsonObject(props.carouselJsonUrl), carouselSubcomponentHandler);
+    }
 }
+
+Carousel.propTypes = {
+    carouselData : PropTypes.object,
+    carouselID : PropTypes.string,
+    carouselJsonUrl : PropTypes.string
+};
 
 export default Carousel;
 

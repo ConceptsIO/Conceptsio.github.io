@@ -1,24 +1,13 @@
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
-
-function parseNavbarDropdownContents(navbarDropdownContents) {
-    return navbarDropdownContents.map((item) => {
-        return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-    });
-}
-
-function parseNavbarDropdownContainers(navbarDropdownContainers, navbarDropdownContents) {
-    return navbarDropdownContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, navbarDropdownContents);
-    });
-}
-
-function parseNavbarDropdownData(navbarDropdownData) {
-    return parseNavbarDropdownContainers(navbarDropdownData.componentContainers, parseNavbarDropdownContents(navbarDropdownData.componentContents));
-}
+import PropTypes from 'prop-types';
+import componentParser from '../Utilities/componentParser.jsx';
 
 const NavbarDropdown = (props) => {
-    return parseNavbarDropdownData(props.navbarDropdownData);
+    return componentParser(props.navbarDropdownData);
 }
+
+NavbarDropdown.propTypes = {
+    navbarDropdownData : PropTypes.object.isRequired
+};
 
 export default NavbarDropdown;
 

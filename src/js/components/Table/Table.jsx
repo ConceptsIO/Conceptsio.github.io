@@ -1,41 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getJsonObjectWithID } from "../Utilities/getJsonObject";
-import parseJsonItem from '../Utilities/parseJsonItem.jsx';
+import componentParser from '../Utilities/componentParser.jsx';
+import { getJsonObject, getJsonObjectWithID } from "../Utilities/getJsonObject.js";
 import TableHead from './TableHead.jsx';
 import TableBody from './TableBody.jsx';
 
-function parseTableContents(tableContents) {
-    return tableContents.map((item) => {
-        switch(item.componentType) {
-            case "tableHead":
-                return <TableHead tableHeadData={ item } />;
-            case "tableBody":
-                return <TableBody tableBodyData={ item } />;
-            default:
-                return parseJsonItem(item.itemType, item.itemAttributes, item.itemContents);
-        }
-    });
-}
-
-function parseTableContainers(tableContainers, tableContents) {
-    return tableContainers.map((container) => {
-        return parseJsonItem(container.containerType, container.containerAttributes, container.containerContents, tableContents);
-    });
-}
-
-function parseTableData(tableData) {
-    return parseTableContainers(tableData.componentContainers, parseTableContents(tableData.componentContents));
-}
-
 const Table = (props) => {
-    return parseTableData(getJsonObjectWithID(props.tableJsonUrl, props.tableID));
+    const tableSubcomponentHandler = function(potentialSubcomponent) {
+        switch(potentialSubcomponent.componentType) {
+            case "tableHead":
+                return <TableHead tableHeadData={ potentialSubcomponent } />;
+            case "tableBody":
+                return <TableBody tableBodyData={ potentialSubcomponent } />;
+        }
+    };
+
+    if(props.tableData) {
+        return componentParser(props.tableData, tableSubcomponentHandler);
+    } else if(props.tableID) {
+        return componentParser(getJsonObjectWithID(props.tableJsonUrl, props.tableID), tableSubcomponentHandler);
+    } else {
+        return componentParser(getJsonObject(props.tableJsonUrl), tableSubcomponentHandler);
+    }
 }
 
 Table.propTypes = {
+    tableData : PropTypes.object,
     tableID : PropTypes.string,
-    tableJsonUrl : PropTypes.string.isRequired
+    tableJsonUrl : PropTypes.string
 };
 
 export default Table;
