@@ -1,17 +1,49 @@
 [
     {
-        "contentColumnID": "aboutUs",
-        "contentColumnContainer": [
+        "componentID": "ContentSectionHead",
+        "componentContainers": [
             {
                 "containerType": "div",
-                "containerAttributes": [
+                "containerAttributes": {
+                    "className": "container-fluid"
+                },
+                "containerContents": [
                     {
-                        "className":"container"                        
+                        "componentID": "MainNavBar",
+                        "componentType": "navbar",
+                        "componentContents": "../src/js/data/navbar-data.json"
+                    },
+                    {
+                        "componentID": "MainJumbotron",
+                        "componentType": "jumbotron",
+                        "componentContents": "../src/js/data/jumbotron-data.json"
                     }
                 ]
             }
+        ]
+    },
+    {
+        "componentID": "ContentSectionAboutUs",
+        "componentContainers": [
+            {
+                "containerType": "div",
+                "containerAttributes": {
+                    "className": "container",
+                    "id": "aboutUs"
+                }
+            },
+            {
+                "componentID": "StaffCarousel",
+                "componentType": "carousel",
+                "componentContents": "../src/js/data/carousel-data.json"
+            },
+            {
+                "componentID": "PricingTable",
+                "componentType": "table",
+                "componetContents": "../src/js/data/table-data.json"
+            }
         ],
-        "contentColumnContents": [
+        "componentContent": [
             {
                 "itemType": "h2",
                 "itemContents": {
@@ -21,7 +53,7 @@
             {
                 "itemType": "img",
                 "itemAttributes": {
-                    "src": "../../../../src/assets/ConceptsIOSolutionsCropped.png",
+                    "src": "../src/assets/ConceptsIOSolutionsCropped.png",
                     "style": {
                         "display": "block",
                         "marginLeft": "auto", 
@@ -52,6 +84,16 @@
             {
                 "itemType": "br",
                 "itemCount": "2"
+            }
+        ]
+    },
+    {
+        "componentID": "ContentSectionFooter",
+        "componentContainers": [
+            {
+                "componentID": "Footer",
+                "componentType": "footer",
+                "componentContents": "../src/js/data/footer-data.json"
             }
         ]
     }
