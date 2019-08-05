@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import NavbarItem from './NavbarItem.jsx';
 import componentParser from '../Utilities/componentParser.jsx';
+import { getRandomKeyValue } from '../Utilities/getRandomKeyValue.js';
+import NavbarItem from './NavbarItem.jsx';
 
 const NavbarItems = (props) => {
     const navbarItemsSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
             case "navbarItem":
-                return <NavbarItem navbarItemData={potentialSubcomponent}/>;
+                return <NavbarItem key={ getRandomKeyValue() } navbarItemData={potentialSubcomponent}/>;
         }
     };
     return componentParser(props.navbarItemsData, navbarItemsSubcomponentHandler);

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import componentParser from '../Utilities/componentParser.jsx';
 import { getJsonObject, getJsonObjectWithID } from "../Utilities/getJsonObject.js";
+import { getRandomKeyValue } from '../Utilities/getRandomKeyValue.js';
 import TableHead from './TableHead.jsx';
 import TableBody from './TableBody.jsx';
 
@@ -10,9 +11,9 @@ const Table = (props) => {
     const tableSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
             case "tableHead":
-                return <TableHead tableHeadData={ potentialSubcomponent } />;
+                return <TableHead key={ getRandomKeyValue() } tableHeadData={ potentialSubcomponent } />;
             case "tableBody":
-                return <TableBody tableBodyData={ potentialSubcomponent } />;
+                return <TableBody key={ getRandomKeyValue() } tableBodyData={ potentialSubcomponent } />;
         }
     };
 

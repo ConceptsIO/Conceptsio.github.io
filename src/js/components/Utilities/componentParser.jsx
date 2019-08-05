@@ -1,4 +1,3 @@
-
 import parseJsonObjectToComponentContainers from './parseJsonObjectToComponentContainers.jsx';
 import parseJsonObjectToComponentItem from './parseJsonObjectToComponentItem.jsx';
 

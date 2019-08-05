@@ -14,56 +14,56 @@ const App = (props) => {
         <div>
             <Navbar navbarID={ "MainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
             <Jumbotron jumbotronID={ "MainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />
-            <div class="container-fluid" id="Services" style={{ "background-color": "gray", "color":"white"}}>
-                <div class="row" style={{ "margin-left": "10px" }}>
+            <div className="container-fluid" id="Services" style={{ "backgroundColor": "gray", "color":"white"}}>
+                <div className="row" style={{ "marginLeft": "10px" }}>
                     <h1>Services - How We Help You Win</h1>
                 </div>
                 <br />
-                <div class="row" style={{ "margin-left": "5px" }}>
+                <div className="row" style={{ "marginLeft": "5px" }}>
                     <h5>Websites - Speedy Construction, Reliable Maintenance, Steadfast Support</h5>
                 </div>
                 <br />
-                <div class="row align-items-center" style={{ "margin-left": "5px" }}>
-                    <div class="col col-lg-4 col-xs-3"> 
+                <div className="row align-items-center" style={{ "marginLeft": "5px" }}>
+                    <div className="col col-lg-4 col-xs-3"> 
                         <img alt="mobile responsive"/>
                     </div>
-                    <div class="col col-lg-4 col-xs-3">
+                    <div className="col col-lg-4 col-xs-3">
                         <img alt="maintenance and support" />
                     </div>
-                    <div class="col col-lg-4 col-xs-3">
+                    <div className="col col-lg-4 col-xs-3">
                         <img alt="best in class consulting" />
                     </div>
                 </div>
                 <br />
-                <div class="row" style={{ "margin-left": "5px" }}>
+                <div className="row" style={{ "marginLeft": "5px" }}>
                     <h5>Social Media - Build Your Brand, Boost Sales, Crush the Competition</h5>
                 </div>
                 <br />
-                <div class="row align-items-center" style={{ "margin-left": "5px" }}>
-                    <div class="col col-lg-4 col-xs-3"> 
-                        <img alt="mobile responsive"/>
+                <div className="row align-items-center" style={{ "marginLeft": "5px" }}>
+                    <div className="col col-lg-4 col-xs-3"> 
+                        <img alt="Facebook, Instagram, LinkedIn, and More Ads"/>
                     </div>
-                    <div class="col col-lg-4 col-xs-3">
-                        <img alt="maintenance and support" />
+                    <div className="col col-lg-4 col-xs-3">
+                        <img alt="Copy Writing and Content Production" />
                     </div>
-                    <div class="col col-lg-4 col-xs-3">
-                        <img alt="best in class consulting" />
+                    <div className="col col-lg-4 col-xs-3">
+                        <img alt="Tailored Marketing Strategy for Target Demographics" />
                     </div>
                 </div>
                 <br/>
-                <div class="row" style={{ "margin-left": "5px" }}>
-                    <h5>Next-Gen Customer Service - Leveraging Platforms Like Slack, Discord, and Other Text Platforms</h5>
+                <div className="row" style={{ "marginLeft": "5px" }}>
+                    <h5>Next-Gen Community Management and Customer Service - Leveraging Platforms Like Slack, Discord</h5>
                 </div>
                 <br/>
-                <div class="row align-items-center" style={{ "margin-left": "5px" }}>
-                    <div class="col col-lg-4 col-xs-3"> 
-                        <img alt="mobile responsive"/>
+                <div className="row align-items-center" style={{ "marginLeft": "5px" }}>
+                    <div className="col col-lg-4 col-xs-3"> 
+                        <img alt="Slack - B2B Customer Service"/>
                     </div>
-                    <div class="col col-lg-4 col-xs-3">
-                        <img alt="maintenance and support" />
+                    <div className="col col-lg-4 col-xs-3">
+                        <img alt="Discord - Safe text, talk, screen-share" />
                     </div>
-                    <div class="col col-lg-4 col-xs-3">
-                        <img alt="best in class consulting" />
+                    <div className="col col-lg-4 col-xs-3">
+                        <img alt="On-website customer service" />
                     </div>
                 </div>
                 <br/>
@@ -71,15 +71,15 @@ const App = (props) => {
             </div>
             <br/>
             <div className="container" id="AboutUs">
-                <div class="row">
+                <div className="row">
                     <h1>About Us</h1>
                     <br />
                 </div>
-                <div class="row align-items-center">
-                    <div class="col">
-                        <img class="mx-auto d-block" src="../assets/ConceptsIOSolutionsCropped.png"/>
+                <div className="row align-items-center">
+                    <div className="col">
+                        <img className="mx-auto d-block" src="../assets/ConceptsIOSolutionsCropped.png"/>
                     </div>
-                    <div class="col">
+                    <div className="col">
                         ConceptsIO Solutions is devoted to working with small 
                         to medium sized businesses on building, maintaining, and 
                         improving their digital presence. Contemporary businesses drive 
@@ -92,7 +92,7 @@ const App = (props) => {
                         products effectively online.
                     </div>
                 </div>
-                <div class="row">
+                <div className="row">
                     <br />
                     <br />
                     We are made up of dedicated professionals who want to produce 
@@ -110,6 +110,8 @@ const App = (props) => {
             <br />
             <br />
             <Table tableID={ "PriceTable" } tableJsonUrl={ props.tablejsonurl } />
+            <br />
+            <br />
             <Footer footerID={ "Footer" } footerJsonUrl={ props.footerjsonurl } />
         </div>
     );

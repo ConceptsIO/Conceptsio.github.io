@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import componentParser from '../Utilities/componentParser.jsx';
+import { getRandomKeyValue } from '../Utilities/getRandomKeyValue.js';
 import NavbarItems from './NavbarItems.jsx';
 
 const NavbarCollapse = (props) => {
     const navbarCollapseSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
             case "navbarItems":
-                return <NavbarItems navbarItemsData={ potentialSubcomponent } />;
+                return <NavbarItems key={ getRandomKeyValue() } navbarItemsData={ potentialSubcomponent } />;
         }
     };
     return componentParser(props.navbarCollapseData, navbarCollapseSubcomponentHandler);

@@ -5,18 +5,17 @@ import CarouselControls from './CarouselControls.jsx';
 import CarouselSlide from './CarouselSlide.jsx';
 import componentParser from '../Utilities/componentParser.jsx';
 import { getJsonObject, getJsonObjectWithID } from '../Utilities/getJsonObject.js';
+import { getRandomKeyValue } from '../Utilities/getRandomKeyValue.js';
 
 const Carousel = (props) => {
     const carouselSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
             case "carouselControls":
-                return <CarouselControls carouselControlsData={potentialSubcomponent}/>;
+                return <CarouselControls carouselControlsData={potentialSubcomponent} key={ getRandomKeyValue() }/>;
             case "carouselSlide":
-                return <CarouselSlide carouselSlideData={potentialSubcomponent}/>;
-            default:
-                break;
+                return <CarouselSlide carouselSlideData={potentialSubcomponent} key={ getRandomKeyValue() }/>;
         }
-    }
+    };
     if(props.carouselData) {
         return componentParser(props.carouselData, carouselSubcomponentHandler);
     } else if(props.carouselID) {
@@ -24,7 +23,7 @@ const Carousel = (props) => {
     } else {
         return componentParser(getJsonObject(props.carouselJsonUrl), carouselSubcomponentHandler);
     }
-}
+};
 
 Carousel.propTypes = {
     carouselData : PropTypes.object,

@@ -33,12 +33,7 @@
                 "componentType": "tableHead",
                 "componentContainers": [
                     { 
-                        "containerType": "thead",
-                        "containerContents": [
-                            {
-                                "containerType": "thead"
-                            }
-                        ]
+                        "containerType": "thead"
                     }
                 ],
                 "componentContents": [
@@ -164,7 +159,7 @@
                                     {
                                         "itemType": "a",
                                         "itemAttributes": {
-                                            "href": "#contactUs"
+                                            "href": "#ContactUs"
                                         },
                                         "itemContents": "Let's Set up a Meeting"
                                     }

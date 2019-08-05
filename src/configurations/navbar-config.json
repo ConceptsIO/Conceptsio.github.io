@@ -120,6 +120,27 @@
                                         "itemType": "a",
                                         "itemAttributes": {
                                             "className": "nav-link",
+                                            "href": "#Services"
+                                        },
+                                        "itemContents": "Services"
+                                    }
+                                ]
+                            },
+                            {
+                                "componentType": "navbarItem",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "li",
+                                        "containerAttributes": {
+                                            "className": "nav-item"
+                                        }
+                                    }
+                                ],
+                                "componentContents": [
+                                    {
+                                        "itemType": "a",
+                                        "itemAttributes": {
+                                            "className": "nav-link",
                                             "href": "#AboutUs"
                                         },
                                         "itemContents": "About Us"

@@ -1,6 +1,7 @@
 [
     {
         "componentID": "StaffCarousel",
+        "componentType": "Carousel",
         "componentContainers": [
             {
                 "containerType": "div",
@@ -29,7 +30,7 @@
         "componentContents" : [
             {
                 "componentID": "CarouselControls",
-                "componentType": "carouselControls",
+                "componentType": "CarouselControls",
                 "componentContainers": [
                     {
                         "containerType": "div"
@@ -110,7 +111,7 @@
             },
             {
                 "componentID": "CarouselSlide",
-                "componentType": "carouselSlide",
+                "componentType": "CarouselSlide",
                 "componentContainers": [
                     {
                         "containerType": "div",

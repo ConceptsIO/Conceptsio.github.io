@@ -4,14 +4,15 @@ import PropTypes from 'prop-types';
 import CarouselControlPrev from './CarouselControlPrev.jsx';
 import CarouselControlNext from './CarouselControlNext.jsx';
 import componentParser from '../Utilities/componentParser.jsx';
+import { getRandomKeyValue } from '../Utilities/getRandomKeyValue.js';
 
 const CarouselControls = (props) => {
     const carouselControlsSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
             case "prev":
-                return <CarouselControlPrev carouselControlPrevData={ potentialSubcomponent }/>;
+                return <CarouselControlPrev carouselControlPrevData={ potentialSubcomponent } key={ getRandomKeyValue() }/>;
             case "next":
-                return <CarouselControlNext carouselControlNextData={ potentialSubcomponent }/>;
+                return <CarouselControlNext carouselControlNextData={ potentialSubcomponent } key={ getRandomKeyValue() }/>;
         }
     }
     return componentParser(props.carouselControlsData, carouselControlsSubcomponentHandler);

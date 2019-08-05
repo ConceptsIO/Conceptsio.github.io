@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-import componentParser from "../Utilities/componentParser.jsx";
-import { getJsonObject, getJsonObjectWithID } from "../Utilities/getJsonObject";
+import componentParser from '../Utilities/componentParser.jsx';
+import { getJsonObject, getJsonObjectWithID } from '../Utilities/getJsonObject';
 
 const Card = (props) => {
     if(props.cardData) {
@@ -11,13 +11,13 @@ const Card = (props) => {
     } else {
         return componentParser(getJsonObject(props.cardJsonUrl));
     }
-}
+};
 
 Card.propTypes = {
     cardData : PropTypes.object,
     cardID : PropTypes.string,
     cardJsonUrl : PropTypes.string,
-}
+};
 
 export default Card;
 

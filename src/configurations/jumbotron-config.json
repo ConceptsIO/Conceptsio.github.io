@@ -23,7 +23,7 @@
                         "itemAttributes": {
                             "style": {
                                 "color": "lightseagreen",
-                                "font-weight": "bold"
+                                "fontWeight": "bold"
                             }
                         },
                         "itemContents": "I"
@@ -33,7 +33,7 @@
                         "itemAttributes": {
                             "style": {
                                 "color": "teal",
-                                "font-weight": "bold"
+                                "fontWeight": "bold"
                             }
                         },
                         "itemContents": "O"

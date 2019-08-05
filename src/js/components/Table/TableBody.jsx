@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import componentParser from '../Utilities/componentParser.jsx';
+import { getRandomKeyValue } from '../Utilities/getRandomKeyValue.js';
 import TableRow from './TableRow.jsx';
 
 
@@ -9,7 +10,7 @@ const TableBody = (props) => {
     const tableBodySubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
             case "tableRow":
-                return <TableRow tableRowData={ potentialSubcomponent } />;
+                return <TableRow key={ getRandomKeyValue() } tableRowData={ potentialSubcomponent } />;
             default:
                 break;
         }

@@ -1,75 +1,52 @@
 import React from 'react';
-
-const uuidv4 = require('uuid/v4');
-const buffer= Array();
+import { getRandomKeyValue } from '../Utilities/getRandomKeyValue.js';
 
 function parseJsonObjectToComponentItem(componentItems) {
-    // generate a random uuid into the buffer
-    uuidv4(null, buffer, 0);
+    var contents = null;
+    if(typeof(componentItems.itemContents) === "object") {
+        contents = componentItems.itemContents.map((item) => {
+            return parseJsonObjectToComponentItem(item);
+        });
+    }
     // checks the passed in item type to various HTML tags
     switch(componentItems.itemType) {
         // cases to evaluate the passed in item type and returns the component item's contents
         case "a":
-            return <a { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</a>;
+            return <a { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</a>;
         case "br":
-            return <br key={ buffer }/>;
+            return <br key={ getRandomKeyValue() }/>;
         case "button":
-            return <button { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</button>;
+            return <button { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</button>;
         case "div":
-            if(typeof(componentItems.itemContents) === "object") {
-                var contents = componentItems.itemContents.map((item) => {
-                    return parseJsonObjectToComponentItem(item);
-                });
-                return <div { ...componentItems.itemAttributes } key={ buffer }>{ contents }</div>;
-            }
+            return <div { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</div>;
+        
         case "h1":
-            if(typeof(componentItems.itemContents) === "object") {
-                var contents = componentItems.itemContents.map((item) => {
-                    return parseJsonObjectToComponentItem(item);
-                });
-                return <h1 { ...componentItems.itemAttributes } key={ buffer }>{ contents }</h1>;
-            } else {
-                return <h1 { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</h1>;
-            }
+            return <h1 { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</h1>;
         case "h2":
-            return <h2 { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</h2>;
+            return <h2 { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</h2>;
         case "h3":
-            return <h3 { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</h3>;
+            return <h3 { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</h3>;
         case "h4":
-            return <h4 { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</h4>;
+            return <h4 { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</h4>;
         case "h5":
-            return <h5 { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</h5>;
+            return <h5 { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</h5>;
         case "h6":
-            return <h6 { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</h6>;
+            return <h6 { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</h6>;
         case "img":
-            return <img { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</img>;
+            return <img { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</img>;
         case "li":
-            return <li { ...componentItems.itemAttributes } key={ buffer } >{ componentItems.itemContents }</li>;
+            return <li { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</li>;
         case "nav":
-            return <nav { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</nav>;
+            return <nav { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</nav>;
         case "p":
-            if(typeof(componentItems.itemContents) === "object") {
-                var contents = componentItems.itemContents.map((item) => {
-                    return parseJsonObjectToComponentItem(item);
-                });
-                return <p { ...componentItems.itemAttributes } key={ buffer }>{ contents }</p>;
-            } else {
-                return <p { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</p>;
-            }
-            
+            return <p { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</p>;
+
         case "span":
-            if(typeof(componentItems.itemContents) === "object") {
-                var contents = componentItems.itemContents.map((item) => {
-                    return parseJsonObjectToComponentItem(item);
-                });
-                return <span { ...componentItems.itemAttributes } key={ buffer }>{ contents }</span>;
-            } else {
-                return <span { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</span>;
-            }
+            return <span { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</span>;
         case "td":
-            return <td { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</td>;
+            return <td { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</td>;
         case "th":
-            return <th { ...componentItems.itemAttributes } key={ buffer }>{ componentItems.itemContents }</th>;
+            return <th { ...componentItems.itemAttributes } key={ getRandomKeyValue() }>{ contents ? contents : componentItems.itemContents }</th>;
         default: 
             return componentItems;
     }

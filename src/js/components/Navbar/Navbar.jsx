@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { getJsonObject, getJsonObjectWithID } from '../Utilities/getJsonObject.js';
+import { getRandomKeyValue } from '../Utilities/getRandomKeyValue.js';
 import NavbarBrand from './NavbarBrand.jsx';
 import NavbarCollapse from './NavbarCollapse.jsx';
 import NavbarToggler from './NavbarToggler.jsx';
@@ -11,11 +12,11 @@ const Navbar = (props) => {
     const navbarSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
             case "navbarBrand":
-                return <NavbarBrand navbarBrandData={ potentialSubcomponent } />;
+                return <NavbarBrand key={ getRandomKeyValue() } navbarBrandData={ potentialSubcomponent } />;
             case "navbarCollapse":
-                return <NavbarCollapse navbarCollapseData={ potentialSubcomponent } />;
+                return <NavbarCollapse key={ getRandomKeyValue() } navbarCollapseData={ potentialSubcomponent } />;
             case "navbarToggler":
-                return <NavbarToggler navbarTogglerData={ potentialSubcomponent } />;
+                return <NavbarToggler key={ getRandomKeyValue() } navbarTogglerData={ potentialSubcomponent } />;
         }
     };
     if(props.navbarData) {
