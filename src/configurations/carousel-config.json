@@ -48,7 +48,7 @@
                                         "containerType": "a",
                                         "containerAttributes": {
                                             "className": "carousel-control-prev",
-                                            "data-slide": "next",
+                                            "data-slide": "prev",
                                             "href": "#StaffCarousel",
                                             "role": "button"
                                         }
@@ -117,8 +117,11 @@
                         "containerType": "div",
                         "containerAttributes": {
                             "className": "carousel-inner",
+                            "role": "listbox",
                             "style": {
-                                "margin": "auto"
+                                "margin": "auto",
+                                "width": "100%",
+                                "min-height": "30%"
                             }
                         }
                     }
@@ -140,7 +143,7 @@
                                             "style": {
                                                 "backgroundColor": "lightseagreen",
                                                 "display": "block",
-                                                "height": "auto",
+                                                "height": "40%",
                                                 "margin": "auto",
                                                 "width": "50%"
                                             }
@@ -184,7 +187,7 @@
                             },
                             {
                                 "itemType": "p",
-                                "itemContents": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur who wants to work toward a world where humanity is free from robotic tasks and free to explore the full breadth of science, culture, and the cosmos. Also, he’s a software engineer, UI/UX designer, and writer; he is interested to discuss automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
+                                "itemContents": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur. He is interested in discussing automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
                             } 
                         ]
                     },

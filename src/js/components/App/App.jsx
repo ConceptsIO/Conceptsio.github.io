@@ -58,7 +58,7 @@ const App = (props) => {
                 </div>
                 <br/>
                 <div className="row" style={{ "marginLeft": "5px" }}>
-                    <h5>Next-Gen Community Management and Customer Service - Leveraging Platforms Like Slack, Discord</h5>
+                    <h5>Next-Gen Community Management and Customer Service - Leveraging Platforms Like Slack and Discord</h5>
                 </div>
                 <br/>
                 <div className="row d-flex align-items-center" style={{ "textAlign": "center" }}>
