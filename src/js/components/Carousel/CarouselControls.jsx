@@ -9,9 +9,9 @@ import { getRandomKeyValue } from '../Utilities/getRandomKeyValue.js';
 const CarouselControls = (props) => {
     const carouselControlsSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
-            case "prev":
+            case "Prev":
                 return <CarouselControlPrev carouselControlPrevData={ potentialSubcomponent } key={ getRandomKeyValue() }/>;
-            case "next":
+            case "Next":
                 return <CarouselControlNext carouselControlNextData={ potentialSubcomponent } key={ getRandomKeyValue() }/>;
         }
     }

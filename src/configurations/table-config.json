@@ -1,6 +1,7 @@
 [
     {
         "componentID": "PriceTable",
+        "componentType": "Table",
         "componentContainers": [
             {
                 "containerType": "div",
@@ -8,7 +9,7 @@
                     "className": "container-fluid",
                     "id": "PriceTable"
                 },
-               "containerContents": [
+                "containerContents": [
                     {
                         "itemType": "h2",
                         "itemContents": "Pricing"
@@ -30,15 +31,15 @@
         ],
         "componentContents": [
             {
-                "componentType": "tableHead",
+                "componentType": "TableHead",
                 "componentContainers": [
-                    { 
+                    {
                         "containerType": "thead"
                     }
                 ],
                 "componentContents": [
                     {
-                        "componentType": "tableRow",
+                        "componentType": "TableRow",
                         "componentContainers": [
                             {
                                 "containerType": "tr"
@@ -51,7 +52,7 @@
                                     "scope": "col",
                                     "style": {
                                         "width": "10%"
-                                    } 
+                                    }
                                 },
                                 "itemContents": "Pricing Tier"
                             },
@@ -71,7 +72,7 @@
                                     "scope": "col",
                                     "style": {
                                         "width": "20%"
-                                    } 
+                                    }
                                 },
                                 "itemContents": "Code Monkeys"
                             },
@@ -81,7 +82,7 @@
                                     "scope": "col",
                                     "style": {
                                         "width": "20%"
-                                    } 
+                                    }
                                 },
                                 "itemContents": "Webmasters"
                             },
@@ -91,7 +92,7 @@
                                     "scope": "col",
                                     "style": {
                                         "width": "20%"
-                                    } 
+                                    }
                                 },
                                 "itemContents": "Startup Hackers *Special Tier*"
                             }
@@ -100,7 +101,7 @@
                 ]
             },
             {
-                "componentType": "tableBody",
+                "componentType": "TableBody",
                 "componentContainers": [
                     {
                         "containerType": "tbody"
@@ -108,7 +109,7 @@
                 ],
                 "componentContents": [
                     {
-                        "componentType": "tableRow",
+                        "componentType": "TableRow",
                         "componentContainers": [
                             {
                                 "containerType": "tr"
@@ -116,7 +117,7 @@
                         ],
                         "componentContents": [
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -127,7 +128,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -138,7 +139,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -149,7 +150,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -166,7 +167,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -179,7 +180,7 @@
                         ]
                     },
                     {
-                        "componentType": "tableRow",
+                        "componentType": "TableRow",
                         "componentContainers": [
                             {
                                 "containerType": "tr"
@@ -187,7 +188,7 @@
                         ],
                         "componentContents": [
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -198,7 +199,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -209,7 +210,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -220,7 +221,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -231,7 +232,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -244,7 +245,7 @@
                         ]
                     },
                     {
-                        "componentType": "tableRow",
+                        "componentType": "TableRow",
                         "componentContainers": [
                             {
                                 "containerType": "tr"
@@ -252,7 +253,7 @@
                         ],
                         "componentContents": [
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -263,7 +264,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -274,7 +275,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -285,7 +286,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -296,7 +297,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -309,7 +310,7 @@
                         ]
                     },
                     {
-                        "componentType": "tableRow",
+                        "componentType": "TableRow",
                         "componentContainers": [
                             {
                                 "containerType": "tr"
@@ -317,7 +318,7 @@
                         ],
                         "componentContents": [
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -328,7 +329,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td",
@@ -345,31 +346,41 @@
                                         ]
                                     }
                                 ],
-                                "componentContents" : [
+                                "componentContents": [
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["Beautiful smart websites for online branding"]
+                                        "itemContents": [
+                                            "Beautiful smart websites for online branding"
+                                        ]
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["Mobile optimized websites"]
+                                        "itemContents": [
+                                            "Mobile optimized websites"
+                                        ]
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["Single page application"]
+                                        "itemContents": [
+                                            "Single page application"
+                                        ]
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["Site copywriting"]
+                                        "itemContents": [
+                                            "Site copywriting"
+                                        ]
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["Monthly strategy meeting"]
+                                        "itemContents": [
+                                            "Monthly strategy meeting"
+                                        ]
                                     }
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td",
@@ -386,48 +397,7 @@
                                         ]
                                     }
                                 ],
-                                "componentContents" : [
-                                    {
-                                        "itemType": "li",
-                                        "itemContents": ["All features from the previous tiers"]
-                                    },
-                                    {
-                                        "itemType": "li",
-                                        "itemContents": ["Access to Slack/Discord customer service/forums"]
-                                    },
-                                    {
-                                        "itemType": "li",
-                                        "itemContents": ["User login, website dashboard, database integration"]
-                                    },
-                                    {
-                                        "itemType": "li",
-                                        "itemContents": ["Support for email via Gsuite"]
-                                    },
-                                    {
-                                        "itemType": "li",
-                                        "itemContents": ["SEO consultation"]
-                                    }
-                                ]
-                            },
-                            {
-                                "componentType": "tableData",
-                                "componentContainers": [
-                                    {
-                                        "containerType": "td",
-                                        "containerContents": [
-                                            {
-                                                "containerType": "ul",
-                                                "containerAttributes": {
-                                                    "style": {
-                                                        "paddingLeft": "5%",
-                                                        "wrapContent": "true"
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "componentContents" : [
+                                "componentContents": [
                                     {
                                         "itemType": "li",
                                         "itemContents": [
@@ -436,28 +406,32 @@
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["Custom built features"]
+                                        "itemContents": [
+                                            "Access to Slack/Discord customer service/forums"
+                                        ]
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["24/7 live support"]
+                                        "itemContents": [
+                                            "User login, website dashboard, database integration"
+                                        ]
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["Ecommerce strategy and implementation consulting"]
+                                        "itemContents": [
+                                            "Support for email via Gsuite"
+                                        ]
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["D2C web marketplace on your site"]
-                                    },
-                                    {
-                                        "itemType": "li",
-                                        "itemContents": ["Digital marketing strategy and implementation consulting"]
+                                        "itemContents": [
+                                            "SEO consultation"
+                                        ]
                                     }
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td",
@@ -474,25 +448,88 @@
                                         ]
                                     }
                                 ],
-                                "componentContents" : [
+                                "componentContents": [
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["Special version of the Webmasters tier for pre-seed to seed stage startups"]
+                                        "itemContents": [
+                                            "All features from the previous tiers"
+                                        ]
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["You can negotiate for the features from Webmasters with the Code Monkeys features as a starting base"]
+                                        "itemContents": [
+                                            "Custom built features"
+                                        ]
                                     },
                                     {
                                         "itemType": "li",
-                                        "itemContents": ["We will do a top to bottom assessment and consultation for your business to determine what web technologies and presence best serve your business"]
+                                        "itemContents": [
+                                            "24/7 live support"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Ecommerce strategy and implementation consulting"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "D2C web marketplace on your site"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Digital marketing strategy and implementation consulting"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td",
+                                        "containerContents": [
+                                            {
+                                                "containerType": "ul",
+                                                "containerAttributes": {
+                                                    "style": {
+                                                        "paddingLeft": "5%",
+                                                        "wrapContent": "true"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "componentContents": [
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Special version of the Webmasters tier for pre-seed to seed stage startups"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "You can negotiate for the features from Webmasters with the Code Monkeys features as a starting base"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "We will do a top to bottom assessment and consultation for your business to determine what web technologies and presence best serve your business"
+                                        ]
                                     }
                                 ]
                             }
                         ]
                     },
                     {
-                        "componentType": "tableRow",
+                        "componentType": "TableRow",
                         "componentContainers": [
                             {
                                 "containerType": "tr"
@@ -500,7 +537,7 @@
                         ],
                         "componentContents": [
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -515,7 +552,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -530,7 +567,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -545,7 +582,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -556,7 +593,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -573,7 +610,7 @@
                         ]
                     },
                     {
-                        "componentType": "tableRow",
+                        "componentType": "TableRow",
                         "componentContainers": [
                             {
                                 "containerType": "tr"
@@ -581,7 +618,7 @@
                         ],
                         "componentContents": [
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -592,7 +629,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -603,7 +640,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -614,7 +651,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -625,7 +662,7 @@
                                 ]
                             },
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td"
@@ -638,7 +675,7 @@
                         ]
                     },
                     {
-                        "componentType": "tableRow",
+                        "componentType": "TableRow",
                         "componentContainers": [
                             {
                                 "containerType": "tr"
@@ -646,7 +683,7 @@
                         ],
                         "componentContents": [
                             {
-                                "componentType": "tableData",
+                                "componentType": "TableData",
                                 "componentContainers": [
                                     {
                                         "containerType": "td",

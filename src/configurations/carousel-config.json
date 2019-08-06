@@ -39,7 +39,7 @@
                 "componentContents": [
                     {
                         "componentID": "Prev",
-                        "componentType": "prev",
+                        "componentType": "Prev",
                         "componentContainers": [
                             {
                                 "containerType": "div",
@@ -74,7 +74,7 @@
                     },
                     {
                         "componentID": "Next",
-                        "componentType": "next",
+                        "componentType": "Next",
                         "componentContainers": [
                             {
                                 "containerType": "div",
@@ -125,7 +125,7 @@
                 ],
                 "componentContents": [
                     {
-                        "componentType": "card",
+                        "componentType": "Card",
                         "componentContainers": [
                             {
                                 "containerType": "div",
@@ -189,7 +189,7 @@
                         ]
                     },
                     {
-                        "componentType": "card",
+                        "componentType": "Card",
                         "componentContainers": [
                             {
                                 "containerType": "div",
@@ -253,7 +253,7 @@
                         ]
                     },
                     {
-                        "componentType": "card",
+                        "componentType": "Card",
                         "componentContainers": [
                             {
                                 "containerType": "div",

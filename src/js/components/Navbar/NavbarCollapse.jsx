@@ -8,7 +8,7 @@ import NavbarItems from './NavbarItems.jsx';
 const NavbarCollapse = (props) => {
     const navbarCollapseSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
-            case "navbarItems":
+            case "NavbarItems":
                 return <NavbarItems key={ getRandomKeyValue() } navbarItemsData={ potentialSubcomponent } />;
         }
     };

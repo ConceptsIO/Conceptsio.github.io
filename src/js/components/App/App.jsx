@@ -13,8 +13,8 @@ const App = (props) => {
     return (
         <div>
             <Navbar navbarID={ "MainPageNavbar" } navbarJsonUrl={ props.navbarjsonurl } />
-            <Jumbotron jumbotronID={ "MainJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />
-            <div className="container-fluid" id="Services" style={{ "backgroundColor": "gray", "color":"white"}}>
+            <Jumbotron jumbotronID={ "MainPageJumbotron" } jumbotronJsonUrl={ props.jumbotronjsonurl } />
+            <div className="container" id="Services">
                 <div className="row" style={{ "marginLeft": "10px" }}>
                     <h1>Services - How We Help You Win</h1>
                 </div>
@@ -23,15 +23,18 @@ const App = (props) => {
                     <h5>Websites - Speedy Construction, Reliable Maintenance, Steadfast Support</h5>
                 </div>
                 <br />
-                <div className="row align-items-center" style={{ "marginLeft": "5px" }}>
+                <div className="row d-flex align-items-center" style={{ "textAlign": "center"}}>
                     <div className="col col-lg-4 col-xs-3"> 
-                        <img alt="mobile responsive"/>
+                        <img className="mx-auto d-block" src="../assets/smartphone.png" alt="mobile responsive"/>
+                        <p >Mobile Responsive Websites</p>
                     </div>
                     <div className="col col-lg-4 col-xs-3">
-                        <img alt="maintenance and support" />
+                        <img className="mx-auto d-block" src="../assets/maintenance_and_support.jpeg" alt="maintenance and support" />
+                        <p >Maintenance and Support</p>
                     </div>
                     <div className="col col-lg-4 col-xs-3">
-                        <img alt="best in class consulting" />
+                        <img className="mx-auto d-block" src="../assets/consulting.jpeg" alt="best in class consulting" />
+                        <p>Best in Class Consultations</p>
                     </div>
                 </div>
                 <br />
@@ -39,15 +42,18 @@ const App = (props) => {
                     <h5>Social Media - Build Your Brand, Boost Sales, Crush the Competition</h5>
                 </div>
                 <br />
-                <div className="row align-items-center" style={{ "marginLeft": "5px" }}>
+                <div className="row d-flex align-items-center" style={{ "textAlign": "center" }}>
                     <div className="col col-lg-4 col-xs-3"> 
-                        <img alt="Facebook, Instagram, LinkedIn, and More Ads"/>
+                        <img className="mx-auto d-block" src="../assets/SocialMediaLogos.png" alt="Facebook, Instagram, LinkedIn, and More Ads"/>
+                        <p >Facebook, Instagram, LinkedIn, and More<span><br /></span>Organic Content and Paid Ads</p>
                     </div>
                     <div className="col col-lg-4 col-xs-3">
-                        <img alt="Copy Writing and Content Production" />
+                        <img className="mx-auto d-block" src="../assets/copywriting.jpeg" alt="Copy Writing and Content Production" />
+                        <p>Social Media Copy Writing and Content Production</p>
                     </div>
                     <div className="col col-lg-4 col-xs-3">
-                        <img alt="Tailored Marketing Strategy for Target Demographics" />
+                        <img className="mx-auto d-block" alt="Tailored Marketing Strategy for Target Demographics" />
+                        <p>Tailored Marketing Strategy for Target Demographics</p>
                     </div>
                 </div>
                 <br/>
@@ -55,15 +61,16 @@ const App = (props) => {
                     <h5>Next-Gen Community Management and Customer Service - Leveraging Platforms Like Slack, Discord</h5>
                 </div>
                 <br/>
-                <div className="row align-items-center" style={{ "marginLeft": "5px" }}>
+                <div className="row d-flex align-items-center" style={{ "textAlign": "center" }}>
                     <div className="col col-lg-4 col-xs-3"> 
-                        <img alt="Slack - B2B Customer Service"/>
+                        <img className="mx-auto d-block" src="../assets/slacklogo.png" alt="Slack - B2B Customer Service"/>
                     </div>
                     <div className="col col-lg-4 col-xs-3">
-                        <img alt="Discord - Safe text, talk, screen-share" />
+                        <img className="mx-auto d-block" src="../assets/discordlogo.png" alt="Discord - Safe text, talk, screen-share" />
                     </div>
                     <div className="col col-lg-4 col-xs-3">
-                        <img alt="On-website customer service" />
+                        <img className="mx-auto d-block" src="../assets/customer_service.jpeg" alt="On-website customer service" />
+                        <p>Website-based customer service</p>
                     </div>
                 </div>
                 <br/>
@@ -112,7 +119,7 @@ const App = (props) => {
             <Table tableID={ "PriceTable" } tableJsonUrl={ props.tablejsonurl } />
             <br />
             <br />
-            <Footer footerID={ "Footer" } footerJsonUrl={ props.footerjsonurl } />
+            <Footer footerID={ "MainPageFooter" } footerJsonUrl={ props.footerjsonurl } />
         </div>
     );
 }

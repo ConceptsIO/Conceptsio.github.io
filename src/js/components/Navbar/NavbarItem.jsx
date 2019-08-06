@@ -8,7 +8,7 @@ import NavbarDropdown from './NavbarDropdown.jsx';
 const NavbarItem = (props) => {
     const navbarSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
-            case "navbarDropdown":
+            case "NavbarDropdown":
                 return <NavbarDropdown key={ getRandomKeyValue() } navbarDropdownData={ potentialSubcomponent } />;
             default:
                 break;

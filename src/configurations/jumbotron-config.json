@@ -1,6 +1,6 @@
 [
     {
-        "componentID": "MainJumbotron",
+        "componentID": "MainPageJumbotron",
         "componentContainers": [
             {
                 "containerType": "div",

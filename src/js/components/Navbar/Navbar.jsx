@@ -11,11 +11,11 @@ import componentParser from '../Utilities/componentParser.jsx';
 const Navbar = (props) => {
     const navbarSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
-            case "navbarBrand":
+            case "NavbarBrand":
                 return <NavbarBrand key={ getRandomKeyValue() } navbarBrandData={ potentialSubcomponent } />;
-            case "navbarCollapse":
+            case "NavbarCollapse":
                 return <NavbarCollapse key={ getRandomKeyValue() } navbarCollapseData={ potentialSubcomponent } />;
-            case "navbarToggler":
+            case "NavbarToggler":
                 return <NavbarToggler key={ getRandomKeyValue() } navbarTogglerData={ potentialSubcomponent } />;
         }
     };

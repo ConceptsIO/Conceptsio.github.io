@@ -8,7 +8,7 @@ import NavbarItem from './NavbarItem.jsx';
 const NavbarItems = (props) => {
     const navbarItemsSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
-            case "navbarItem":
+            case "NavbarItem":
                 return <NavbarItem key={ getRandomKeyValue() } navbarItemData={potentialSubcomponent}/>;
         }
     };

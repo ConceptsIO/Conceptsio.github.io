@@ -1,6 +1,7 @@
 [
     {
-        "componentID": "Footer",
+        "componentID": "MainPageFooter",
+        "componentType": "Footer",
         "componentContainers": [
             {
                 "containerType": "footer",

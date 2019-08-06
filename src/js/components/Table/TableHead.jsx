@@ -8,7 +8,7 @@ import TableRow from "./TableRow.jsx";
 const TableHead = (props) => {
     const tableHeadSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
-            case "tableRow":
+            case "TableRow":
                 return <TableRow key={ getRandomKeyValue() } tableRowData={ potentialSubcomponent } />;
         }
     }

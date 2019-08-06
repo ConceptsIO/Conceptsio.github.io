@@ -8,7 +8,7 @@ import TableData from "./TableData.jsx";
 const TableRow = (props) => {
     const tableRowSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
-            case "tableData":
+            case "TableData":
                 return <TableData key={ getRandomKeyValue() } tableDataData={ potentialSubcomponent } />;
         }
     }

@@ -10,9 +10,9 @@ import TableBody from './TableBody.jsx';
 const Table = (props) => {
     const tableSubcomponentHandler = function(potentialSubcomponent) {
         switch(potentialSubcomponent.componentType) {
-            case "tableHead":
+            case "TableHead":
                 return <TableHead key={ getRandomKeyValue() } tableHeadData={ potentialSubcomponent } />;
-            case "tableBody":
+            case "TableBody":
                 return <TableBody key={ getRandomKeyValue() } tableBodyData={ potentialSubcomponent } />;
         }
     };
