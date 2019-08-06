@@ -1,0 +1,712 @@
+[
+    {
+        "componentID": "PriceTable",
+        "componentType": "Table",
+        "componentContainers": [
+            {
+                "containerType": "div",
+                "containerAttributes": {
+                    "className": "container-fluid",
+                    "id": "PriceTable"
+                },
+                "containerContents": [
+                    {
+                        "itemType": "h2",
+                        "itemContents": "Pricing"
+                    },
+                    {
+                        "itemType": "br"
+                    },
+                    {
+                        "containerType": "table",
+                        "containerAttributes": {
+                            "className": "table table-bordered",
+                            "style": {
+                                "borderColor": "black"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "componentContents": [
+            {
+                "componentType": "TableHead",
+                "componentContainers": [
+                    {
+                        "containerType": "thead"
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentType": "TableRow",
+                        "componentContainers": [
+                            {
+                                "containerType": "tr"
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "th",
+                                "itemAttributes": {
+                                    "scope": "col",
+                                    "style": {
+                                        "width": "10%"
+                                    }
+                                },
+                                "itemContents": "Pricing Tier"
+                            },
+                            {
+                                "itemType": "th",
+                                "itemAttributes": {
+                                    "scope": "col",
+                                    "style": {
+                                        "width": "20%"
+                                    }
+                                },
+                                "itemContents": "Script Kiddies"
+                            },
+                            {
+                                "itemType": "th",
+                                "itemAttributes": {
+                                    "scope": "col",
+                                    "style": {
+                                        "width": "20%"
+                                    }
+                                },
+                                "itemContents": "Code Monkeys"
+                            },
+                            {
+                                "itemType": "th",
+                                "itemAttributes": {
+                                    "scope": "col",
+                                    "style": {
+                                        "width": "20%"
+                                    }
+                                },
+                                "itemContents": "Webmasters"
+                            },
+                            {
+                                "itemType": "th",
+                                "itemAttributes": {
+                                    "scope": "col",
+                                    "style": {
+                                        "width": "20%"
+                                    }
+                                },
+                                "itemContents": "Startup Hackers *Special Tier*"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "componentType": "TableBody",
+                "componentContainers": [
+                    {
+                        "containerType": "tbody"
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentType": "TableRow",
+                        "componentContainers": [
+                            {
+                                "containerType": "tr"
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Build/Design Cost"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "$3,000 one time fee"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "$7,750 one time fee"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    {
+                                        "itemType": "a",
+                                        "itemAttributes": {
+                                            "href": "#ContactUs"
+                                        },
+                                        "itemContents": "Let's Set up a Meeting"
+                                    }
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "$7000+ one time fee"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "componentType": "TableRow",
+                        "componentContainers": [
+                            {
+                                "containerType": "tr"
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Maintenance Cost"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "$50/month*"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "$100/month*"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Depends on project scope*"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "$90+/month*"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "componentType": "TableRow",
+                        "componentContainers": [
+                            {
+                                "containerType": "tr"
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Strategy/Support Cost"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "$25/month"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "$100/month"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Depends on project scope"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "$100+/month"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "componentType": "TableRow",
+                        "componentContainers": [
+                            {
+                                "containerType": "tr"
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Features of Tiers"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td",
+                                        "containerContents": [
+                                            {
+                                                "containerType": "ul",
+                                                "containerAttributes": {
+                                                    "style": {
+                                                        "paddingLeft": "5%",
+                                                        "wrapContent": "true"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "componentContents": [
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Beautiful smart websites for online branding"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Mobile optimized websites"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Single page application"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Site copywriting"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Monthly strategy meeting"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td",
+                                        "containerContents": [
+                                            {
+                                                "containerType": "ul",
+                                                "containerAttributes": {
+                                                    "style": {
+                                                        "paddingLeft": "5%",
+                                                        "wrapContent": "true"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "componentContents": [
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "All features from the previous tiers"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Access to Slack/Discord customer service/forums"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "User login, website dashboard, database integration"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Support for email via Gsuite"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "SEO consultation"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td",
+                                        "containerContents": [
+                                            {
+                                                "containerType": "ul",
+                                                "containerAttributes": {
+                                                    "style": {
+                                                        "paddingLeft": "5%",
+                                                        "wrapContent": "true"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "componentContents": [
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "All features from the previous tiers"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Custom built features"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "24/7 live support"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Ecommerce strategy and implementation consulting"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "D2C web marketplace on your site"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Digital marketing strategy and implementation consulting"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td",
+                                        "containerContents": [
+                                            {
+                                                "containerType": "ul",
+                                                "containerAttributes": {
+                                                    "style": {
+                                                        "paddingLeft": "5%",
+                                                        "wrapContent": "true"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "componentContents": [
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "Special version of the Webmasters tier for pre-seed to seed stage startups"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "You can negotiate for the features from Webmasters with the Code Monkeys features as a starting base"
+                                        ]
+                                    },
+                                    {
+                                        "itemType": "li",
+                                        "itemContents": [
+                                            "We will do a top to bottom assessment and consultation for your business to determine what web technologies and presence best serve your business"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "componentType": "TableRow",
+                        "componentContainers": [
+                            {
+                                "containerType": "tr"
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Time to Build",
+                                    {
+                                        "itemType": "br"
+                                    },
+                                    "Minimum service period"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "2 weeks website construction",
+                                    {
+                                        "itemType": "br"
+                                    },
+                                    "Minimum 16 month service contract"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "2-4 weeks website construction",
+                                    {
+                                        "itemType": "br"
+                                    },
+                                    "Minimum 12 month service contract"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Depends on project scope"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Depends on project scope",
+                                    {
+                                        "itemType": "br"
+                                    },
+                                    "Minimum 12 month service contract"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "componentType": "TableRow",
+                        "componentContainers": [
+                            {
+                                "containerType": "tr"
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Who is this for?"
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Small business who want a simple, stylish, static webpage."
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Small to medium sized businesses who want a contracted team to manage their web presence and build their website content strategy."
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Businesses seeking complex or multiple websites and web-based infrastructures that can be used as part of their business whether it's a direct to consumer marketplace to an enterprise SaaS platform."
+                                ]
+                            },
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td"
+                                    }
+                                ],
+                                "componentContents": [
+                                    "Startups that are one-two years into their journey that we can provide tremendous value. These startups are incredibly busy and seek to have a dedicated team managing their website and social media presence while they go off and save the world."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "componentType": "TableRow",
+                        "componentContainers": [
+                            {
+                                "containerType": "tr"
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "componentType": "TableData",
+                                "componentContainers": [
+                                    {
+                                        "containerType": "td",
+                                        "containerAttributes": {
+                                            "colSpan": "5"
+                                        }
+                                    }
+                                ],
+                                "componentContents": [
+                                    {
+                                        "itemType": "h6",
+                                        "itemContents": "We understand that every business is different and their wants and budgets warrant different solutions. We have tried to build our standard pricing model with that in mind, however we will always be open to negotiating a bespoke solution."
+                                    },
+                                    {
+                                        "itemType": "br"
+                                    },
+                                    "*Fees related to third-party services such as hosting, server costs, etc, are not included in the maintenance cost and will be assessed based on your business needs."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

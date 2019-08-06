@@ -1,0 +1,326 @@
+[
+    {
+        "componentID": "StaffCarousel",
+        "componentType": "Carousel",
+        "componentContainers": [
+            {
+                "containerType": "div",
+                "containerAttributes": {
+                    "style": {
+                        "alignItems": "center",
+                        "backgroundColor": "lightgrey",
+                        "display": "flex",
+                        "height": "900px",
+                        "justifyContent": "center"
+                    }
+                },
+                "containerContents": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "carousel slide",
+                            "data-ride": "carousel",
+                            "data-interval": "7500",
+                            "id": "StaffCarousel"
+                        }
+                    }
+                ]
+            }
+        ],
+        "componentContents" : [
+            {
+                "componentID": "CarouselControls",
+                "componentType": "CarouselControls",
+                "componentContainers": [
+                    {
+                        "containerType": "div"
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentID": "Prev",
+                        "componentType": "Prev",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerContents": [
+                                    {
+                                        "containerType": "a",
+                                        "containerAttributes": {
+                                            "className": "carousel-control-prev",
+                                            "data-slide": "prev",
+                                            "href": "#StaffCarousel",
+                                            "role": "button"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "span",
+                                "itemAttributes": {
+                                    "className": "carousel-control-prev-icon",
+                                    "aria-hidden": "true"
+                                }
+                            },
+                            {
+                                "itemType": "span",
+                                "itemAttributes": {
+                                    "className": "sr-only"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "componentID": "Next",
+                        "componentType": "Next",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerContents": [
+                                    {
+                                        "containerType": "a",
+                                        "containerAttributes": {
+                                            "className": "carousel-control-next",
+                                            "data-slide": "next",
+                                            "href": "#StaffCarousel",
+                                            "role": "button"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "span",
+                                "itemAttributes": {
+                                    "className": "carousel-control-next-icon",
+                                    "aria-hidden": "true"
+                                }
+                            },
+                            {
+                                "itemType": "span",
+                                "itemAttributes": {
+                                    "className": "sr-only"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "componentID": "CarouselSlide",
+                "componentType": "CarouselSlide",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "carousel-inner",
+                            "role": "listbox",
+                            "style": {
+                                "margin": "auto",
+                                "width": "100%",
+                                "min-height": "30%"
+                            }
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentType": "Card",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "carousel-item active"
+                                },
+                                "containerContents": [
+                                    {
+                                        "containerType": "div",
+                                        "containerAttributes": {
+                                            "className": "card",
+                                            "style": {
+                                                "backgroundColor": "lightseagreen",
+                                                "display": "block",
+                                                "height": "40%",
+                                                "margin": "auto",
+                                                "width": "50%"
+                                            }
+                                        }, 
+                                        "containerContents": [
+                                            {
+                                                "containerType": "div",
+                                                "containerAttributes": {
+                                                    "className": "card-body",
+                                                    "style": {
+                                                        "color": "white",
+                                                        "textAlign": "center"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "componentContents" : [
+                            {
+                                "itemType": "h3",
+                                "itemContents": "George Le - Co-founder/CEO"
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "src": "../assets/george.jpg",
+                                    "alt": "This is George"
+                                }
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "George Le, a Massachusetts native and graduate of the University of Massachusetts Lowell, is a serial tech entrepreneur. He is interested in discussing automation, digital marketing, esports, and new web infrastructures and technologies with entrepreneurs and difference makers!"
+                            } 
+                        ]
+                    },
+                    {
+                        "componentType": "Card",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "carousel-item"
+                                },
+                                "containerContents": [
+                                    {
+                                        "containerType": "div",
+                                        "containerAttributes": {
+                                            "className": "card",
+                                            "style": {
+                                                "backgroundColor": "lightseagreen",
+                                                "display": "block",
+                                                "height": "auto",
+                                                "margin": "auto",
+                                                "width": "50%"
+                                            }
+                                        }, 
+                                        "containerContents": [
+                                            {
+                                                "containerType": "div",
+                                                "containerAttributes": {
+                                                    "className": "card-body",
+                                                    "style": {
+                                                        "color": "white",
+                                                        "textAlign": "center"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "componentContents" : [
+                            {
+                                "itemType": "h3",
+                                "itemContents": "Matthew LeBlanc - Co-founder/CTO"
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "src": "../assets/matt.jpg",
+                                    "alt": "This is Matt"
+                                }
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Matthew LeBlanc is a recent graduate of the University of Massachusetts Lowell where he received a Bachelor's degree in computer science. He is a software developer and focuses on front-end development using technologies like React.js. He is passionate about learning new technologies as well as experiencing new aspects of culture."
+                            }
+                        ]
+                    },
+                    {
+                        "componentType": "Card",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "carousel-item"
+                                },
+                                "containerContents": [
+                                    {
+                                        "containerType": "div",
+                                        "containerAttributes": {
+                                            "className": "card",
+                                            "style": {
+                                                "backgroundColor": "lightseagreen",
+                                                "display": "block",
+                                                "height": "auto",
+                                                "margin": "auto",
+                                                "width": "50%"
+                                            }
+                                        }, 
+                                        "containerContents": [
+                                            {
+                                                "containerType": "div",
+                                                "containerAttributes": {
+                                                    "className": "card-body",
+                                                    "style": {
+                                                        "color": "white",
+                                                        "textAlign": "center"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "componentContents" : [
+                            {
+                                "itemType": "h3",
+                                "itemContents": "Jonathan Murphy - Co-founder/CPO-CIO"
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "src": "../assets/jonathan.jpg",
+                                    "alt": "This is Jonathan"
+                                }
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Jonathan Murphy graduated with an undergraduate degree in computer science from the University of Massachusetts Lowell. He manages ConceptsIO deployment and security practices and is highly interest in open-source projects, IT infrastructure and security, and IOT."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

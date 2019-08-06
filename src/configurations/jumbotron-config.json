@@ -1,0 +1,50 @@
+[
+    {
+        "componentID": "MainPageJumbotron",
+        "componentContainers": [
+            {
+                "containerType": "div",
+                "containerAttributes": {
+                    "className": "jumbotron",
+                    "style": {
+                        "backgroundRepeat": "no-repeat", 
+                        "backgroundPosition": "right"
+                    }
+                }      
+            }
+        ],
+        "componentContents": [
+            {
+                "itemType": "h1",
+                "itemContents": [
+                    "Concepts",
+                    {
+                        "itemType": "span",
+                        "itemAttributes": {
+                            "style": {
+                                "color": "lightseagreen",
+                                "fontWeight": "bold"
+                            }
+                        },
+                        "itemContents": "I"
+                    },
+                    {
+                        "itemType": "span",
+                        "itemAttributes": {
+                            "style": {
+                                "color": "teal",
+                                "fontWeight": "bold"
+                            }
+                        },
+                        "itemContents": "O"
+                    },
+                    " Solutions"
+                ]
+            },
+            {
+                "itemType": "h3",
+                "itemContents": "A Full Service Website and Digital Marketing Agency"
+            }
+        ]
+    }
+]

@@ -1,0 +1,108 @@
+[
+    {
+        "componentID": "MainPageFooter",
+        "componentType": "Footer",
+        "componentContainers": [
+            {
+                "containerType": "footer",
+                "containerAttributes": {
+                    "style": {
+                        "bottom": "0",
+                        "display": "contents",
+                        "position": "absolute",
+                        "width": "100%"
+                    }
+                },
+                "containerContents": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "container"
+                        },
+                        "containerContents": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "id": "ContactUs"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "componentContents": [
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "h2",
+                "itemContents": "Contact Us"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "p",
+                "itemContents": [
+                    "Shoot me an email and let's get the ball rolling: ",
+                    {
+                        "itemType": "span",
+                        "itemContents": [
+                            {
+                                "itemType": "a",
+                                "itemAttributes": {
+                                    "href": "mailto:george.le@conceptsio.com"
+                                },
+                                "itemContents": "George.Le@conceptsio.com"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "div",
+                "itemAttributes": {
+                    "style": {
+                        "textAlign": "center"
+                    }
+                },
+                "itemContents": [
+                    {
+                        "itemType": "p",
+                        "itemContents": "The lucky number of the day is 42"
+                    },
+                    {
+                        "itemType": "p",
+                        "itemAttributes": {
+                            "className": "text-muted"
+                        },
+                        "itemContents": "Copyright 2019, ConceptsIO Solutions LLC"
+                    },
+                    {
+                        "itemType": "p",
+                        "itemAttributes": {
+                            "className": "text-muted"
+                        },
+                        "itemContents": "For all your Website and Ecommerce Solutions"
+                    }
+                ]
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "br"
+            }
+        ]
+    }
+]

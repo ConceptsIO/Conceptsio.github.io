@@ -1,4 +1,27 @@
-import React from 'react';
+import PropTypes from 'prop-types';
+
+import componentParser from '../Utilities/componentParser.jsx';
+import { getJsonObject, getJsonObjectWithID } from '../Utilities/getJsonObject.js';
+
+const Footer = (props) => {
+    if(props.footerData) {
+        return componentParser(props.footerData);
+    } else if(props.footerID) {
+        return componentParser(getJsonObjectWithID(props.footerJsonUrl, props.footerID));
+    } else {
+        return componentParser(getJsonObject(props.footerJsonUrl));
+    }    
+}
+
+Footer.propTypes = {
+    footerData : PropTypes.object,
+    footerID : PropTypes.string,
+    footerJsonUrl : PropTypes.string
+};
+
+export default Footer;
+
+/* import React from 'react';
 
 class Footer extends React.Component {
     render() {
@@ -26,4 +49,4 @@ class Footer extends React.Component {
     }
 }
 
-export default Footer;
+export default Footer; */
