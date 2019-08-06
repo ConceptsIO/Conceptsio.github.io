@@ -52,7 +52,7 @@ const App = (props) => {
                         <p>Social Media Copy Writing and Content Production</p>
                     </div>
                     <div className="col col-lg-4 col-xs-3">
-                        <img className="mx-auto d-block" alt="Tailored Marketing Strategy for Target Demographics" />
+                        <img className="mx-auto d-block" src="../assets/TailorStrategy.png" alt="Tailored Marketing Strategy for Target Demographics" />
                         <p>Tailored Marketing Strategy for Target Demographics</p>
                     </div>
                 </div>
@@ -64,9 +64,11 @@ const App = (props) => {
                 <div className="row d-flex align-items-center" style={{ "textAlign": "center" }}>
                     <div className="col col-lg-4 col-xs-3"> 
                         <img className="mx-auto d-block" src="../assets/slacklogo.png" alt="Slack - B2B Customer Service"/>
+                        <p>Slack Server - B2B Customer Service</p>
                     </div>
                     <div className="col col-lg-4 col-xs-3">
                         <img className="mx-auto d-block" src="../assets/discordlogo.png" alt="Discord - Safe text, talk, screen-share" />
+                        <p>Discord Server - Safe text, talk, screen-share</p>
                     </div>
                     <div className="col col-lg-4 col-xs-3">
                         <img className="mx-auto d-block" src="../assets/customer_service.jpeg" alt="On-website customer service" />
@@ -84,9 +86,6 @@ const App = (props) => {
                 </div>
                 <div className="row align-items-center">
                     <div className="col">
-                        <img className="mx-auto d-block" src="../assets/ConceptsIOSolutionsCropped.png"/>
-                    </div>
-                    <div className="col">
                         ConceptsIO Solutions is devoted to working with small 
                         to medium sized businesses on building, maintaining, and 
                         improving their digital presence. Contemporary businesses drive 
@@ -98,21 +97,27 @@ const App = (props) => {
                         in constructing beautiful custom websites and help businesses sell their 
                         products effectively online.
                     </div>
+                    <div className="col">
+                        <img className="mx-auto d-block" src="../assets/ConceptsIOSolutionsCropped.png"/>
+                    </div>
                 </div>
-                <div className="row">
-                    <br />
-                    <br />
-                    We are made up of dedicated professionals who want to produce 
-                    tremendous value for our clients and be flexible to their needs. 
-                    Our strategy is to guide clients in making the best decision possible 
-                    for their website while respecting their expertise in their industry.
-                    <br />
-                    <br />
-                    Thank you to our clients for including us in their journey!
-                    <br />
-                    <br />
+                <div className="row align-items-center">
+                    <div className="col">
+                        <br />
+                        We are made up of dedicated professionals who want to produce 
+                        tremendous value for our clients and be flexible to their needs. 
+                        Our strategy is to guide clients in making the best decision possible 
+                        for their website while respecting their expertise in their industry.
+                        <br />
+                        <br />
+                        Thank you to our clients for including us in their journey!
+                        <br />
+                        <br />
+                    </div>
                 </div>
             </div>
+            <br />
+            <br />
             <Carousel carouselID={ "StaffCarousel" } carouselJsonUrl={ props.carouseljsonurl } />
             <br />
             <br />
