@@ -13,7 +13,7 @@ const ContentColumn = (props) => {
         //     case "carousel":
         //         return <Carousel carouselData={  }/>;
         //     case "ContentRow":    
-        //         return <ContentRow contentRowData={ potentialSubcomponent } />
+        //         return <ContentRow contentRowData={ } />
         //     case "footer":
         //         return <Footer footerData={  }/>;
         //     case "jumbotron":
