@@ -1,0 +1,63 @@
+[
+    {
+        "pageID": "MainPage",
+        "pageContainers": [
+            {
+                "containerType": "div"
+            }
+        ],
+        "pageContents": [
+            {
+                "componentID": "HeaderContentSection",
+                "componentType": "ContentSection",
+                "componentJsonUrl": "../src/configurations/content-section-config.json"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "componentID": "ServicesContentSection",
+                "componentType": "ContentSection",
+                "componentJsonUrl": "../src/configurations/content-section-config.json"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "componentID": "AboutUsContentSection",
+                "componentType": "ContentSection",
+                "componentJsonUrl": "../src/configurations/content-section-config.json"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "componentID": "StaffCarouselContentSection",
+                "componentType": "ContentSection",
+                "componentJsonUrl": "../src/configurations/content-section-config.json"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "componentID": "PricingTableContentSection",
+                "componentType": "ContentSection",
+                "componentJsonUrl": "../src/configurations/content-section-config.json"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "componentID": "MainPageFooter",
+                "componentType": "ContentSection",
+                "componentJsonUrl": "../src/configurations/content-section-config.json"
+            }
+        ]
+    }
+]

@@ -9,4 +9,4 @@ import App from './components/App/App.jsx';
 
 // non-redux render
 const appWrapper = document.getElementById('App');
-appWrapper ? ReactDOM.render(<App { ...appWrapper.dataset }/>, appWrapper) : false;  
+appWrapper ? ReactDOM.render(<App { ...appWrapper.dataset } />, appWrapper) : false;

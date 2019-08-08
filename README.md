@@ -1,12 +1,12 @@
-# Base React App Template with sample formContainer
+# ConceptsIO Website
 
-This template can be used as a base for a React web application.
+This is the repository containing the code for the ConceptsIO primary website. It is build using React with Express.js/Node.js in the backend.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-1. git clone https://**username**@bitbucket.org/conceptsiosolutions/base-react-app.git
+1. git clone (URL of REPO)
 2. npm install --save-dev webpack
 3. npm start
 

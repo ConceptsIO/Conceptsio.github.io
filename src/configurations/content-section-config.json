@@ -1,12 +1,635 @@
 [
     {
+        "componentID": "HeaderContentSection",
+        "componentType": "ContentSection",
+        "componentContainers": [
+            {
+                "containerType": "div" 
+            }
+        ],
+        "componentContents": [
+            {
+                "componentID": "MainPageNavbar",
+                "componentType": "Navbar",
+                "componentJsonUrl": "../src/configurations/navbar-config.json"
+            },
+            {
+                "componentID": "MainPageJumbotron",
+                "componentType": "Jumbotron",
+                "componentJsonUrl":"../src/configurations/jumbotron-config.json"
+            }
+        ]
+    },
+    {
         "componentID": "ServicesContentSection",
         "componentType": "ContentSection",
         "componentContainers": [
-
+            {
+                "containerType": "div",
+                "containerAttributes": {
+                    "className": "container",
+                    "id": "Services"
+                }
+            }
         ],
         "componentContents": [
-
+            {
+                "componentID": "ServicesHeader",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row",
+                            "style": {
+                                "marginLeft": "10px"
+                            }
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "itemType": "h1",
+                        "itemContents": "Services - How We Help You Win"
+                    }
+                ]
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "componentID": "WebsitesHeader",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row",
+                            "style": {
+                                "marginLeft": "5px"
+                            }
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "itemType": "h5",
+                        "itemContents": "Websites - Speedy Construction, Reliable Maintenance, Steadfast Support"
+                    }
+                ]
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "componentID": "WebsitesInfo",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row d-flex align-items-center",
+                            "style": {
+                                "textAlign": "center"
+                            }
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentID": "MobileResponsiveBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col col-lg4 col-xs-3",
+                                    "style": {
+                                        "textAlign": "center"
+                                    }
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/smartphone.png",
+                                    "alt": "mobile responsive websites"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Mobile Responsive Websites"
+                            }
+                        ]
+                    },
+                    {
+                        "componentID": "MaintenanceSupportBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col col-lg4 col-xs-3",
+                                    "style": {
+                                        "textAlign": "center"
+                                    }
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/maintenance_and_support.jpeg",
+                                    "alt": "maintenance_and_support"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Maintenance and Support"
+                            }
+                        ]
+                    },
+                    {
+                        "componentID": "ConsultingBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col col-lg4 col-xs-3",
+                                    "style": {
+                                        "textAlign": "center"
+                                    }
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/consulting.jpeg",
+                                    "alt": "best in class consultations"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Best in Class Consultations"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "componentID": "SocialMediaHeader",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row",
+                            "style": {
+                                "marginLeft": "5px"
+                            }
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "itemType": "h5",
+                        "itemContents": "Social Media - Build Your Brand, Boost Sales, Crush the Competition"
+                    }
+                ]
+            },
+            {
+                "componentID": "SocialMediaInfo",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row d-flex align-items-center",
+                            "style": {
+                                "textAlign": "center"
+                            }
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentID": "SocialMediaAdsBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col col-lg4 col-xs-3",
+                                    "style": {
+                                        "textAlign": "center"
+                                    }
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/SocialMediaLogos.png",
+                                    "alt": "Facebook, Instagram, LinkedIn, and More Ads"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": [
+                                    "Facebook, Instagram, LinkedIn, and More",
+                                    {
+                                        "itemType": "span",
+                                        "itemContents": [
+                                            {
+                                                "itemType": "br"
+                                            }
+                                        ]
+                                    },
+                                    "Organic Content and Paid Ads"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "componentID": "SocialMediaContentBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col col-lg4 col-xs-3",
+                                    "style": {
+                                        "textAlign": "center"
+                                    }
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/copywriting.jpeg",
+                                    "alt": "Social Media Copy Writing and Content Production"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Social Media Copy Writing and Content Production"
+                            }
+                        ]
+                    },
+                    {
+                        "componentID": "MarketingStrategyBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col col-lg4 col-xs-3",
+                                    "style": {
+                                        "textAlign": "center"
+                                    }
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/TailorStrategy.png",
+                                    "alt": "Tailored Marketing Strategy for Target Demographics"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Tailored Marketing Strategy for Target Demographics"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "itemType": "br"
+            },
+            {
+                "componentID": "CommunityServiceHeader",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row",
+                            "style": {
+                                "marginLeft": "5px"
+                            }
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "itemType": "h5",
+                        "itemContents": "Next-Gen Community Management and Customer Service - Leveraging Platforms Like Slack and Discord"
+                    }
+                ]
+            },
+            {
+                "componentID": "CommunityServiceInfo",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row d-flex align-items-center",
+                            "style": {
+                                "textAlign": "center"
+                            }
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentID": "SlackBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col col-lg4 col-xs-3",
+                                    "style": {
+                                        "textAlign": "center"
+                                    }
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/slacklogo.png",
+                                    "alt": "Slack - B2B Customer Service"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Slack - B2B Customer Service"
+                            }
+                        ]
+                    },
+                    {
+                        "componentID": "MaintenanceSupportBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col col-lg4 col-xs-3",
+                                    "style": {
+                                        "textAlign": "center"
+                                    }
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/discordlogo.png",
+                                    "alt": "Discord - Safe text, talk, screen-share"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Discord - Safe text, talk, screen-share"
+                            }
+                        ]
+                    },
+                    {
+                        "componentID": "CustomerServiceBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col col-lg4 col-xs-3",
+                                    "style": {
+                                        "textAlign": "center"
+                                    }
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/customer_service.jpeg",
+                                    "alt": "Website-based customer service"
+                                }
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Website-based customer service"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "componentID": "AboutUsContentSection",
+        "componentType": "ContentSection",
+        "componentContainers": [
+            {
+                "containerType": "div",
+                "containerAttributes": {
+                    "className": "container",
+                    "id": "AboutUs"
+                }
+            }
+        ],
+        "componentContents": [
+            {
+                "componentID": "AboutUsHeader",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row"
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "itemType": "h1",
+                        "itemContents": "About Us"
+                    },
+                    {
+                        "itemType": "br"
+                    }
+                ]
+            },
+            {
+                "componentID": "FirstAboutUsBlurbAndPhoto",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row align-items-center"
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentID": "FirstAboutUsBlurb",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col"
+                                }
+                            }
+                        ],
+                        "componentContents": "ConceptsIO Solutions is devoted to working with small to medium sized businesses on building, maintaining, and improving their digital presence. Contemporary businesses drive new leads and sales with the usage of smart websites and are legitimized by their online presence. Their websites are analogous to a storefront that passerby’s can window shop at. Digital marketing with tool such as social media ads can create new age brand and sales funnels to a new generation of customers. We serve as partners for SMBs in constructing beautiful custom websites and help businesses sell their products effectively online."
+                    },
+                    {
+                        "componentID": "CiOSLogo",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col"
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "img",
+                                "itemAttributes": {
+                                    "className": "mx-auto d-block",
+                                    "src": "../assets/ConceptsIOSolutionsCropped.png",
+                                    "alt": "CiOS Logo"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "componentID": "SecondAboutUsBlurb",
+                "componentType": "ContentRow",
+                "componentContainers": [
+                    {
+                        "containerType": "div",
+                        "containerAttributes": {
+                            "className": "row align-items-center"
+                        }
+                    }
+                ],
+                "componentContents": [
+                    {
+                        "componentID": "SecondAboutUsParagraphs",
+                        "componentType": "ContentColumn",
+                        "componentContainers": [
+                            {
+                                "containerType": "div",
+                                "containerAttributes": {
+                                    "className": "col"
+                                }
+                            }
+                        ],
+                        "componentContents": [
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "We are made up of dedicated professionals who want to produce tremendous value for our clients and be flexible to their needs. Our strategy is to guide clients in making the best decision possible for their website while respecting their expertise in their industry."
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "br"
+                            },
+                            {
+                                "itemType": "p",
+                                "itemContents": "Thank you to our clients for including us in their journey!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "componentID": "StaffCarouselContentSection",
+        "componentType": "ContentSection",
+        "componentContainers": [
+            {
+                "containerType": "div"
+            }
+        ],
+        "componentContents": [
+            {
+                "componentID": "StaffCarousel",
+                "componentType": "Carousel",
+                "componentJsonUrl": "../src/configurations/carousel-config.json"
+            }
+        ]
+    },
+    {
+        "componentID": "PricingTableContentSection",
+        "componentType": "ContentSection",
+        "componentContainers": [
+            {
+                "containerType": "div"
+            }
+        ],
+        "componentContents": [
+            {
+                "componentID": "PriceTable",
+                "componentType": "Table",
+                "componentJsonUrl": "../src/configurations/table-config.json"
+            }
+        ]
+    },
+    {
+        "componentID": "MainPageFooter",
+        "componentType": "ContentSection",
+        "componentContainers": [
+            {
+                "containerType": "div"
+            }
+        ], 
+        "componentContents": [
+            {
+                "componentID": "MainPageFooter",
+                "componentType": "Footer",
+                "componentJsonUrl": "../src/configurations/footer-config.json"
+            }
         ]
     }
 ]
